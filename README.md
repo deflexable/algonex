@@ -11,7 +11,7 @@ Algonex is a responsive and functional website developed mainly to showcase and 
 Kindly visit <a href="https://algonex-7.web.app/">https://algonex-7.web.app/</a> to test the live version. Try inputting a word in the search box to retrieve the product.
 
 # Dependency
-* Algolia: Algolia is the search-as-a-service platform that enables companies of all sizes to deliver fast and relevant digital experiences that drive real results. More than 8,000 companies including Stripe, Discovery, Medium, LVMH, Lacoste, Zendesk and Birchbox rely on Algolia to manage 70 billion search queries a month
+* Algolia: Algolia is a search-as-a-service platform that enables companies of all sizes to deliver fast and relevant digital experiences that drive real results. More than 8,000 companies including Stripe, Discovery, Medium, LVMH, Lacoste, Zendesk and Birchbox rely on Algolia to manage 70 billion search queries a month
 
 
 * Firebase: firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. It comprises of different products which includes realtime database, firestore, storage, functions, hosting, Ml kits, e.t.c.
