@@ -1,0 +1,146 @@
+body{
+    user-select: none;
+}
+.service-con{
+    background-color: white;
+    padding: 7px 0px;
+    box-shadow: 0px 2px 6px grey;
+}
+.service-con b{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.bill-con{
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 0px 7px 0px;
+}
+.bill-con a{
+    width: 50px;
+    margin-left: 40px;
+    display: block;
+    text-align: center;
+    flex-shrink: 0;
+    color: unset;
+    text-decoration: none;
+}
+.bill-con a img{
+    width: 100%;
+}
+.bill-con a div{
+    display: block;
+    font-size: 13px;
+    margin-top: 4px;
+}
+#total-trans-txt{
+    text-transform: capitalize;
+    color: rgb(129, 129, 129);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.trans-con{
+    background-color: white;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    min-height: 20vh;
+}
+.trans-content{
+    display: flex;
+    padding: 10px;
+    user-select: none;
+    color: initial;
+    text-decoration: none;
+    border-bottom: 1px inset rgb(204, 204, 204);
+}
+.trans-content:active{
+    background-color: lightgreen;
+}
+.trans-content img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    box-shadow: 2px 2px 4px grey, -2px -2px 4px grey;
+}
+.trans-info{
+    padding: 0px 3px 0px 20px;
+}
+.price-bill{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 3px 0px;
+}
+.date-bill{
+    font-size: 13px;
+    margin-top: 4px;
+}
+.no-trans-temp{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+}
+.no-trans-temp img{
+    width: 40%;
+    max-width: 300px;
+}
+.no-trans-temp div{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(157, 157, 157);
+}
+.trans-spinner{
+    display: block;
+    margin: 20vh auto;
+    width: 23%;
+    max-width: 130px;
+}
+.pg-con{
+    width: 90%;
+    margin: 30px auto;
+    line-height: 43px;
+}
+.pg-con b{
+    color: white;
+    margin-left: 10px;
+    background-color: crimson;
+    padding: 8px 12px;
+    font-size: 18px;
+    box-shadow: 2px 2px 4px grey;
+    cursor: pointer;
+    user-select: none;
+}
+@media only screen and (min-width: 670px){
+    .trans-con{
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 7px grey, -4px -4px 7px grey;
+        width: 75%;
+        max-width: 780px;
+        margin: 20px auto;
+    }
+}
+@media only screen and (min-width: 800px){
+    body{
+        background-color: rgb(226, 226, 226);
+    }
+    #total-trans-txt{
+        font-size: 27px;
+        margin-left: 20px;
+    }
+    .no-trans-temp div{
+        font-size: 25px;
+    }
+    .bill-con {
+        padding: 20px 0px;
+    }
+}
+@media only screen and (min-width: 1100px){
+    #total-trans-txt{
+        font-size: 35px;
+        margin-left: 30px;
+    }
+    .no-trans-temp div{
+        font-size: 27px;
+    }
+}

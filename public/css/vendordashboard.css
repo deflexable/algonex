@@ -1,0 +1,806 @@
+.circle-progress-value {
+  stroke-width: 50px;
+  stroke: hsl(100, 90%, 70%);
+}
+
+.circle-progress-circle {
+  stroke-width: 30px;
+  stroke: hsl(100, 15%, 60%);
+  fill: hsl(100, 15%, 60%);
+}
+
+.circle-progress-text {
+  fill: rgb(230, 230, 230);
+  font-weight: bold;
+}
+
+.initial-loader-con {
+  position: fixed;
+  z-index: 300;
+  background-color: white;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.initial-loader-con div {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  height: 200px;
+  height: fit-content;
+  text-align: center;
+}
+.initial-loader-con img{
+  width: 40%;
+  max-width: 200px;
+}
+.initial-loader-con b{
+  display: block;
+  text-transform: capitalize;
+  color: green;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 10px;
+}
+.header,
+.nav-temp,
+.send-mes-pc,
+.chat-search-pc-client-add,
+#pc-create-new-group-btn,
+.mes-top-pc,
+.mes-pc-group-info-temp,
+.group-info-user-cont reqc reqff,
+.product-cate-drop-wide-sec div h:hover,
+.product-cate-drop-wide div h:hover {
+  background-color: darkblue;
+}
+
+.chat-head,
+.reply-mes-pc-con span,
+.find-chat-pc,
+.my-chat {
+  background-color: blue;
+}
+
+.main-flexer {
+  min-height: 95vh;
+}
+
+.scroll-side-bar {
+  display: none;
+}
+
+.scroll-side-bar a spot {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  border-radius: 7px;
+  padding: 2px 5px;
+  margin: auto 10px auto auto;
+  display: none;
+}
+
+.pc-right-packer {
+  min-height: 93vh;
+}
+
+.pc-right-packert>* {
+  display: none;
+  min-height: 90vh;
+  background-color: white;
+}
+
+.page-section-title {
+  color: crimson;
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+  text-transform: uppercase;
+}
+
+.page-section-sub-title {
+  color: green;
+  text-align: center;
+  margin-top: -27px;
+}
+
+.page-section-sub-title button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main-page-packer {
+  display: block;
+}
+
+.temp {
+  background-color: darkblue;
+  color: white;
+  padding-bottom: 180px;
+}
+
+.temp-head {
+  display: flex;
+}
+
+.temp-head div {
+  margin: auto 10px auto auto;
+  text-align: center;
+}
+
+.temp-head h1 {
+  margin-left: 7px;
+}
+
+.temp-head img {
+  width: 37px;
+  height: 37px;
+}
+
+.temp-head span {
+  display: block;
+  font-size: 13px;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.temp-progress {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.temp-progress div {
+  margin-bottom: 7px;
+}
+
+.temp-progress span {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.temp-info {
+  margin-top: 17px;
+  text-transform: capitalize;
+}
+
+.temp-info span {
+  display: flex;
+  margin-top: 7px;
+  margin-left: 13px;
+}
+
+.temp-info t {
+  font-weight: 600;
+  margin: auto 0px;
+}
+
+.temp-info em {
+  margin: auto 0px auto 3px;
+  font-size: 14px;
+}
+
+.temp-opt-con {
+  text-align: right;
+  margin: 7px 5px 0px 0px;
+}
+
+.temp-opt-con select {
+  border-radius: 7px;
+  background-color: green;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  height: 35px;
+  outline: none;
+}
+
+.temp-adj {
+  margin-top: -140px;
+}
+
+.template {
+  position: relative;
+  width: 96%;
+  background-color: red;
+  border-radius: 10px;
+  margin: 20px auto 50px auto;
+  box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+  color: unset;
+  text-decoration: none;
+  display: block;
+}
+
+.template img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.template span {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-transform: capitalize;
+}
+
+.template div {
+  color: #484848;
+  background-color: red;
+  padding: 10px 3px 10px 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: normal;
+}
+
+/*for payment section*/
+
+.payment-setting-con {
+  background-color: white;
+  padding-bottom: 80px;
+}
+
+.payment-user-img-con {
+  text-align: center;
+}
+
+.payment-user-img-con img {
+  width: 40%;
+  max-width: 230px;
+}
+
+.payment-user-img-con b {
+  display: block;
+  text-transform: capitalize;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.pay-account-info-con {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.pay-account-info-con tr td {
+  font-size: 14px;
+  padding: 15px 3px 15px 7px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.pay-account-info-con tr td:first-child {
+  font-weight: 600;
+}
+
+.pay-account-info-con tr td img {
+  width: 20px;
+  position: absolute;
+  right: 4px;
+  top: 3px;
+}
+
+.vendor-section-mid-spinner {
+  display: block;
+  width: 40%;
+  max-width: 130px;
+  margin: 50px auto;
+}
+
+.payment-issue-table {
+  margin: 40px auto 0px auto;
+  width: 100%;
+  max-width: 800px;
+  display: none;
+}
+
+.payment-issue-table caption,
+.payment-no-ticket-issue span {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+.payment-issue-table tr td {
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 0px;
+  word-break: break-all;
+}
+
+.payment-issue-table tr td:last-child button {
+  background-color: green;
+  color: white;
+  padding: 2px 10px;
+  font-weight: 600;
+}
+
+.payment-no-ticket-issue {
+  width: 85%;
+  margin: 25px auto 0px auto;
+  border-radius: 10px;
+  border: 1px solid rgb(179, 179, 179);
+  max-width: 450px;
+  display: none;
+}
+
+.payment-no-ticket-issue span {
+  display: block;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.payment-no-ticket-issue div {
+  padding: 35px 0px;
+  text-align: center;
+}
+
+.payment-no-ticket-issue div img {
+  width: 60%;
+  max-width: 180px;
+}
+
+.payment-no-ticket-issue b {
+  display: block;
+  font-size: 23px;
+  color: grey;
+  margin-top: 10px;
+}
+
+.seller-guide-packer {
+  background-color: white;
+  padding: 10px 10px 30px 10px;
+  line-height: 22px;
+}
+
+.vendor-guide-title-badge {
+  background-color: rgb(255, 227, 176);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: 30px auto;
+  padding: 7px 30px;
+  border: 2px dashed red;
+}
+
+.vendor-guide-title-badge img {
+  width: 40px;
+}
+
+.vendor-guide-title-badge b {
+  display: block;
+  color: grey;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.v-guide-top-des {
+  color: brown;
+}
+
+.v-guide-navigate-ol-list {
+  margin-top: 15px;
+}
+
+.v-guide-navigate-ol-list>* {
+  margin-top: 10px;
+}
+
+.v-guide-navigate-ol-list li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  color: blue;
+}
+
+.v-guide-navigate-ol-list li ul {
+  list-style-type: disc;
+}
+
+.v-guide-navigate-ol-list li ul li {
+  margin-top: 3px;
+  font-size: 15px;
+  color: rgb(0, 113, 189);
+}
+
+.v-guide-sub-container {
+  margin-top: 35px;
+}
+
+.v-guide-main-title {
+  color: crimson;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.v-guide-sub-ol-list {
+  list-style-type: lower-roman;
+}
+
+.v-guide-sub-ol-list li {
+  margin-top: 15px;
+}
+
+.v-guide-sub-ol-list cimg {
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-evenly;
+}
+
+.v-guide-sub-ol-list cimg img {
+  flex-shrink: 0;
+  width: 45%;
+  max-width: 250px;
+  height: 100%;
+}
+
+.v-guide-formula-note {
+  background-color: rgb(182, 255, 182);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 30px;
+  margin-left: 7%;
+  line-height: 25px;
+}
+
+.v-guide-underline-slash {
+  margin: 5px auto;
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
+
+/*vendor room*/
+
+.vendor-room-search-con {
+  display: flex;
+  padding: 7px 0px;
+  background-color: rgb(238, 249, 255);
+  box-shadow: 0px 3px 8px grey;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 85px;
+}
+
+.vendor-room-search-con>* {
+  margin: auto 4px;
+}
+
+.vendor-room-search-con img {
+  width: 30px;
+}
+
+.vendor-room-search-con input {
+  width: 100%;
+  border: none;
+  background-color: inherit;
+}
+
+.vendor-room-count-txt {
+  font-weight: bolder;
+  font-size: 25px;
+  color: grey;
+  padding: 20px 0px 20px 7px;
+}
+
+.vendor-room-spinner {
+  display: block;
+  width: 30%;
+  max-width: 130px;
+  margin: 20vh auto;
+}
+
+.load-more-vendor-room {
+  padding: 30px 0px;
+  display: none;
+  margin: 0px auto;
+  height: 10px;
+}
+
+.vendor-friend-cont {
+  padding: 10px 0px;
+  display: flex;
+}
+
+.vendor-friend-img {
+  width: 170px;
+  height: 170px;
+  max-width: 40%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: auto 9px;
+}
+
+.venor-friend-info {
+  margin: auto;
+}
+
+.vendor-room-name {
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.vendor-room-location,
+.vendor-room-date {
+  display: flex;
+  margin-top: 7px;
+}
+
+.vendor-room-total-sold {
+  margin-top: 7px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.vendor-room-total-sold b {
+  background-color: blue;
+  padding: 3px 10px;
+  color: white;
+}
+
+.vendor-room-date {
+  font-weight: bold;
+  color: grey;
+}
+
+.vendor-room-location img,
+.vendor-room-date img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.vendor-room-deal {
+  margin-top: 10px;
+}
+
+.vendor-friend-cont table {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  table-layout: fixed;
+  border-spacing: 0px;
+  color: white;
+  margin-top: 5px;
+}
+
+.vendor-friend-cont table tr td {
+  padding: 10px 0px;
+  font-size: 17px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.vendor-friend-cont table tr td:first-child {
+  background-color: crimson;
+}
+
+.vendor-friend-cont table tr td:last-child {
+  background-color: green;
+}
+
+.vendor-room-stripe {
+  background-color: rgb(216, 216, 216);
+  height: 1px;
+  width: 90%;
+  margin: 5px auto;
+}
+
+@media only screen and (min-width: 400px) {
+  .template {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+
+  .temp-adj,
+  .other-temp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .template {
+    width: 40%;
+    margin: 0px;
+    align-self: center;
+  }
+
+  .template {
+    margin: auto 0px;
+  }
+
+  .other-temp {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .vendor-room-search-con {
+    top: 60px;
+  }
+
+  .seller-guide-packer {
+    padding: 10px 20px 30px 20px;
+  }
+
+  .v-guide-sub-container {
+    padding: 0px 15px;
+  }
+
+  .pay-account-info-con {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-color: rgb(237, 237, 237);
+  }
+
+  .temp-head div {
+    cursor: pointer;
+  }
+
+  .main-flexer {
+    display: flex;
+    max-width: 1410px;
+    margin: 0px auto;
+  }
+
+  .scroll-side-bar {
+    background-color: white;
+    width: 25%;
+    position: sticky;
+    top: 63px;
+    flex-shrink: 0;
+    height: 850px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block;
+    box-shadow: 2px 0px 4px grey;
+    margin-top: 7px;
+  }
+
+  .pc-nav-head {
+    height: 190px;
+    position: relative;
+    color: white;
+    background-color: darkblue;
+  }
+
+  .pc-vendor-nav-pro-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 7px 0px 0px 7px;
+    border: 1px solid rgb(160, 160, 160);
+  }
+
+  .pc-vendor-nav-noti-con {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+  }
+
+  .pc-vendor-nav-noti-con img {
+    width: 33px;
+    cursor: pointer;
+  }
+
+  .pc-vendor-nav-noti-con div {
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    font-weight: bold;
+    font-size: 14px;
+    right: 0px;
+    padding: 2px 4px;
+  }
+
+  .pc-vendor-nav-user-info {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    text-transform: capitalize;
+  }
+
+  .pc-vendor-nav-user-info b {
+    display: block;
+  }
+
+  .pc-vendor-nav-user-info div {
+    display: block;
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  .scroll-side-bar a {
+    display: flex;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+    padding: 13px 0px;
+  }
+
+  .scroll-side-bar a:hover {
+    background-color: rgb(164, 164, 255);
+  }
+
+  .scroll-side-bar a img {
+    height: 30px;
+    margin-left: 7px;
+  }
+
+  .scroll-side-bar a div {
+    margin: auto 0px auto 10px;
+    font-weight: 600;
+  }
+
+  .scroll-side-bar stripe {
+    display: block;
+    height: 1px;
+    width: 95%;
+    margin: auto;
+    background-color: rgb(209, 209, 209);
+  }
+
+  .pc-right-packer {
+    flex-shrink: 0;
+    width: 75%;
+    margin-top: 7px;
+  }
+
+  .pc-right-packert {
+    width: 97%;
+    margin: auto;
+  }
+
+  .temp-head h1 {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  .scroll-side-bar a {
+    padding: 18px 0px;
+    font-size: 17px;
+  }
+
+  .scroll-side-bar a img {
+    height: 35px;
+    margin-left: 10px;
+  }
+
+  .scroll-side-bar a div {
+    margin-left: 13px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .template img {
+    height: 200px;
+  }
+}

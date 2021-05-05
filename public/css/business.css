@@ -1,0 +1,215 @@
+body{
+  margin: 0px;
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header{
+  background-color: darkblue;
+  color: white;
+}
+.temp-head{
+  background-color: darkblue;
+  color: white;
+}
+.head-top{
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  color: white;
+  background-color: darkblue;
+  display: flex;
+  height: 50px;
+}
+.logo{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  height: 37px;
+}
+.slide-fix{
+     position: absolute;
+     margin: auto;
+     height: fit-content;
+     width: fit-content;
+     font-weight: 600;
+     font-size: 30px;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     display: none;
+
+}
+.profile-con{
+     margin-left: auto;
+     text-align: center;
+     margin-right: 5px;
+}
+.profile-con img{
+     width: 30px;
+     height: 30px;
+}
+.profile-con div{
+     font-size: 13px;
+     margin-top: -2px;
+}
+.signBtn{
+     background-color:darkblue;
+     color: white;
+     font-weight: bold;
+     margin: auto 8px auto auto;
+     display: inline-block;
+     border-radius: 4px;
+     padding: 6px 9px;
+     border: 2px solid orange;
+     cursor: pointer;
+     display: none;
+}
+.signBtn:active{
+     background-color: white;
+     color: darkblue;
+}
+.main-txt{
+  font-size: 37px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+.j{
+  text-align: center;
+}
+.header-des{
+  text-align: center;
+  padding: 17px 37px 40px 37px;
+  word-spacing: 3px;
+  line-height: 1.7em;
+}
+/*img slider */
+.prev-work{
+     display: flex;
+     overflow-x: auto;
+     scroll-snap-type: x mandatory;
+     max-width: 330px;
+     margin: auto;
+   }
+   .prev-work img{
+     scroll-snap-align: start;
+     flex-shrink: 0;
+     width: 100%;
+     height: 200px;
+   }
+   .spacer h2{
+     text-align: center;
+   }
+   .pro-des{
+     position: relative;
+     margin-top: 10px;
+     text-transform: capitalize;
+     height: fit-content;
+   }
+   .pro-des img{
+     width: 100%;
+   }
+   .pro-des span{
+     position: static;
+     z-index: 5px;
+     height: fit-content;
+     top: 0;
+     bottom: 0;
+     text-align: center;
+     display: block;
+     padding: 0px 50px;
+     font-size: 29px;
+   }
+   .pro-des b{
+     font-size: 37px;
+     color: darkblue;
+   }
+   
+.biss-table{
+     width: 100%;
+     text-align: center;
+}
+.biss-table tr td{
+     width: 50%;
+     text-transform: uppercase;
+}
+.find-biss{
+     border-radius: 3px;
+     border: 2px solid brown;
+     color: brown;
+     margin: 7px;
+     font-weight: bold;
+     background-color: white;
+     padding: 15px 0px;
+}
+.vacancy{
+     border-radius: 3px;
+     background-color: darkgreen;
+     color: white;
+     margin: 7px;
+     font-weight: bold;
+     border: 1px solid gray;
+     padding: 15px 0px;
+}
+.start{
+     background-color: purple;
+     color: white;
+     width: 95%;
+     margin: auto;
+     margin-top: 8px;
+     padding: 15px 0px;
+     text-align: center;
+     font-weight: bold;
+}
+.start:active{
+     padding: 14px 0px;
+     background-color: white;
+     color: purple;
+     border: 1px solid purple;
+}
+.vacancy:active{
+     background-color: white;
+     color: darkgreen;
+}
+.find-biss:active{
+     background-color: brown;
+     color: white;
+}
+.guide-con{
+     width: 95%;
+     margin: auto;
+     margin-top: 30px;
+}
+.guide-con h1{
+     text-align: center;
+}
+.guide-con ol li{
+     margin-top: 15px;
+}
+.testi-con{
+     text-align: center;
+     margin-top: 50px;
+}
+.fig-con{
+     margin: auto;
+     margin-top: 30px;
+     width: 70%;
+}
+.fig-con img{
+     width: 90px;
+     border-radius: 50%;
+     border: 2px solid grey;
+}
+.fig-con figcaption{
+     
+}
+
+@media only screen and (min-width: 600px){
+     .spacer{
+          padding: 10px 15%;
+     }
+     .profile-con{
+          margin-right: 10px;
+     }
+}

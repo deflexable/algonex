@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="theme-color" content="blue" />
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+     <title>Sign In</title>
+     <link rel="stylesheet" href="css/signup.css" />
+
+</head>
+
+<body>
+
+     <div class="temp">
+          <h1>Sign In</h1>
+     </div>
+
+     <div class="payment-con">
+          <img src="img/logoName.png" alt="Algonex Logo" class="logo-top">
+
+          <div class="payment-cont" id="signin-container">
+
+               <img src="img/signup.svg" class="img-pay">
+
+               <h4>Email Address</h4>
+               <div class="form-div">
+                    <img src="img/woman.svg" />
+                    <input type="email" placeholder="Input your email address" id="email" style="user-select: unset;">
+               </div>
+               <div class="ierror" id="email-error">required</div>
+
+               <h4>Password</h4>
+               <div class="form-div">
+                    <img src="img/padlock.svg" />
+                    <input type="password" placeholder="Input your password" id="pin">
+               </div>
+               <div class="ierror" id="pin-error">required</div>
+
+               <button class="pay-div" id="signin-btn">Log In</button>
+
+               <div class="forget-div"><span> <a href="resetpin.html">Forget Password</a></span> <b>|</b> <span><a
+                              href="signup.html">Create New Account</a></span> </div>
+
+               <div class="others-div">
+                    <button class="phone-btn">Facebook</button>
+                    <button class="google-btn">Google Login</button>
+               </div>
+
+          </div>
+          <img src="img/logoName.png" alt="Algonex Logo" class="logo-butt">
+     </div>
+
+
+     <script src="js/jquery.js"></script>
+     <script src="js/firebase.js"></script>
+     <script src="js/signin.js"></script>
+
+</body>
+
+
+</html>

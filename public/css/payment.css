@@ -1,0 +1,210 @@
+body {
+     margin: 0px;
+     background-color: rgb(207, 205, 205);
+     text-align: center;
+     user-select: none;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+.status-dialog {
+     position: fixed;
+     z-index: 30;
+     background-color: rgba(0, 0, 0, 0.666);
+     width: 100vw;
+     height: 100vh;
+     display: none;
+}
+
+.status-dialog div {
+     width: 300px;
+     padding: 15px;
+     margin: auto;
+     margin-top: 70px;
+     background-color: white;
+}
+
+.status-dialog div img {
+     width: 70px;
+     height: 70px;
+     background-color: white;
+}
+
+.status-dialog div h2 {
+     margin-top: 10px;
+     background-color: white;
+}
+
+.status-dialog div b {
+     color: crimson;
+     background-color: white;
+     display: block;
+     text-align: right;
+     margin: 10px 7px 0px 0px;
+}
+
+.temp {
+     background-color: #1c1cfd;
+     height: 290px;
+     padding-top: 20px;
+     color: white;
+}
+
+.temp h1 {
+     background-color: #1c1cfd;
+     margin-top: 0px;
+}
+
+.payment-con {
+     position: absolute;
+     top: 100px;
+     width: 100%;
+     padding-bottom: 70px;
+}
+
+.payment-cont {
+     width: calc(93% - 26px);
+     border-radius: 10px;
+     margin: 0px auto;
+     text-align: center;
+     padding: 13px;
+     background-color: white;
+}
+
+.img-pay {
+     display: none;
+}
+
+.pay-methods {
+     display: flex;
+     background-color: white;
+}
+
+.pay-methods img {
+     height: 25px;
+     width: 50px;
+     background-color: white;
+     display: block;
+     margin: auto;
+}
+
+.payment-cont h4 {
+     background-color: white;
+     text-align: left;
+     margin: 20px 0px 10px 7px;
+}
+
+.form-div {
+     display: flex;
+     background-color: white;
+}
+
+.form-div img {
+     width: 37px;
+     height: 37px;
+     margin: auto 10px auto 5px;
+     flex-shrink: 0;
+     background-color: white;
+}
+
+.form-div input {
+     width: 90%;
+     font-size: 17px;
+     text-align: left;
+     user-select: unset;
+     background-color: white;
+     border: none;
+     border-bottom: 1px solid grey;
+}
+.ierror{
+     color: red;
+     text-align: start;
+     font-size: 12px;
+     margin: 7px 0px 0px 60px;
+     display: none;
+}
+
+.pay-div {
+     background-color: blue;
+     cursor: pointer;
+     color: white;
+     font-weight: bold;
+     font-size: 15px;
+     border-radius: 7px;
+     border: none;
+     margin: 30px auto 15px auto;
+     outline: none;
+     padding: 8px 12px 8px 12px;
+     box-shadow: 2px 2px 4px gray;
+}
+
+.pay-div:active {
+     background-color: white;
+     color: blue;
+}
+
+.wallet-txt-pc {
+     display: none;
+}
+
+.logo-top {
+     display: none;
+}
+
+.logo-butt {
+     width: 200px;
+     max-width: 80%;
+     margin: 40px auto 0px auto;
+}
+@media only screen and (min-width: 530px) {
+     .payment-cont {
+          width: 80%;
+     }
+}
+@media only screen and (min-width: 630px) {
+     .payment-cont {
+          width: 70%;
+     }
+     .logo-butt {
+          width: 210px;
+     }
+}
+
+@media only screen and (min-width: 800px) {
+     body{
+          background-color: darkblue;
+     }
+     .logo-top {
+          display: block;
+          margin: 30px auto;
+          width: 230px;
+     }
+     .img-pay {
+          display: inline-block;
+          height: 50px;
+          margin-bottom: 10px;
+          background-color: white;
+     }
+     .temp {
+          display: none;
+     }
+     .payment-con{
+          top: 10px;
+     }
+     .payment-cont {
+          box-shadow: 3px 3px 7px grey, -3px -3px 7px grey;
+          width: 63%;
+          max-width: 510px;
+     }
+     .wallet-method {
+          display: none;
+     }
+     .wallet-txt-pc {
+          display: block;
+     }
+     .wallet-txt-pc h1 {
+          background-color: white;
+     }
+     .logo-butt {
+          display: none;
+     }
+}

@@ -1,0 +1,1010 @@
+/*{
+    "status": "successful",
+    "customer": {
+        "name": "Onabanjo ademola",
+        "email": "deflexable@gmail.com",
+        "phone_number": "09019445081"
+    },
+    "transaction_id": 1786237,
+    "tx_ref": "DEFLEXZAHpz5t8nJK5i9tkw6Ifcn0",
+    "flw_ref": "FLW137151608622435222",
+    "currency": "NGN",
+    "amount": 119580
+}*/
+
+{
+    "uid": "dUBBYCObilSq6FIr9mwV8FDD1f03",
+    "displayName": "onabanjo ademola",
+    "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GgDQkQrEYTc9-0BHJw3wTq7snltWZUVWgI57-Zz=s96-c",
+    "email": "deflexable@gmail.com",
+    "emailVerified": true,
+    "phoneNumber": null,
+    "isAnonymous": false,
+    "providerData": [{
+        "uid": "115887841343943361708",
+        "displayName": "onabanjo ademola",
+        "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GgDQkQrEYTc9-0BHJw3wTq7snltWZUVWgI57-Zz=s96-c",
+        "email": "deflexable@gmail.com",
+        "phoneNumber": null,
+        "providerId": "google.com"
+    }, {
+        "uid": "deflexable@gmail.com",
+        "displayName": "onabanjo ademola",
+        "photoURL": "https://lh3.googleusercontent.com/a-/AOh14GgDQkQrEYTc9-0BHJw3wTq7snltWZUVWgI57-Zz=s96-c",
+        "email": "deflexable@gmail.com",
+        "phoneNumber": null,
+        "providerId": "password"
+    }],
+    "apiKey": "AIzaSyAFi2b8pmRS40WmDty5fs-Yq7TCwZZaAZg",
+    "appName": "[DEFAULT]",
+    "authDomain": "algonex-500d9.firebaseapp.com",
+    "stsTokenManager": {
+        "apiKey": "AIzaSyAFi2b8pmRS40WmDty5fs-Yq7TCwZZaAZg",
+        "refreshToken": "AG8BCnd1CNPOUkjvkcJhMRP3WJD0__WhbZtDB3Fudw03Z0enBBsYhWHZPNQtyEk4KtH9s3f17a0Z4cX8a_kqFe-mtnZ3JZLah9204cHbAwOpTZ2G_31Mfk7sLEHhuT1mQSSnUO6xFx3e4uyismdZ06ii1B9BF070u6RAejIDgfQWeh76NefBqnRxjnNEDQtm_ojNqEjsYaEpTIgE8Yq2DuBBBcirGS3OpA",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNjYmM4ZjIyMDJmNjZkMWIxZTEwMTY1OTFhZTIxNTZiZTM5NWM2ZDciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoib25hYmFuam8gYWRlbW9sYSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ0RRa1FyRVlUYzktMEJISnczd1RxN3NubHRXWlVWV2dJNTctWno9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbmFpamFiaXNzLTUwMGQ5IiwiYXVkIjoibmFpamFiaXNzLTUwMGQ5IiwiYXV0aF90aW1lIjoxNTk1MDQyMTM2LCJ1c2VyX2lkIjoiZFVCQllDT2JpbFNxNkZJcjltd1Y4RkREMWYwMyIsInN1YiI6ImRVQkJZQ09iaWxTcTZGSXI5bXdWOEZERDFmMDMiLCJpYXQiOjE2MDg2ODc3OTEsImV4cCI6MTYwODY5MTM5MSwiZW1haWwiOiJkZWZsZXhhYmxlQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE1ODg3ODQxMzQzOTQzMzYxNzA4Il0sImVtYWlsIjpbImRlZmxleGFibGVAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.GK0cxEJWn715WF9lJSzaRYfcyRz78xSbvjBHW1vMJFLWylNg_Z5uTDI2NFxy1JxPu6qLCG_VAqm39DR6m6m-ZbG7STmwtX9jfw-_lJeuuYWKLp9rNJYaPv_pXSGyZCo3Yj8l-oKr-J0oVkxn3BRoeez-WgVWbghV17fWQIM7zng_ur4HjpulydqsEa5MLyHiQXn1Qsv8w_ZWWHGFWb95QAB8IpG_peHAKfcrQnQA8wV9AUlg1s-3QtdBPQ3iuSbgDgle8emBG6R4Z-uAoQC_xxHK2oiOYM5c4JArRrGA1TIEey53TrJ5IqEjBC4k3M0PGUyZeT7wFHE2NF6aIUHeKA",
+        "expirationTime": 1608691390408
+    },
+    "redirectEventId": null,
+    "lastLoginAt": "1608163669028",
+    "createdAt": "1594864242447"
+}
+
+{
+    "hits": [{
+        "name": "Dynex™ - Soft Shell Case for Samsung Galaxy S 5 Cell Phones - Yellow/Black/Purple/Green/Red/Orange",
+        "objectID": "1734527000",
+        "_highlightResult": {
+            "name": {
+                "value": "Dynex™ - Soft Shell Case for Samsung Galaxy S 5 Cell <em>Phone</em>s - Yellow/Black/Purple/Green/Red/Orange",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["phone"]
+            },
+            "brand": {
+                "value": "Dynex™",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }],
+    "nbHits": 1637,
+    "page": 0,
+    "nbPages": 1000,
+    "hitsPerPage": 1,
+    "facets": {
+        "brand": {
+            "OtterBox": 143,
+            "Apple": 138,
+            "Samsung": 124,
+            "Speck": 113,
+            "Dynex™": 100,
+            "kate spade new york": 84,
+            "Insignia™": 61,
+            "Platinum": 59,
+            "LifeProof": 53,
+            "Modal": 53,
+            "Isaac Mizrahi New York": 47,
+            "mophie": 45,
+            "Pioneer": 41,
+            "Case-Mate": 37,
+            "Honeywell": 32,
+            "Nanette Lepore": 32,
+            "Ballistic": 27,
+            "Belkin": 25,
+            "ADOPTED": 18,
+            "Incipio": 18,
+            "Native Union": 17,
+            "Insignia": 16,
+            "Moshi": 16,
+            "AT&T": 15,
+            "Cole Haan": 15,
+            "LG": 15,
+            "Motorola": 15,
+            "Boost Mobile": 13,
+            "Blu": 12,
+            "HTC": 12,
+            "Jensen": 12,
+            "Logitech": 12,
+            "Panasonic": 12,
+            "French Bull": 11,
+            "Griffin Technology": 11,
+            "LUNATIK": 11,
+            "Platinum Series": 10,
+            "AT&T GoPhone": 9,
+            "Incase": 9,
+            "JACK SPADE": 9,
+            "Anna Sui": 8,
+            "Cynthia Vincent": 8,
+            "Christian Siriano": 7,
+            "NET10": 7,
+            "Pioneer Elite": 7,
+            "Evutec": 6,
+            "Rocketfish™ Mobile": 6,
+            "PT": 5,
+            "ReachAntenna": 5,
+            "Sony": 5,
+            "olloclip": 5,
+            "Reveal": 4,
+            "Rocketfish™": 4,
+            "Huawei": 3,
+            "Lenmar": 3,
+            "Ooma": 3,
+            "Reach Case": 3,
+            "Altec Lansing": 2,
+            "Armpocket": 2,
+            "BACtrack": 2,
+            "Bracketron": 2,
+            "Crosley": 2,
+            "House of Harlow": 2,
+            "Livescribe": 2,
+            "Plantronics": 2,
+            "Scosche": 2,
+            "eKids": 2,
+            "iBattz": 2,
+            "Apple®": 1,
+            "Audio-Technica": 1,
+            "BlackBerry": 1,
+            "Brother": 1,
+            "Capsa": 1,
+            "Catalyst": 1,
+            "Chef's Choice": 1,
+            "Cortelco": 1,
+            "Distil Union": 1,
+            "EnerPlex": 1,
+            "Hello Kitty": 1,
+            "Isaac Mizrahi": 1,
+            "Jitterbug": 1,
+            "Kenwood": 1,
+            "Kyocera": 1,
+            "Microsoft": 1,
+            "PDP": 1,
+            "Rogue Photographic Design": 1,
+            "Siemens": 1,
+            "Sprint": 1,
+            "iOgrapher": 1,
+            "iOttie": 1,
+            "iSimple": 1,
+            "myCharge": 1
+        }
+    },
+    "exhaustiveFacetsCount": true,
+    "exhaustiveNbHits": true,
+    "query": "phone",
+    "params": "query=phone&attributesToRetrieve=%5B%22name%22%5D&facets=%5B%22brand%22%5D&hitsPerPage=1",
+    "processingTimeMS": 1
+}
+
+
+
+{
+    "hits": [{
+        "objectID": "-MZlYY8Ykt1w2feVCyip",
+        "_highlightResult": {
+            "name": {
+                "value": "Sprint Prepaid - $35 Top-Up Prepaid Card - Yellow",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8Ykt1w2feVCyio",
+        "_highlightResult": {
+            "name": {
+                "value": "Sprint Prepaid - $10 Top-Up Prepaid Card - Yellow",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8Ykt1w2feVCyin",
+        "_highlightResult": {
+            "name": {
+                "value": "Sprint - HTC One (M9) with 32GB Memory Cell Phone - Gray (Sprint)",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8Ykt1w2feVCyim",
+        "_highlightResult": {
+            "name": {
+                "value": "Spotify - $60 Spotify Premium Music Gift Card",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4P",
+        "_highlightResult": {
+            "name": {
+                "value": "Spotify - $30 Spotify Premium Music Gift Card",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4O",
+        "_highlightResult": {
+            "name": {
+                "value": "Spotify - $10 Spotify Premium Music Gift Card",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4N",
+        "_highlightResult": {
+            "name": {
+                "value": "Sphero - Ollie Ultra Tires - Green",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4M",
+        "_highlightResult": {
+            "name": {
+                "value": "Sphero - Ollie Robot - Blue",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4L",
+        "_highlightResult": {
+            "name": {
+                "value": "Sphero - BB-8™ App-Enabled Droid™ by Sphero - White",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4K",
+        "_highlightResult": {
+            "name": {
+                "value": "Sphero - 2.0 Smart Toy - Multi",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4J",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Samsung Galaxy Tab S 8.4 - Pink/Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4I",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Samsung Galaxy Tab S 8.4 - Blue/Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4H",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Samsung Galaxy Tab S 8.4 - Black/Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4G",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Samsung Galaxy Tab S 10.5 - Blue/Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4F",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Samsung Galaxy Tab S 10.5 - Black/Slate Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4E",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Apple® iPad® mini, iPad mini 2 and iPad mini 3 - Red/Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4D",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Apple® iPad® mini, iPad mini 2 and iPad mini 3 - Gray/Black",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4C",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Apple® iPad® mini, iPad mini 2 and iPad mini 3 - Fuchsia Pink/Nickel Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4B",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Apple® iPad® mini, iPad mini 2 and iPad mini 3 - Blue/Blue",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }, {
+        "objectID": "-MZlYY8XRyeQYVLdxJ4A",
+        "_highlightResult": {
+            "name": {
+                "value": "Speck - StyleFolio Case for Apple® iPad® mini, iPad mini 2 and iPad mini 3 - Black/Slate Gray",
+                "matchLevel": "none",
+                "matchedWords": []
+            }
+        }
+    }],
+    "nbHits": 9996,
+    "page": 0,
+    "nbPages": 50,
+    "hitsPerPage": 20,
+    "facets": {
+        "rate": {
+            "1": 1670,
+            "2": 1683,
+            "3": 1632,
+            "4": 1668,
+            "5": 1632,
+            "6": 1711
+        },
+        "type": {
+            "Trend cases": 537,
+            "Ult protection cases": 289,
+            "Slim cases": 210,
+            "Wireless speakers": 187,
+            "Misc camera acces": 156,
+            "Ipad cases": 155,
+            "Non ipad cases": 149,
+            "Ink cartridges": 140,
+            "Earbud headphones": 132,
+            "Accessories": 120,
+            "Connectivity": 117,
+            "Business cases": 107,
+            "Monitoring devices": 99,
+            "Flash drives": 92,
+            "Action cam accy": 90,
+            "Digital cameras": 86,
+            "Cables/connectors": 81,
+            "Misc. housewares": 78,
+            "Alternative power": 77,
+            "On ear headphones": 77,
+            "Ink combo packs": 72,
+            "Notebooks": 72,
+            "Photo video bags": 67,
+            "Lenses core": 66,
+            "Mice": 66,
+            "Deck harness": 65,
+            "Dash kits": 63,
+            "Ht misc": 62,
+            "Multifunction print": 62,
+            "Networking": 62,
+            "Bluetooth keyboards": 60,
+            "Misc accy": 59,
+            "Battery cases": 58,
+            "Gc sales": 58,
+            "Alkaline": 57,
+            "Shave & groom": 57,
+            "Wireless in ears": 55,
+            "Miscellaneous pcare": 54,
+            "French door refrig": 53,
+            "Food": 52,
+            "Coffee/cappuccino": 51,
+            "Dishwasher": 50,
+            "Special order parts": 50,
+            "Chargers": 49,
+            "55\" + lcd": 48,
+            "Dslr cameras": 48,
+            "Novelty lic prod": 47,
+            "Gaming controllers": 46,
+            "Home automation": 46,
+            "Blank media": 44,
+            "Notebook accessories": 44,
+            "Smartwatches": 44,
+            "Video monitoring": 44,
+            "Speakers": 42,
+            "Otr microwaves": 40,
+            "Soundbars": 39,
+            "Wireless on/over ear": 39,
+            "At&t smartphone": 37,
+            "Camera batteries": 37,
+            "Flat screen monitor": 37,
+            "Keyboards": 37,
+            "Photo speciality": 36,
+            "Spr iphone handset": 36,
+            "Apple connected": 35,
+            "At&t iphone handset": 35,
+            "Mobile phone media": 35,
+            "So ink-toner": 34,
+            "Upright": 34,
+            "Amp accy": 33,
+            "Apple wifi": 33,
+            "Blenders": 32,
+            "So monitoring device": 32,
+            "Gas range": 31,
+            "Rechargeable": 31,
+            "Secure digital memor": 31,
+            "Traditional speakers": 31,
+            "Vzw iphone handset": 31,
+            "Water proof cases": 31,
+            "Alternative powr opp": 30,
+            "Dc filter": 30,
+            "So ent furn ups": 30,
+            "Toners": 30,
+            "Misc. computer acc.": 29,
+            "So iphone accy": 29,
+            "Surge/ups": 29,
+            "Electric range": 28,
+            "Ht power surge": 28,
+            "Humidifiers": 28,
+            "Internal hard drives": 28,
+            "Laser": 28,
+            "Media storage": 28,
+            "So camera accy": 28,
+            "Styluses": 28,
+            "Tv mounts": 28,
+            "Apple third accy": 27,
+            "Cd decks": 27,
+            "Fitness accessories": 27,
+            "Hand-held": 27,
+            "Ht remotes": 27,
+            "Misc accessories": 27
+        },
+        "brand": {
+            "Insignia™": 551,
+            "Samsung": 511,
+            "Apple": 386,
+            "HP": 259,
+            "Sony": 251,
+            "Metra": 221,
+            "LG": 217,
+            "Dynex™": 214,
+            "Canon": 177,
+            "Speck": 170,
+            "Logitech": 168,
+            "OtterBox": 159,
+            "Platinum": 131,
+            "Modal": 121,
+            "Frigidaire": 116,
+            "Microsoft": 111,
+            "PNY": 110,
+            "Epson": 107,
+            "kate spade new york": 103,
+            "Bose®": 102,
+            "GE": 93,
+            "SanDisk": 92,
+            "Belkin": 90,
+            "KitchenAid": 90,
+            "Rocketfish™": 83,
+            "Griffin Technology": 80,
+            "Brother": 78,
+            "Nikon": 77,
+            "Keurig": 72,
+            "Hamilton Beach": 71,
+            "Garmin": 70,
+            "Asus": 67,
+            "Beats by Dr. Dre": 67,
+            "Lenovo": 67,
+            "LifeProof": 66,
+            "mophie": 64,
+            "Isaac Mizrahi New York": 62,
+            "Energizer": 60,
+            "Best Buy GC": 58,
+            "NETGEAR": 57,
+            "Cuisinart": 54,
+            "Skullcandy": 53,
+            "AudioQuest": 52,
+            "Conair": 50,
+            "Monster": 50,
+            "Fitbit": 49,
+            "GoPro": 48,
+            "DigiPower": 47,
+            "Motorola": 47,
+            "Panasonic": 46,
+            "Case-Mate": 45,
+            "Lowepro": 45,
+            "Nanette Lepore": 44,
+            "Pioneer": 41,
+            "Incase": 40,
+            "Seagate": 40,
+            "Dell": 39,
+            "Amazon": 38,
+            "Bosch": 38,
+            "Case Logic": 38,
+            "Kicker": 38,
+            "JBL": 37,
+            "Memorex": 35,
+            "Philips Norelco": 35,
+            "Sharp": 35,
+            "JVC": 34,
+            "Honeywell": 32,
+            "Insignia": 31,
+            "Ballistic": 30,
+            "Bowers & Wilkins": 30,
+            "Dyson": 30,
+            "Rayovac": 30,
+            "Jensen": 29,
+            "Kenwood": 29,
+            "Hoover": 28,
+            "Philips Sonicare": 28,
+            "Razer": 28,
+            "Sanus": 28,
+            "Scosche": 27,
+            "Jam": 26,
+            "LeapFrog": 26,
+            "Oster": 26,
+            "BISSELL": 25,
+            "Contigo": 25,
+            "Fujifilm": 25,
+            "Lenmar": 25,
+            "Acer": 23,
+            "Definitive Technology": 23,
+            "Nostalgia Electrics": 23,
+            "Philips": 23,
+            "ADOPTED": 22,
+            "Bower": 22,
+            "Crane": 22,
+            "Native Union": 22,
+            "myCharge": 22,
+            "Duracell": 21,
+            "AT&T": 20,
+            "Corsair": 20,
+            "Klipsch": 20,
+            "Activision": 19
+        },
+        "price": {
+            "15": 16,
+            "25": 26,
+            "30": 15,
+            "49": 12,
+            "50": 18,
+            "200": 13,
+            "39.99": 651,
+            "19.99": 603,
+            "49.99": 524,
+            "29.99": 490,
+            "99.99": 433,
+            "59.99": 336,
+            "14.99": 317,
+            "9.99": 313,
+            "34.99": 297,
+            "79.99": 284,
+            "24.99": 262,
+            "199.99": 240,
+            "149.99": 226,
+            "69.99": 201,
+            "129.99": 190,
+            "249.99": 136,
+            "299.99": 136,
+            "12.99": 116,
+            "399.99": 116,
+            "44.99": 114,
+            "89.99": 113,
+            "179.99": 108,
+            "2.99": 107,
+            "999.99": 99,
+            "499.99": 92,
+            "799.99": 91,
+            "349.99": 90,
+            "899.99": 86,
+            "599.99": 85,
+            "119.99": 84,
+            "699.99": 75,
+            "7.99": 71,
+            "17.99": 67,
+            "16.99": 66,
+            "4.99": 62,
+            "449.99": 61,
+            "169.99": 54,
+            "13.99": 53,
+            "6.99": 51,
+            "229.99": 49,
+            "11.99": 47,
+            "1099.99": 46,
+            "139.99": 44,
+            "1199.99": 42,
+            "549.99": 42,
+            "159.99": 40,
+            "279.99": 40,
+            "10.99": 38,
+            "1299.99": 37,
+            "649.99": 36,
+            "109.99": 35,
+            "22.99": 35,
+            "21.99": 34,
+            "219.99": 34,
+            "54.99": 33,
+            "64.99": 31,
+            "1499.99": 29,
+            "329.99": 29,
+            "749.99": 29,
+            "8.99": 28,
+            "379.99": 25,
+            "1399.99": 24,
+            "1599.99": 24,
+            "1699.99": 24,
+            "189.99": 24,
+            "20.99": 24,
+            "699.98": 24,
+            "5.99": 23,
+            "849.99": 21,
+            "25.99": 20,
+            "26.99": 20,
+            "31.99": 19,
+            "74.99": 19,
+            "15.99": 18,
+            "1799.99": 18,
+            "2299.99": 17,
+            "32.99": 17,
+            "949.99": 17,
+            "529.99": 16,
+            "629.99": 16,
+            "1899.99": 15,
+            "27.99": 15,
+            "18.99": 14,
+            "2099.99": 14,
+            "259.99": 14,
+            "599.98": 14,
+            "239.99": 13,
+            "2499.99": 13,
+            "3.99": 13,
+            "319.99": 13,
+            "429.99": 13,
+            "1999.99": 12,
+            "41.99": 12,
+            "42.99": 12
+        },
+        "stock": {
+            "0": 515,
+            "1": 532,
+            "2": 500,
+            "3": 532,
+            "4": 458,
+            "5": 510,
+            "6": 526,
+            "7": 456,
+            "8": 503,
+            "9": 502,
+            "10": 104,
+            "11": 108,
+            "12": 103,
+            "13": 116,
+            "14": 120,
+            "15": 98,
+            "16": 105,
+            "17": 99,
+            "18": 101,
+            "19": 107,
+            "20": 97,
+            "21": 101,
+            "22": 79,
+            "23": 115,
+            "24": 104,
+            "25": 93,
+            "26": 87,
+            "27": 102,
+            "28": 100,
+            "29": 103,
+            "30": 99,
+            "31": 111,
+            "32": 100,
+            "33": 93,
+            "34": 104,
+            "35": 101,
+            "36": 106,
+            "37": 118,
+            "38": 93,
+            "39": 103,
+            "40": 89,
+            "41": 76,
+            "42": 95,
+            "43": 105,
+            "44": 104,
+            "45": 93,
+            "46": 85,
+            "47": 76,
+            "48": 92,
+            "49": 96,
+            "50": 92,
+            "51": 113,
+            "52": 123,
+            "53": 100,
+            "54": 86,
+            "55": 97,
+            "56": 88,
+            "57": 95,
+            "58": 93,
+            "59": 94
+        },
+        "discount": {
+            "0": 524,
+            "1": 493,
+            "2": 508,
+            "3": 462,
+            "4": 486,
+            "5": 531,
+            "6": 491,
+            "7": 511,
+            "8": 498,
+            "9": 480,
+            "10": 110,
+            "11": 104,
+            "12": 108,
+            "13": 98,
+            "14": 101,
+            "15": 107,
+            "16": 88,
+            "17": 109,
+            "18": 110,
+            "19": 107,
+            "20": 104,
+            "21": 96,
+            "22": 85,
+            "23": 111,
+            "24": 117,
+            "25": 115,
+            "26": 104,
+            "27": 98,
+            "28": 117,
+            "29": 92,
+            "30": 105,
+            "31": 103,
+            "32": 84,
+            "33": 89,
+            "34": 108,
+            "35": 99,
+            "36": 115,
+            "37": 113,
+            "38": 77,
+            "39": 105,
+            "40": 106,
+            "41": 85,
+            "42": 105,
+            "43": 103,
+            "44": 94,
+            "45": 90,
+            "46": 83,
+            "47": 96,
+            "48": 99,
+            "49": 102,
+            "50": 106,
+            "51": 96,
+            "52": 91,
+            "53": 94,
+            "54": 89,
+            "55": 106,
+            "56": 95,
+            "57": 111,
+            "58": 83,
+            "59": 99
+        },
+        "price_range": {
+            "1 - 50": 4918,
+            "50 - 100": 1615,
+            "100 - 200": 1159,
+            "500 - 2000": 1134,
+            "200 - 500": 1013,
+            "> 2000": 157
+        }
+    },
+    "facets_stats": {
+        "rate": {
+            "min": 1,
+            "max": 6,
+            "avg": 3,
+            "sum": 35030
+        },
+        "price": {
+            "min": 1.99,
+            "max": 4999.98,
+            "avg": 233.799,
+            "sum": 2337060
+        },
+        "stock": {
+            "min": 0,
+            "max": 59,
+            "avg": 19,
+            "sum": 191153
+        },
+        "discount": {
+            "min": 0,
+            "max": 59,
+            "avg": 19,
+            "sum": 193049
+        }
+    },
+    "exhaustiveFacetsCount": true,
+    "exhaustiveNbHits": true,
+    "query": "*",
+    "params": "query=*&page=0&hitsPerPage=20&facets=%5B%22brand%22%2C%22price%22%2C%22rate%22%2C%22stock%22%2C%22type%22%2C%22price_range%22%2C%22discount%22%5D&attributesToRetrieve=%5B%22pName%22%5D",
+    "processingTimeMS": 1
+}
+
+
+
+{
+    "hits": [{
+        "objectID": "-MZlYY8548yEeq1R5lgL",
+        "_highlightResult": {
+            "name": {
+                "value": "Sony - 420W Portable Party Speaker System with Apple® iPod® and <em>iPhone</em>® Dock - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYY7b7rJgblIE4AlA",
+        "_highlightResult": {
+            "name": {
+                "value": "Scosche - Corded FM Transmitter for Apple® iPod® and <em>iPhone</em>® - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYXwVfR5pk-Y5Yx_Z",
+        "_highlightResult": {
+            "name": {
+                "value": "Kenwood - iPod®/<em>iPhone</em>® A/V Cable for Decks with Rear USB Input - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYXvvk3KeirivLte4",
+        "_highlightResult": {
+            "name": {
+                "value": "iSimple - JamKast FM Transmitter for Select Apple® iPod® and <em>iPhone</em>® Models - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYXvPcrh3luLfxle1",
+        "_highlightResult": {
+            "name": {
+                "value": "Insignia™ - Docking Clock Radio for Apple® iPod® and <em>iPhone</em>® - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYXvNkLVUm7CWj0uJ",
+        "_highlightResult": {
+            "name": {
+                "value": "Insignia™ - CD Boombox with FM Radio and Apple® <em>iPhone</em>® and iPod® Dock - Black/Gray",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }, {
+        "objectID": "-MZlYXu-qkMHiDWfRLxY",
+        "_highlightResult": {
+            "name": {
+                "value": "Griffin Technology - iTrip Auto FM Transmitter for Apple® iPod® and <em>iPhone</em>® - Black",
+                "matchLevel": "full",
+                "fullyHighlighted": false,
+                "matchedWords": ["iphone"]
+            }
+        }
+    }],
+    "nbHits": 7,
+    "page": 0,
+    "nbPages": 1,
+    "hitsPerPage": 20,
+    "facets": {
+        "rate": {
+            "1": 1,
+            "2": 1,
+            "4": 3,
+            "5": 1,
+            "6": 1
+        },
+        "type": {
+            "Bluetooh & mp3 accy": 2,
+            "Traditional speakers": 2,
+            "Accessories": 1,
+            "Connectivity": 1,
+            "Executive shelf": 1
+        },
+        "brand": {
+            "Insignia™": 2,
+            "Griffin Technology": 1,
+            "Kenwood": 1,
+            "Scosche": 1,
+            "Sony": 1,
+            "iSimple": 1
+        },
+        "price": {
+            "29.99": 1,
+            "34.99": 1,
+            "349.99": 1,
+            "49.99": 1,
+            "64.99": 1,
+            "74.99": 1,
+            "79.99": 1
+        },
+        "stock": {
+            "2": 1,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "26": 1,
+            "34": 1,
+            "46": 1
+        },
+        "discount": {
+            "0": 1,
+            "2": 1,
+            "5": 2,
+            "11": 1,
+            "44": 1,
+            "57": 1
+        },
+        "price_range": {
+            "1 - 50": 3,
+            "50 - 100": 3,
+            "200 - 500": 1
+        }
+    },
+    "facets_stats": {
+        "rate": {
+            "min": 1,
+            "max": 6,
+            "avg": 3,
+            "sum": 26
+        },
+        "price": {
+            "min": 29.99,
+            "max": 349.99,
+            "avg": 97.8471,
+            "sum": 684.93
+        },
+        "stock": {
+            "min": 2,
+            "max": 46,
+            "avg": 18,
+            "sum": 130
+        },
+        "discount": {
+            "min": 0,
+            "max": 57,
+            "avg": 17,
+            "sum": 124
+        }
+    },
+    "exhaustiveFacetsCount": true,
+    "exhaustiveNbHits": true,
+    "query": "iphone",
+    "params": "query=iphone&filters=cate%3AAudio&page=0&hitsPerPage=20&facets=%5B%22brand%22%2C%22price%22%2C%22rate%22%2C%22stock%22%2C%22type%22%2C%22price_range%22%2C%22discount%22%5D&attributesToRetrieve=%5B%22pName%22%5D",
+    "processingTimeMS": 1
+}

@@ -1,0 +1,172 @@
+body {
+  margin: 0px;
+  font-family: Segoe UI;
+}
+
+.phone-chat-dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
+  overflow-y: auto;
+  background-color: #eeeeee;
+  display: none;
+}
+
+.chat-head-phone {
+  display: flex;
+  position: sticky;
+  background-color: green;
+  color: white;
+  padding: 5px 0px;
+  width: 100%;
+  z-index: 30;
+  top: 0;
+}
+
+.chat-head-phone img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.chat-close-phone {
+  width: 25px;
+  height: 25px;
+  margin: auto 0px auto 2px;
+}
+
+.chat-u-img-phone {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.chat-head-phone div {
+  margin: auto 0px auto 4px;
+}
+
+.chat-head-phone div b {
+  margin-bottom: 3px;
+  display: block;
+}
+
+.chat-head-phone div small {
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+}
+
+.chat-opt-phone {
+  width: 25px;
+  height: 25px;
+  margin: auto 0px auto auto;
+}
+
+.opt-con-phone {
+  width: 190px;
+  background-color: white;
+  padding: 6px 0px;
+  box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
+  position: fixed;
+  margin-top: 4px;
+  right: 5px;
+  display: none;
+  user-select: none;
+}
+
+.opt-con-phone div {
+  padding: 12px;
+}
+
+.opt-con-phone div:active {
+  background-color: #e1e1e1;
+}
+
+.chat-con-phone {
+  background-color: #eeeeee;
+}
+
+.message-con-phone {
+  background-color: green;
+  border-radius: 10px;
+  padding: 0px 7px 7px 7px;
+  max-width: 65%;
+  margin: 10px 0px;
+}
+
+.message-con-phone b {
+  padding: 3px 0px 7px 0px;
+  display: block;
+}
+
+.message-con-phone video, .message-con-phone img, .message-con-phone audio{
+  width: 100%;
+}
+
+.message-con-phone small {
+  display: block;
+  margin-top: 7px;
+  text-align: right;
+  font-size: 10px;
+}
+
+#you-mes-phone {
+  background-color: white;
+  box-shadow: 1px 1px 2px grey, -1px -1px 2px grey;
+  margin-left: 10px;
+}
+
+#my-mes-phone {
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #007400;
+  color: white;
+}
+
+.chat-butt-phone {
+  bottom: 0px;
+  position: sticky;
+  background-color: #d4d4d4;
+}
+
+.chat-butt-flex-phone {
+  display: flex;
+  padding: 5px 0px;
+}
+
+.chat-butt-flex-phone label{
+  margin: auto 7px;
+}
+.media-btn {
+  width: 50px;
+  height: 50px;
+}
+
+.chat-input-phone {
+  width: 100%;
+  max-width: calc(100% - 128px);
+  max-height: 200px;
+  overflow-y: scroll;
+  font-size: 20px;
+  border: 1px solid grey;
+  margin: auto 0px;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+  background-color: white;
+  outline: none;
+}
+
+.chat-send-btn-phone {
+  padding: 10px 8px 6px 10px;
+  margin: auto 7px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.chat-send-btn-phone img {
+  width: 30px;
+  height: 30px;
+}

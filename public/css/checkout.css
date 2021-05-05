@@ -1,0 +1,92 @@
+.delivery-info-con {
+    margin-left: 15px;
+}
+.cart-item-spin-loader{
+    display: block;
+    margin: 15vh auto;
+    height: 10px;
+}
+.checkout-splitter{
+    background-color: rgb(187, 187, 187);
+    display: block;
+    width: 100%;
+    padding: 7px 0px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.info-cont {
+    border-top: 1px solid rgb(228, 228, 228);
+    margin-top: 7px;
+}
+
+.info-cont b {
+    text-transform: capitalize;
+    text-indent: 5px;
+    display: block;
+    font-size: 15px;
+    padding: 7px 0px;
+}
+.info-cont label{
+    font-size: 14px;
+}
+
+.info-cont div {
+    padding: 10px 0px;
+}
+
+.info-cont input {
+    outline: none;
+}
+
+#postal-code-input {
+    padding: 7px;
+    width: 93%;
+    border: none;
+    text-indent: 10px;
+    font-size: 15px;
+}
+
+.delivery-info-con select {
+    display: block;
+    padding: 10px;
+    width: 95%;
+    margin: 13px auto 0px auto;
+}
+
+.delivery-info-con textarea {
+    margin: 13px 0px 0px 10px;
+    width: 70%;
+    max-width: 93%;
+    padding: 7px;
+    font-size: 15px;
+}
+.cart-img-con{
+    position: relative;
+}
+.delivery-cost{
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.item-cart-count{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 3px 4px;
+    top: 0px;
+}
+.ierror{
+    color: red;
+    font-size: 12px;
+    margin: 5px 0px 0px 15px;
+    display: none;
+}
+#checkout-btn-pc{
+    display: block;
+    margin-top: 30px;
+    margin-right: 13px;
+}

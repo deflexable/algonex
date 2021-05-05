@@ -1,0 +1,529 @@
+{
+  "businessIndex": {
+    ".read": true,
+    ".write": false
+  },
+  "businessDes": {
+    "$businessId": {
+      ".read": true,
+      ".write": "auth != null && (!data.exists() || newData.exists()) && root.child('businessInfo/'+$businessId+'/user').val() == auth.uid",
+      ".validate": "newData.val().length >= 60 && newData.val().length <= 3000 && newData.isString()"
+    }
+  },
+  "businessInfo": {
+    "$businessId": {
+      "address": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 30 && newData.isString() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "bisName": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 70 && newData.isString() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "date": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val() == now && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "sDes": {
+        ".read": true,
+        ".write": false,
+        ".validate": true
+      },
+      "email": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 30 && newData.isString() && newData.val().contains('@') && newData.val().contains('.') && !newData.val().contains(' ') && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "cate": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 30 && newData.isString() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "properties": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists()"
+      },
+      "phone": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 9 && newData.val().length <= 16 && (newData.isNumber() || newData.val().beginsWith('+')) && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "state": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "root.child('deliveryRate/'+newData.val().toLowerCase()).exists() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "localGov": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 3 && newData.val().length <= 70 && newData.isString() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "type": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "(newData.val() == 'sole' || newData.val() == 'llc' || newData.val() == 'c' || newData.val() == 'p') && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "user": {
+        ".read": true,
+        ".write": "auth != null && auth.uid == newData.val() && (!data.exists() && newData.exists())",
+        ".validate": "root.child('Users/'+newData.val()).exists() && (newData.parent().hasChildren(['address', 'bisName', 'date', 'email', 'localGov', 'phone', 'state', 'type', 'user', 'properties']) || data.parent().exists())"
+      },
+      "website": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 300 && newData.isString() && newData.val().contains('.') && !newData.val().contains(' ')"
+      },
+      "facebook": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 300 && newData.isString() && newData.val().contains('.') && !newData.val().contains(' ')"
+      },
+      "twitter": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 300 && newData.isString() && newData.val().contains('.') && !newData.val().contains(' ')"
+      },
+      "instagram": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 300 && newData.isString() && newData.val().contains('.') && !newData.val().contains(' ')"
+      },
+      "youtube": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 300 && newData.isString() && newData.val().contains('.') && !newData.val().contains(' ')"
+      }
+    }
+  },
+  "businessList": {
+    "$bisCate": {
+      "$businessId": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() || newData.exists()) && root.child('businessInfo/'+$businessId+'/user').val() == auth.uid && root.child('businessIndex/'+$bisCate).exists()",
+        ".validate": "newData.val() == now"
+      }
+    }
+  },
+  "cart": {
+    "$userId": {
+      "$productId": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": "$userId == auth.uid && auth != null",
+        ".validate": "root.child('Products/'+$productId).exists() && root.child('Products/'+$productId+'/status').val().beginsWith('approved') && root.child('vendors/'+root.child('Products/'+$productId+'/sellerId').val()+'/status').val().beginsWith('approved') && newData.isNumber()"
+      }
+    }
+  },
+  "wishlist": {
+    "$userId": {
+      "$productId": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": "$userId == auth.uid && auth != null",
+        ".validate": "root.child('Products/'+$productId).exists() && root.child('Products/'+$productId+'/status').val().beginsWith('approved') && root.child('vendors/'+root.child('Products/'+$productId+'/sellerId').val()+'/status').val() == 'approved' && newData.val() == now"
+      }
+    }
+  },
+  "deliveryRate": {
+    ".read": true,
+    ".write": false
+  },
+  "helpCenter": {
+    ".read": true,
+    ".write": false
+  },
+  "forumHomepage": {
+    ".read": true,
+    ".write": false
+  },
+  "forumCate": {
+    ".read": true,
+    ".write": false
+  },
+  "ForumPosts": {
+    "$postId": {
+      "topic": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 25 && newData.val().length <= 90 && newData.isString() && (newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "cate": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "root.child('forumCate/'+newData.val().replace('/', '<s>')).exists() && newData.isString() && (newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "subCate": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "root.child('forumSubCate/'+newData.val().replace('/', '<s>')).exists() && newData.isString() && (newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "date": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val() == now && (newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "des": {
+        ".read": true,
+        ".write": "auth != null && (!data.exists() && newData.exists()) && (data.parent().child('user').val() == auth.uid || newData.parent().child('user').val() == auth.uid)",
+        ".validate": "newData.val().length >= 70 && newData.val().length <= 200 && newData.isString() && (newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "user": {
+        ".read": true,
+        ".write": "auth != null && auth.uid == newData.val() && (!data.exists() && newData.exists())",
+        ".validate": "(newData.parent().hasChildren(['cate', 'subCate', 'des', 'date', 'topic', 'user']) || data.parent().exists())"
+      },
+      "views": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.isNumber()"
+      },
+      "likes": {
+        ".read": true,
+        ".write": false,
+        ".validate": "newData.isNumber()"
+      },
+      "comments": {
+        ".read": true,
+        ".write": false,
+        ".validate": "newData.isNumber()"
+      }
+    }
+  },
+  "ForumPostComment": {
+    "$postId": {
+      "$commentId": {
+        "comment": {
+          ".read": true,
+          ".write": "auth != null && auth.uid == newData.parent().child('user').val()",
+          ".validate": "newData.length <= 10000 && root.child('ForumPosts/'+$postId).exists()"
+        }
+      }
+    }
+  },
+  "ForumPostLikes": {
+    "$postId": {
+      "$userId": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null",
+        ".validate": "root.child('Users/'+$userId).exists() && root.child('ForumPosts/'+$postId).exists() && newData.val() == now"
+      }
+    }
+  },
+  "ForumPostDes": {
+    "$postRef": {
+      ".read": true,
+      ".write": "auth != null && (!data.exists() || newData.exists()) && (root.child('ForumPosts/'+$postRef+'/user').val() == auth.uid || newData.parent().parent().child('ForumPosts/'+$postRef+'/user').val() == auth.uid)",
+      ".validate": "newData.isString() && newData.val().length > 85 && newData.val().length < 30001"
+    }
+  },
+  "Users": {
+    "$userId": {
+      "followers": {
+        ".read": true,
+        ".write": false,
+        ".validate": "newData.isNumber()"
+      },
+      "following": {
+        ".read": true,
+        ".write": false,
+        ".validate": "newData.isNumber()"
+      },
+      "balance": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": false
+      },
+      "name": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().replace(' ', '').length >= 3 && newData.val().replace(' ', '').length <= 40 && newData.isString()"
+      },
+      "phone": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 9 && newData.val().length <= 16 && (newData.isNumber() || newData.val().beginsWith('+'))"
+      },
+      "gender": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val() == 'male' || newData.val() == 'female'"
+      },
+      "email": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().contains('@') && newData.val().length <= 150 && !newData.val().contains(' ')"
+      },
+      "status": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val() == 'online' || newData.val() == now"
+      },
+      "image": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (newData.val()+''.beginsWith('https://firebasestorage.googleapis.com') || !newData.val().exists())"
+      },
+      "work": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.isString() && root.child('businessIndex/'+newData.val()).exists()"
+      },
+      "isAdmin": {
+        ".read": true,
+        ".write": false,
+        ".validate": "newData.val().isBoolean()"
+      }
+    }
+  },
+  "UsersMetaData": {
+    "$userId": {
+      "facebook": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 15 && newData.val().length <= 90 && newData.contains('.') && !newData.contains(' ')"
+      },
+      "instagram": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 15 && newData.val().length <= 90 && newData.contains('.') && !newData.contains(' ')"
+      },
+      "twitter": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 15 && newData.val().length <= 90 && newData.contains('.') && !newData.contains(' ')"
+      },
+      "whatsapp": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 9 && newData.val().length <= 18 && !newData.contains(' ') && (newData.isNumber() || newData.val().beginsWith('+'))"
+      },
+      "youtube": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 15 && newData.val().length <= 90 && newData.contains('.') && !newData.contains(' ')"
+      }
+    }
+  },
+  "userFollowers": {
+    "$userId": {
+      "$followedUid": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null",
+        ".validate": "root.child('Users/'+$followedUid).exists() && root.child('Users/'+$userId).exists() && newData.val() == now"
+      }
+    }
+  },
+  "userReport": {
+
+  },
+  "mainCategoryImg": {
+
+  },
+  "transactionInfo": {
+
+  },
+  "transactionList": {
+
+  },
+  "ForumPosts": {
+
+  },
+  "ForumPosts": {
+
+  },
+  "ForumPosts": {
+
+  },
+  "vPagerImg": {
+    ".read": true,
+    ".write": false
+  },
+  "vendorTicket": {
+    "$userId": {
+      ".read": "$userId == auth.uid && auth != null",
+      ".write": false
+    }
+  },
+  "vendors": {
+    "$userId": {
+      ".indexOn": ["fName", "date", "phone", "email", "storeName", "status"],
+      "fName": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 30 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "lName": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 30 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "date": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val() == now && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "dob": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val().length >= 2 && newData.val().length <= 20 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists()) && newData.val().matches(/^(19|20)[3-9][0-9][-\\/. ](0[1-9]|1[012])[-\\/. ](0[1-9]|[12][0-9]|3[01])$/)"
+      },
+      "phone": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 9 && newData.val().length <= 16 && (newData.isNumber() || newData.val().beginsWith('+')) && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "phone2": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 9 && newData.val().length <= 16 && (newData.isNumber() || newData.val().beginsWith('+')) && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "storeName": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length >= 7 && newData.val().length <= 90 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "storeDes": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().replace(' ', '').length >= 20 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "gender": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists()) && (newData.val() == 'male' || newData.val() == 'female')",
+        ".validate": "(newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "email": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().contains('@') && !newData.val().contains(' ') && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "accountNo": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "(newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "sellList": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "address": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().replace(' ', '').length >= 15 && newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "state": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "root.child('deliveryRate/'+newData.val().toLowerCase()).exists() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "localGovt": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.isString() && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "status": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val() == 'pending' && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "tin": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length <= 50 && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "regNo": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().length <= 40 && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "img": {
+        ".read": true,
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() || newData.exists())",
+        ".validate": "newData.val().beginsWith('https://firebasestorage.googleapis.com') && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      },
+      "document": {
+        ".read": "$userId == auth.uid && auth != null",
+        ".write": "$userId == auth.uid && auth != null && (!data.exists() && newData.exists())",
+        ".validate": "newData.val().beginsWith('https://firebasestorage.googleapis.com') && (newData.parent().hasChildren(['fName', 'lName', 'date', 'dob', 'phone', 'storeName', 'storeDes', 'gender', 'email', 'address', 'state', 'localGovt', 'status', 'img', 'document']) || data.parent().exists())"
+      }
+    }
+  },
+  "groupChat": {
+    "$groupkey": {
+      "admin": {
+        ".read": "data.parent().child('participants/'+auth.uid).exists() && auth != null",
+        ".write": "$groupkey.beginsWith('groupFlag') && (data.child(auth.uid).exists() || !data.exists()) && (data.parent().exists() || newData.parent().hasChildren(['name', 'participants', 'createdOn', 'createdBy', 'admin']) ) && (!newData.exists() || newData.val() == now) && auth != null",
+        ".validate": true
+      },
+      "request": {
+        ".read": true,
+        "$requestUid": {
+          ".write": "auth!=null && root.child('Users/'+$requestUid+'/name').exists() && $groupkey.beginsWith('groupFlag') && (data.parent().child('admin/'+auth.uid).exists() || $requestUid == auth.uid) && (data.parent().data.exists() || (!data.parent().data.exists() && data.parent().newData.exists() && data.parent().newData.hasChildren(['name', 'participants', 'createdOn', 'createdBy', 'admin'])) ) && (!newData.exists() || newData.val() == now)"
+        }
+      },
+      "name": {
+        ".read": true,
+        ".write": "data.parent().child('admin/'+auth.uid).exists() || !data.parent().child('admin').exists() && $groupkey.beginsWith('groupFlag')"
+      },
+      "img": {
+        ".read": "!data.parent().child('private').exists() || data.parent().child('participants/'+auth.uid).exists()",
+        ".write": "data.parent().child('admin/'+auth.uid).exists() || !data.parent().child('admin').exists() && $groupkey.beginsWith('groupFlag')"
+      },
+      "participants": {
+        ".read": "data.child(auth.uid).exists()",
+        "$userId": {
+          ".write": "(!root.child('groupChat/' +$groupkey+'/private').exists() || root.child('groupChat/'+$groupkey+'/admin/'+auth.uid).exists()) && ( (!newData.exists() && auth.uid == $userId) || (!newData.exists() && root.child('groupChat/'+$groupkey+'/admin/'+auth.uid).exists()) || newData.exists()) && root.child('Users/'+$userId+'/name').exists() && root.child('Users/'+$userId+'/image').exists() && (!data.exists() || !newData.exists()) && $groupkey.beginsWith('groupFlag')",
+          ".validate": "newData.val() == now"
+        }
+      },
+      "$other": {
+        ".validate": false
+      }
+    }
+  },
+  "chats": {
+
+  },
+  "message": {
+    "$userId": {
+      "$key": {
+        "lastDate": {
+          ".write": "((root.child('groupChat/'+$key).exists() && root.child('Users/'+$userId+'/name').exists() && ( (root.child('groupChat/'+$key+'/admin/'+auth.uid).exists() || $userId == auth.uid) || (root.child('groupChat/'+$key+'/participants/'+auth.uid).exists() && newData.exists() && data.exists()) )) || (root.child('Users/'+$key+'/name').exists() && root.child('Users/'+$userId+'/name').exists() && ($userId == auth.uid || $key == auth.uid))) && auth != null",
+          ".validate": "newData.val() == now || !newData.exists()"
+        },
+        "messageId": {
+          ".write": "root.child('Users/'+$key+'/name').exists() && root.child('Users/'+$userId+'/name').exists() && ($userId == auth.uid || $key == auth.uid) && ((newData.val() == $userId+$key || newData.val() == $key+$userId) || !newData.exists()) && auth != null"
+        },
+        "seen": {
+          ".write": "((root.child('groupChat/'+$key).exists() && root.child('Users/'+$userId+'/name').exists() && ( (root.child('groupChat/'+$key+'/admin/'+auth.uid).exists() || $userId == auth.uid) || (root.child('groupChat/'+$key+'/participants/'+auth.uid).exists() && newData.exists() && data.exists()) )) || (root.child('Users/'+$key+'/name').exists() && root.child('Users/'+$userId+'/name').exists() && ($userId == auth.uid || $key == auth.uid))) && auth != null",
+          ".validate": "newData.val().isNumber()"
+        }
+      }
+    }
+  },
+  "Products": {
+    "$key": {
+      "cate": {
+        /*writing this for all parmanent nodes*/
+        ".read": "true",
+        ".write": "newData.isString() && !data.exists() && newData.exists() && root.child('Users/'+auth.uid+'/sellerStatus').val() == 'approved' && auth.uid == data.parent().child('sellerId').val() == auth.uid && auth!=null"
+      },
+      "sellerId": {
+        ".write": "newData.val() == auth.uid"
+      },
+      "discount": {
+        ".write": "(!newData.exists() || newData.isNumber()) && newData.val() <= 0 && newData.val() >= 100"
+      },
+      "stock": {
+        ".write": "newData.exists() && newData.isNumber() && newData.val() <= 0"
+      },
+      "date": {
+        ".write": "newData.val() == now"
+      },
+      "$other": {
+        ".validate": false
+      }
+    }
+  }
+}

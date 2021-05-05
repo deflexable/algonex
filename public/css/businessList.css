@@ -1,0 +1,478 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-page-packer {
+    margin: 0px 0px 20px 0px;
+}
+
+.main-page-spinner {
+    width: 30%;
+    display: block;
+    margin: 20vh auto;
+    max-width: 150px;
+}
+
+.filter-phone-con {
+    background-color: rgb(213, 213, 213);
+    padding: 10px 0px 10px 6px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.filter-phone-con button {
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    padding: 1px 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.term-note {
+    background-color: #b6f6ff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 30px auto 30px auto;
+    padding: 10px 0px;
+}
+
+.bis-filter-title {
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+.bis-filter-title b {
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+    margin: auto 0px auto 10px;
+}
+
+.bis-filter-title img {
+    width: 23px;
+    margin: auto 10px auto auto;
+    flex-shrink: 0;
+}
+
+.term-note img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    flex-shrink: 0;
+}
+
+.term-note b {
+    font-size: 15px;
+    color: darkblue;
+}
+
+.term-note div {
+    font-size: 13px;
+    color: #0000c1;
+    line-height: 1.4em;
+    margin-right: 10px;
+}
+
+.side-bar-filter {
+    display: none;
+}
+
+.side-bar-filter select {
+    width: 95%;
+    padding: 8px 0px 8px 5px;
+    margin: 17px auto;
+    display: block;
+    outline: none;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.geo-query-con {
+    display: none;
+}
+
+.geo-query-temp-img {
+    display: block;
+    width: 50%;
+    max-width: 200px;
+    margin: 30px auto;
+}
+
+.filter-bord-cont {
+    border: 1px solid rgb(167, 167, 167);
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 7px;
+}
+
+.filter-bord-cont b {
+    font-size: 15px;
+    display: block;
+    padding: 3px 0px 7px 5px;
+}
+
+.filter-range-cont {
+    padding: 5px 0px 10px 0px;
+    margin-left: 15px;
+}
+
+.filter-range-cont .filter-range-input-text {
+    width: 40px;
+}
+
+#geo-range-slider {
+    max-width: 47%;
+    vertical-align: middle;
+}
+
+.geo-cord-filt-cont {
+    display: flex;
+}
+
+.geo-cord-filt-cont div {
+    max-width: 70%;
+}
+
+.geo-cord-filt-cont div input {
+    display: block;
+    margin: 8px 13px;
+    width: 90%;
+}
+
+.geo-cord-filt-cont button {
+    margin: auto;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    padding: 2px 7px;
+}
+
+#filter-search-btn {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 6px 15px;
+    box-shadow: 2px 2px 4px grey;
+    user-select: none;
+}
+
+
+#filter-search-btn:active {
+    color: blue;
+    background-color: white;
+}
+
+.bis-overview-con {
+    padding: 20px 0px;
+    text-align: center;
+    display: none;
+}
+
+.bis-overview-con img {
+    width: 40%;
+    max-width: 250px;
+}
+
+.bis-overview-con div {
+    color: rgb(109, 109, 109);
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 7px;
+    text-transform: capitalize;
+}
+
+.bis-overview-con span {
+    font-size: 14px;
+    margin-top: 3px;
+    display: block;
+}
+
+.result-found-txt {
+    font-weight: bolder;
+    color: grey;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 15px 0px 10px 0px;
+    margin-left: 13px;
+}
+
+.no-record-found-temp {
+    display: none;
+    margin: 15vh auto;
+}
+
+.no-record-found-temp img {
+    width: 55%;
+    max-width: 300px;
+    display: block;
+    margin: 0px auto;
+}
+
+.no-record-found-temp b {
+    font-size: 23px;
+    color: grey;
+    display: block;
+    text-align: center;
+}
+
+.user-bis-cont {
+    margin-top: 7px;
+}
+
+.user-bis-flex {
+    display: flex;
+    width: 100%;
+    padding: 7px 0px;
+    color: unset;
+    text-decoration: none;
+    outline: none;
+}
+
+.bis-pro-con {
+    width: 25%;
+    height: 100%;
+    max-width: 150px;
+    margin: 0px 10px;
+    flex-shrink: 0;
+}
+
+.user-bis-logo {
+    width: 100%;
+}
+
+.star-rate-con {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.star-rate-con img {
+    width: 15px;
+}
+
+.bis-followers {
+    display: flex;
+    margin-top: 3px;
+}
+
+.bis-followers img {
+    width: 27px;
+    margin: auto 0px;
+}
+
+.bis-followers div {
+    font-weight: 600;
+    font-size: 14px;
+    margin: auto 0px auto 7px;
+}
+
+.bis-info-con {}
+
+.bis-name {
+    display: block;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.bis-location {
+    display: flex;
+    width: 100%;
+    padding: 3px 0px;
+    margin-top: 3px;
+}
+
+.bis-location img {
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.bis-location div {
+    font-size: 14px;
+    margin: auto 0px auto 7px;
+    font-weight: bold;
+    color: grey;
+}
+
+.bis-distance {
+    border: 2px solid red;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 2px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    color: brown;
+    background-color: rgb(255, 244, 223);
+}
+
+.bis-des {
+    word-break: break-all;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
+.bis-opt-table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0px;
+}
+
+.bis-opt-table td {
+    padding: 7px 0px;
+    user-select: none;
+    outline: none;
+}
+
+.bis-opt-table tr td:first-child {
+    background-color: green;
+}
+
+.bis-opt-table tr td:last-child {
+    background-color: crimson;
+}
+
+.bis-opt-table td a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+.bis-opt-table td img {
+    width: 25px;
+    margin: auto 0px;
+}
+
+.bis-opt-table td b {
+    margin: auto 0px auto 7px;
+}
+
+.pg-box {
+    padding: 20px 0px;
+    width: 90%;
+    margin: 27px auto;
+    line-height: 53px;
+}
+
+.pg-box a {
+    padding: 8px 12px;
+    box-shadow: 2px 2px 4px grey;
+    background-color: orange;
+    margin-left: 10px;
+    user-select: none;
+    color: unset;
+    font-weight: 600;
+    text-decoration: none;
+    outline: none;
+}
+
+@media only screen and (min-width: 470px) {}
+
+@media only screen and (min-width: 650px) {
+    .result-found-txt {
+        font-size: 23px;
+        margin-left: 12px;
+    }
+
+    .bis-name {
+        font-size: 23px;
+        font-weight: bolder;
+    }
+
+    .bis-location div {
+        font-size: 16px;
+    }
+
+    .bis-followers div {
+        font-size: 16px;
+    }
+
+    #filter-search-btn {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 730px) {
+    .index-page-packer {
+        width: 85%;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 7px grey, -2px -2px 7px gray;
+    }
+
+    .no-record-found-temp b {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .bis-filter-title img {
+        display: none;
+    }
+
+    .filter-phone-con {
+        display: none;
+    }
+
+    .result-found-txt {
+        font-size: 25px;
+        margin-left: 16px;
+    }
+
+    .bis-des {
+        font-size: 17px;
+    }
+
+    .con-flexer {
+        display: flex;
+        max-width: 1270px;
+    }
+
+    .con-flexer>* {
+        flex-shrink: 0;
+    }
+
+    .side-bar-filter {
+        width: 23%;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        box-shadow: 2px 2px 4px grey;
+        min-height: 91vh;
+        display: block;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+
+    .index-packer {
+        width: 67%;
+        background-color: white;
+        margin: 15px auto;
+    }
+
+    .index-page-packer {
+        padding: 15px 3%;
+        width: unset;
+    }
+
+    .result-found-txt {
+        font-size: 27px;
+    }
+
+    .user-bis-logo {
+        margin: 0px 13px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .index-packer {
+        padding: 23px 3%;
+    }
+}

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="green" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/multicart.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+
+    <style id="proStyle">
+        .circle-progress-value {
+            stroke-width: 50px;
+            stroke: blue;
+        }
+
+        .circle-progress-circle {
+            stroke-width: 30px;
+            stroke: orange;
+            fill: orange;
+        }
+
+        .circle-progress-text {
+            fill: white;
+            font-weight: 600;
+        }
+    </style>
+
+    <div class="header-pack">
+
+        <div class="header">
+
+            <div class="header-top">
+
+                <div class="head-bar">
+                    <img src="img/menu.svg" id="hamb" />
+                    <div class="head-bar-count">
+                        47
+                    </div>
+                </div>
+
+                <a href="index.html"><img src="img/logoName.png" id="logo" /></a>
+
+                <div>
+                    <div class="pc-search-div">
+                        <form id="pc-prod-search-form-head">
+                            <input type="search" placeholder="Search for products" onfocus="this.select()" />
+                        </form>
+                        <img src="img/microphone.svg" id="pc-prod-search-icon-img">
+                    </div>
+                    <div class="pc-search-hint">
+
+                    </div>
+                </div>
+
+                <div class="end-head-con">
+
+                    <div class="drop-con drop-first">
+
+                        <div class="drop-view" id="product-cate-drop-wide-hover">
+                            <img src="img/gift-box.svg">
+                            <b>Products</b>
+                        </div>
+
+                        <div class="product-cate-drop-wide">
+
+                        </div>
+                    </div>
+
+                    <div class="drop-con">
+
+                        <div style="position: relative;">
+                            <div class="drop-view">
+                                <img src="img/user.svg">
+                                <b>user</b>
+                            </div>
+
+                            <div class="user-drop-count">
+                            </div>
+                        </div>
+
+                        <div class="drop-list" id="mDrop">
+                            <a href="profile.html">my profile</a>
+                            <a>notifications <notia></notia></a>
+                            <a>wallet <notia></notia></a>
+                            <a href="transactionlist.html">Transaction history</a>
+                            <a>wishlist</a>
+                            <a>settings</a>
+                            <a>log out</a>
+                        </div>
+
+                    </div>
+
+                    <div class="drop-con drop-end">
+
+                        <div class="drop-view">
+                            <img src="img/star.svg">
+                            <b>Services</b>
+                        </div>
+
+                        <div style="position: relative;">
+                            <div class="product-cate-drop-wide-sec">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="end-one noti-div headIcon" id="newChatIndicatorTopHeader">
+                        <div>
+
+                        </div>
+                        <img src="img/chat.svg" />
+                    </div>
+
+                    <div class="end-one cart-ic headIcon" id="checkCartBtnHead">
+                        <div>
+
+                        </div>
+                        <img src="img/cart.svg" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pho-search-div">
+                <form id="prod-form-search-phone-head">
+                    <input type="search" placeholder="Search for products" onfocus="this.select()">
+                </form>
+                <img src="img/microphone.svg" alt="search-button" id="phone-prod-search-icon-img">
+            </div>
+
+        </div>
+
+        <div class="phone-search-hint">
+
+        </div>
+
+    </div>
+
+    <div class="drop-list drop-list-outside" id="lDrop">
+        <a style="display: none;" class="vendor-pc-decision-nav-link">Become a vendor<notia></notia> </a>
+        <a id="service-head-pc-button">Products Categories</a>
+        <a href="businessindex.html">Discover businesses</a>
+        <a href="jobIndex.html">find jobs</a>
+        <a href="businessUpload.html">share your business</a>
+        <a href="jobUpload.html">offer a job</a>
+        <a href="airtime.html">airtime</a>
+        <a href="electricity.html">electricity</a>
+        <a href="tv.html">television</a>
+        <a href="insurance.html">motor insurance</a>
+        <a href="waec.html">waec</a>
+        <a href="helpcenter.html">help ?</a>
+    </div>
+
+    <div class="nav-con">
+
+        <div class="nav-cont">
+
+            <div class="nav-temp">
+                <img src="img/progressDots.gif" class="profile-nav" />
+                <span>
+                    <img src="img/wallet.svg" alt="">
+                    <i>Loading...</i>
+                </span>
+
+                <div>
+                    <b>
+                        <sk
+                            style="background-color: rgb(255, 234, 234); width: 70%; padding: 10px 0px; border-radius: 10px;">
+                        </sk>
+                    </b>
+                    <small>
+                        <sk
+                            style="background-color: rgb(225, 255, 224); width: 40%; padding: 10px 0px; border-radius: 10px;">
+                        </sk>
+                    </small>
+                </div>
+            </div>
+
+            <ul class="main-nav-global-ul">
+
+                <li style="display: none;">
+                    <img src="img/vendor.svg" />
+                    <span>Start Selling</span>
+                    <nat></nat>
+                </li>
+                <li>
+                    <img src="img/dairy-products.svg" />
+                    <span>Products Categories</span>
+                </li>
+                <li>
+                    <img src="img/transfer.svg" />
+                    <span>Transaction history</span>
+                    <nat></nat>
+                </li>
+                <li>
+                    <img src="img/love.svg" />
+                    <span>My Wishlist</span>
+                    <nat></nat>
+                </li>
+                <li>
+                    <img src="img/notificationblack.svg" />
+                    <span>Notification</span>
+                    <nat></nat>
+                </li>
+                <li>
+                    <img src="img/user.png" />
+                    <span>My Profile</span>
+                </li>
+                <li>
+                    <img src="img/employee.svg" />
+                    <span>Jobs</span>
+                </li>
+                <li>
+                    <img src="img/suitcase.svg" />
+                    <span>Businesses</span>
+                </li>
+                <li>
+                    <img src="img/helpcenter.png" />
+                    <span>Help Center</span>
+                </li>
+                <li>
+                    <img src="img/interface.svg" />
+                    <span>Get Algonex App</span>
+                </li>
+                <li>
+                    <img src="img/settings.svg" />
+                    <span>Settings</span>
+                </li>
+                <li>
+                    <img src="img/logout.png" />
+                    <span>Checking...</span>
+                </li>
+                <li>
+                    <img src="img/aboutus.svg" />
+                    <span>About Us</span>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="phone-product-cate-dialog-head">
+
+        <div class="phone-product-cate-dialog-toolbar">
+            <img src="img/back.svg" alt="">
+            <b>Products Categories</b>
+        </div>
+        <div class="phone-product-cate-dialog-scroll">
+
+        </div>
+
+    </div>
+
+    <div class="head-img-zoomer-con">
+        <img src="img/clear.png" alt="" class="head-img-zoomer-close-btn">
+        <img src="img/progressDots.gif" alt="" class="head-img-zoomer-img">
+    </div>
+
+    <div class="mes-container-pc" id="mes-container-pc-id-sharp">
+        <div class="mes-container-bone">
+            <div class="mes-top-pc" id="chatTop">
+                <img src="img/close.svg" class="chat-close-pc">
+                <img src="img/progressDots.gif" class="chat-u-img-pc">
+                <div>
+                    <span class="chat-u-name-pc">Loading...</span>
+                    <span class="chat-last-seen-pc"></span>
+                </div>
+                <div class="mes-top-aligner-end">
+                    <img src="img/video-camera-white.svg" alt="" class="mes-video-chat-btn">
+                    <img src="img/more.svg" class="mes-pc-opt">
+                </div>
+            </div>
+
+            <div class="mes-list-pc" id="messageList">
+                <div class="mes-pc-del-con">
+                    <span>cancel</span>
+                    <div>delete (7)</div>
+                </div>
+                <div class="mes-del-copy-clear">
+                    Clear
+                </div>
+                <div class="mes-pc-opt-con">
+                    <!--0-->
+                    <div>invite friend</div>
+                    <!--1-->
+                    <div>view profile</div>
+                    <!--2-->
+                    <div>delete message</div>
+                    <!--3-->
+                    <div>copy message</div>
+                    <!--4-->
+                    <div>group info</div>
+                    <!--5-->
+                    <div>participants</div>
+                    <!--6-->
+                    <div>silence chat</div>
+                    <!--7-->
+                    <div>exit group</div>
+                </div>
+                <div class="pc-mes-encrypt">
+                    Messages in this chat are encrypted to prevent malware attacks towards your privacy
+                </div>
+
+                <div class="reply-mes-pc-con">
+                    <div>Replying to..</div>
+                    <img src="img/clear.png" id="clearReplyPcMes" alt="">
+
+                    <span>
+
+                    </span>
+
+                </div>
+
+                <div class="mes-emoji-con">
+
+                </div>
+
+                <img src="img/progressDots.gif" alt="" id="img-full-mes-pc">
+
+                <div class="mes-pc-group-info-con">
+
+                    <div class="mes-pc-group-info-temp">
+                        <img src="img/back.svg" alt="" class="mes-pc-group-info-temp-back">
+                        <div class="mes-pc-group-info-temp-img"></div>
+                        <span>
+                            <div>Loading...</div>
+                            <small>Loading...</small>
+                        </span>
+                    </div>
+
+                    <div class="mes-group-info-pc-params-con">
+                        <div class="group-info-pc-creator">Created By: <a href="">Loading...</a></div>
+                        <div class="group-info-pc-des">
+                            <b>Group Description</b>
+                            <div>Loading<img src="img/progressDots.gif" alt=""></div>
+                        </div>
+
+                        <div class="group-info-user-con" id="mes-group-admin-list">
+                            <b>Group Admin</b>
+                            <div class="group-info-user-cont">
+                                <img src="img/user.png" alt="">
+                                <div>
+                                    <block>Remove</block>
+                                    <name>Loading...</name>
+                                    <i>Join on: Loading...</i>
+                                    <small>Group Admin</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="group-mes-settings-con" id="group-visibility-mes-pc-setting">
+                        <b>Group Visibility</b>
+                        <div class="group-mes-settings-flex">
+                            <div>
+                                <span>Public</span>
+                                <small>People can join this group by invitation or group request <uder>Don't Understand
+                                    </uder></small>
+                            </div>
+                            <img src="img/switch-off.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="group-mes-settings-con" id="group-link-info-mes-pc">
+                        <b>Group Link</b>
+                        <a href="">Loading...</a>
+                    </div>
+
+                    <div class="group-mes-settings-con" id="mes-group-change-settings">
+                        <b>Admin Settings</b>
+                        <label for="admin-group-change-img-input" class="mes-group-set-change-cont">
+                            <span>
+                                Edit Group Profile Image
+                            </span>
+                            <img src="img/edit.png" alt="">
+                            <input type="file" id="admin-group-change-img-input" hidden>
+                        </label>
+
+                        <div class="mes-group-set-change-cont">
+                            <edname>Edit Group Name</edname>
+                            <button>Save</button>
+                            <img src="img/edit.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="group-info-user-con" id="mes-group-request-list-pc">
+                        <b>Group Request</b>
+                        <div class="group-info-user-cont">
+                            <img src="" alt="">
+                            <div>
+                                <div>Loading...</div>
+                                <i>Join on: Loading...</i>
+                                <reqc>
+                                    <reqff>Accept</reqff>
+                                    <reqll>Decline</reqll>
+                                </reqc>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group-info-user-con" id="mes-group-participant-list">
+                        <b>participants</b>
+                        <div class="group-info-user-cont">
+                            <img src="" alt="">
+                            <div>
+                                <div>Loading...</div>
+                                <i>Join on: Loading...</i>
+                                <span>Private Chat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mes-group-invite-section-pc">
+                    <div class="mes-search-pro-pc-div">
+                        <img src="img/backBlack.svg" alt="">
+                        <input type="search" name="" id="" placeholder="Search By Phone Or Name"
+                            onfocus="this.select()">
+                    </div>
+                    <div class="group-invite-section-pc-button">
+                        Invite
+                    </div>
+
+                    <scroll>
+                        <div class="group-invite-divider-pc" id="group-invite-divider-pc-search-result">
+                        </div>
+
+                        <div id="group-invite-section-cont-pc-search-con">
+
+                            <!-- <div class="group-invite-section-cont-pc">
+                    <img src="img/airtel.png" alt="">
+                    <div>
+                      <span>Onabanjo Ademola</span>
+                      <i>08091273737</i>
+                    </div>
+                    <input type="checkbox" name="group-invite-checkbox-pc">
+                  </div>-->
+
+                        </div>
+
+                        <div class="group-invite-divider-pc" id="group-invite-divider-pc-chat">Your Chat List</div>
+
+                        <div id="group-invite-my-chat-con">
+
+                            <div class="group-invite-section-cont-pc">
+                                <img src="img/progressDots.gif" alt="">
+                                <div>
+                                    <span>Please wait...</span>
+                                    <i></i>
+                                </div>
+                                <input type="checkbox" name="group-invite-checkbox-pc" id="">
+                            </div>
+
+                        </div>
+
+                    </scroll>
+                </div>
+
+                <div class="mes-list-pc-cont">
+
+                </div>
+
+            </div>
+            <div class="chat-bottom">
+                <div class="chat-bottom-div">
+                    <label for="input-file-mes-pc" class="mes-input-file-pc">
+                        <img src="img/paper-clip.svg">
+                    </label>
+                    <input type="file" id="input-file-mes-pc" hidden multiple>
+                    <img src="img/emoji.svg" alt="" class="mes-emoji-btn">
+                    <div class="mes-hint-toggler">Type Your Message Here</div>
+                    <div class="mes-edittext-pc" role="textbox" contenteditable="true"></div>
+                    <div class="send-mes-pc"><img src="img/sendWhite.svg"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pc-chat-alert-con">
+
+        <img src="img/clear.png" alt="" id="close-pc-mes-alert">
+
+    </div>
+
+    <div class="group-link-public-join-alert">
+
+        <div>
+            <temp></temp>
+            <packer>
+                <b>Loading...</b>
+                <span>created by:Loading...</span>
+                <small>create date: Loading...</small>
+            </packer>
+
+            <button>Join</button>
+        </div>
+
+    </div>
+
+    <div class="noti-container-master">
+
+        <div class="noti-container" style="display: block;">
+            <div class="chat-head">
+                <span>Chat</span>
+                <div>
+                    <img src="img/add-user.svg" alt="" class="add-client-pc-show">
+                    <img src="img/more.svg" alt="" id="chat-more-opt-pc">
+                </div>
+
+            </div>
+            <div class="chat-pc-opt">
+                <div class="add-client-pc-show">Add A Client</div>
+                <div>Create Group</div>
+                <div>Block Chats</div>
+                <div>Settings</div>
+            </div>
+
+            <img src="" id="noti-side-zoom-img-pc" alt="">
+
+            <div class="chat-pc-flow-flexer">
+                <div class="m-flow" id="chatListCon">
+
+                    <noChat>
+                        Loading chats <img src="img/progressDots.gif" alt="">
+                    </noChat>
+
+                    <div class="no-chat-found-pc-cont">
+                        <img src="img/chatFriend.jpg" alt="">
+                        <h3>No Chat Found</h3>
+                    </div>
+
+                    <div class="find-chat-pc">
+                        <img src="img/chat.svg" alt="">
+                    </div>
+
+                    <div class="noti-block-user-btn-con">
+                        <div>cancel</div>
+                        <span>blocking<img src="img/progressDots.gif" alt=""></span>
+                    </div>
+
+                    <div class="pc-chat-list"><img src="img/progressDots.gif" alt="profile" />
+                        <block> <small></small>
+                            <input type="checkbox" name="noti-main-section-checkbox" id="">
+                            <span>
+                                <sk
+                                    style="background-color: rgb(182, 255, 180); width: 70%; padding: 10px 0px; border-radius: 10px; display: block; margin-top: 7px;">
+                                </sk>
+                            </span>
+                            <sub>
+                                <sk
+                                    style="background-color: rgb(255, 195, 195); width: 40%; padding: 7px 0px; border-radius: 7px; display: block;">
+                                </sk>
+                            </sub>
+                        </block>
+                    </div>
+
+                </div>
+                <div class="chat-search-pc-section">
+                    <div class="chat-search-client-pc-div">
+                        <img src="img/backBlack.svg" alt="">
+                        <input type="search" placeholder="Search By Phone or Name" style="font-size: 14px;"
+                            onfocus="this.select()">
+                    </div>
+
+                    <div class="chat-search-pc-section-scroll">
+
+                    </div>
+
+                </div>
+                <div class="chat-pc-create-group-section">
+
+                    <img src="img/backBlack.svg" alt="" id="pc-create-group-back-btn">
+
+                    <label for="pc-create-group-input-img" class="cpcgs-img-con">
+                        <img src="img/user.png" alt="" class="cpcgs-img-con-ff">
+                        <img src="img/upload.png" alt="" class="cpcgs-img-con-ll">
+                        <input type="file" name="pc-create-group-input-img" id="pc-create-group-input-img" hidden
+                            accept="*/image">
+                    </label>
+
+                    <div class="chat-pc-create-group-section-cont">
+                        <b>Group Name</b>
+                        <input type="text" placeholder="Give this group a name">
+                    </div>
+
+                    <div class="chat-pc-create-group-section-cont">
+                        <b>Group Description</b>
+                        <textarea name="" id="" rows="5"
+                            placeholder="Give a brief description about this group"></textarea>
+                    </div>
+
+                    <div class="chat-pc-create-group-section-cont">
+                        <b>Group Visibility</b>
+                        <div>
+                            <span>Group will be public</span>
+                            <img src="img/switch-off.svg" alt="">
+                        </div>
+                    </div>
+
+                    <button id="pc-create-new-group-btn">Create</button>
+                    <small></small>
+
+                </div>
+
+                <div class="pc-chat-settings-section">
+                    <div class="pc-chat-settings-section-toolbar">
+                        <img src="img/back.svg" alt="" class="pc-chat-settings-section-back">
+                        Settings
+                    </div>
+
+                    <div class="chat-layout-setting-cont" id="chat-popup-settings">
+                        <b>Popup Message</b>
+                        <div>
+                            <small>You will receive popup notifications for incoming messages</small>
+                            <img src="img/switch-on.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="chat-layout-setting-cont" id="chat-mute-settings">
+                        <b>Mute Notifications</b>
+                        <div>
+                            <small>Notifications for incoming messages will be muted</small>
+                            <img src="img/switch-on.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="chat-layout-setting-cont" id="enter-is-send-chat-settings">
+                        <b>Enter Is Send</b>
+                        <div>
+                            <small>Your message will be sent when you press enter key</small>
+                            <img src="img/switch-on.svg" alt="">
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-toast">
+        <div>
+            <img src="img/warning.svg" alt="">
+            <span></span>
+        </div>
+    </div>
+
+    <input type="text" id="mes-copy-bucket-pc">
+
+    <div class="no-cart-temp">
+        <img src="img/cartsBeau.svg" alt="">
+        <div>Nothing Found In Your Cart </div>
+    </div>
+
+    <div class="padder" style="display: block;">
+
+        <div class="checkout-splitter">
+            Delivery Insight
+        </div>
+        <div class="delivery-info-con">
+
+            <div class="info-cont delivery-method" style="border-top: none;" id="delivery-method">
+                <b style="color: darkblue;">Pick your delivery method</b>
+                <div>
+                    <input type="radio" name="deliv-rad" value="station" id="door-deliv-rad">
+                    <label for="door-deliv-rad">Pick up station</label>
+                </div>
+                <div>
+                    <input type="radio" name="deliv-rad" value="door" id="station-deliv-rad">
+                    <label for="station-deliv-rad">Door delivery</label>
+                </div>
+            </div>
+            <div class="ierror" id="deliv-rad-error"></div>
+
+            <div class="info-cont">
+                <b>Pick Payment method</b>
+                <div>
+                    <input type="radio" name="pay-rad" id="wallet-rad" value="wallet">
+                    <label for="wallet-rad">Pay from wallet</label>
+                </div>
+                <div>
+                    <input type="radio" name="pay-rad" id="card-rad" value="bank">
+                    <label for="card-rad">Pay with card or bank</label>
+                </div>
+            </div>
+            <div class="ierror" id="pay-rad-error"></div>
+
+            <div class="info-cont" style="border-bottom: 1px solid rgb(228, 228, 228); padding-bottom: 7px;">
+                <b>Input your postal code</b>
+                <input type="number" placeholder="Please input your postal code" id="postal-code-input">
+            </div>
+            <div class="ierror" id="postal-code-input-error"></div>
+
+            <select id="state">
+                <option value="none">Select your residential state</option>
+            </select>
+            <div class="ierror" id="state-error"></div>
+
+            <select id="localGov">
+                <option value="none">Select your local government</option>
+            </select>
+            <div class="ierror" id="localGov-error"></div>
+
+            <textarea id="address" cols="30" rows="10" placeholder="Kindly input your residential address"></textarea>
+            <div class="ierror" id="address-error"></div>
+
+            <textarea id="side-note" cols="30" rows="10" placeholder="Write your side note (not mandatory)"></textarea>
+            <div class="ierror" style="display: block;color: green;">Tell us what on your mind toward the product you're ordering for</div>
+        </div>
+
+        <b class="checkout-splitter" style="margin-top: 30px;">Cart item(s)</b>
+        <div class="cart-content-appender">
+
+            <img src="img/progressDots.gif" alt="" class="cart-item-spin-loader">
+
+        </div>
+
+        <div class="cart-item-total">
+            <b class="total-cart-red">Total Amount <em>(excluding delivery) </em>
+            </b>
+
+            <div class="calc-content">
+
+                <div class="total-cart-body">
+                    <span>Items cost</span>
+                    <b>.</b>
+                </div>
+                <div class="total-cart-body">
+                    <span>Discount</span>
+                    <b>.</b>
+                </div>
+                <div class="total-cart-body">
+                    <span>Delivery cost</span>
+                    <b>.</b>
+                </div>
+                <div class="total-cart-body total-cart-body-sum">
+                    <span>Total amount</span>
+                    <b>.</b>
+                </div>
+                <img src="img/spinner.gif" alt="">
+
+            </div>
+
+        </div>
+        <button id="checkout-btn-pc">Check Out</button>
+    </div>
+
+    <footer>
+
+        <div class="contact-pc-con">
+            <div class="contact-content"> <img src="img/helpService.svg" class="contact-img"> <span>Need Help? </span>
+                <div class="call-btn-footer-phone"><a href="tel:+2349019445081">CALL US</a></div> <span>Or</span>
+                <div class="chat-btn-footer-phone">CHAT</div> <span>Us Today</span>
+            </div>
+        </div>
+
+        <div class="app-con-phone">
+            <img src="img/googlePlayBox.png" style="width: unset;">
+            <img src="img/appstore.png" style="width: unset;">
+        </div>
+
+        <div class="footer-txt-con">
+
+            <div class="footer-txt" id="footPhoneTxtNav1">
+                <b>
+                    site map
+                </b>
+                <a href="index.html"> Home Page</a>
+                <a href="forum.html">Algonex Forum</a>
+                <a class="footer-sigin-toggle-txt">Sign In</a>
+                <a href="termsAndCondition.html#aboutUsSection">About Us</a>
+            </div>
+            <div class="footer-txt" id="footPhoneTxtNav2">
+                <b>
+                    copyright and legals
+                </b>
+                <a href="termsAndCondition.html#userAgreement">User Agreement</a>
+                <a href="helpcenter.html">Help</a>
+                <a href="termsAndCondition.html#privacyAndPolicySection">Privacy Policy & Ad</a>
+                <a href="termsAndCondition.html">Terms & Condition</a>
+            </div>
+
+        </div>
+
+        <div class="meet-txt-phone">Follow Us On</div>
+
+        <div class="social">
+            <img src="img/facebook.svg" />
+            <img src="img/twitter.svg" />
+            <img src="img/instagram.svg" />
+            <img src="img/whatsapp.svg" />
+        </div>
+
+        <div class="meet-txt-phone">Our partners</div>
+        <div class="partner-div">
+            <img src="img/flutterwave.png" />
+            <img src="img/gigl.png" />
+            <img src="img/mastercard.png" />
+            <img src="img/algolia.png" />
+        </div>
+    </footer>
+
+    <div class="footer-pc-con">
+        <div class="contact-pc-con">
+            <div class="contact-content"> <img src="img/helpService.svg" class="contact-img"> <span>Need Help? </span>
+                <div class="call-btn-footer-phone"><a href="tel:+2349019445081">CALL US</a></div> <span>Or</span>
+                <div class="chat-btn-footer-phone">CHAT</div> <span>Us Today</span>
+            </div>
+        </div>
+
+        <div class="meet-con">
+            <div class="pc-meet-img">
+                <div class="meet-txt">Meet Us On</div>
+                <img src="img/facebook.svg">
+                <img src="img/twitter.svg">
+                <img src="img/instagram.svg">
+                <img src="img/whatsapp.svg">
+            </div>
+
+            <div class="app-con-pc">
+                <img src="img/googlePlayBox.png" style="width: unset;">
+                <img src="img/appstore.png" style="width: unset;">
+            </div>
+        </div>
+
+        <div class="txt-nav-pc">
+
+
+            <div>
+                <span class="txt-nav-head">Site Map</span>
+                <a href="index.html">Home page</a>
+                <a href="forum.html">Algonex Forum</a>
+                <a class="footer-sigin-toggle-txt">Checking..</a>
+                <a href="termsAndCondition.html">About Us</a>
+            </div>
+
+            <div>
+                <span class="txt-nav-head">Our services</span>
+                <a href="businessindex.html">Businesses</a>
+                <a href="jobIndex.html">Jobs Discovery</a>
+                <a href="businessUpload.html">Add business</a>
+                <a href="jobUpload.html">Offer Job</a>
+            </div>
+
+            <div>
+                <span class="txt-nav-head">Other services</span>
+                <a href="workforce.html">Work Force</a>
+                <a href="vendorreg.html">Become a vendor</a>
+                <a href="">Bill payment</a>
+                <a href="">Board management</a>
+            </div>
+
+            <div>
+                <span class="txt-nav-head">copyright and legals</span>
+                <a href="termsAndCondition.html#userAgreement">User Agreement</a>
+                <a href="helpcenter.html">Help</a>
+                <a href="termsAndCondition.html#privacyAndPolicySection">Privacy Policy & Ad</a>
+                <a href="termsAndCondition.html">Terms & Condition</a>
+            </div>
+
+        </div>
+
+        <div class="foot-bottom">
+
+            <img src="img/flutterwave.png">
+            <img src="img/gigl.png">
+            <img src="img/mastercard.png">
+            <img src="img/algolia.png">
+
+            <div class="copyright-pc-con">
+                <div class="copy-yr">&COPY; 2020 - 2021</div>
+                <div>
+                    <div>Algonex Company RC</div>
+                    <div>All righst reserved</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/algolia.js"></script>
+    <script src="js/pCate.js"></script>
+    <script src="js/imgCompressor.js"></script>
+    <script src="js/header.js"></script>
+    
+    <script src="js/location.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+}
+
+.header,
+.nav-temp,
+.send-mes-pc,
+.chat-search-pc-client-add,
+#pc-create-new-group-btn,
+.mes-top-pc,
+.mes-pc-group-info-temp,
+.group-info-user-cont reqc reqff,
+.product-cate-drop-wide-sec div h:hover,
+.product-cate-drop-wide div h:hover {
+    background-color: blue;
+}
+
+.chat-head,
+.reply-mes-pc-con span,
+.find-chat-pc,
+.my-chat {
+    background-color: blue;
+}
+
+.temp {
+    background-color: blue;
+    position: relative;
+    height: 370px;
+    color: white;
+}
+
+.follow-user-temp {
+    font-weight: bold;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    font-size: 15px;
+    background-color: yellow;
+    padding: 6px 12px;
+    display: none;
+}
+
+.temp-opt {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 4px;
+    cursor: pointer;
+    top: 7px;
+}
+
+.temp-opt-con {
+    position: absolute;
+    z-index: 5;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    right: 0px;
+    display: none;
+}
+
+.temp-opt-con div {
+    padding: 10px 30px 10px 7px;
+}
+
+.temp-opt-con div:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.temp-opt-con div:active {
+    background-color: blue;
+    color: white;
+}
+
+.temp-cen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 55%;
+    height: fit-content;
+    width: -moz-fit-content;
+    text-transform: capitalize;
+    width: fit-content;
+    margin: auto;
+    text-align-last: center;
+}
+
+.temp-cen red {
+    color: yellow;
+    display: block;
+    font-size: 15px;
+}
+
+.user-temp-profile-pic,
+.temp-cen label {
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.temp-cen label {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: none;
+}
+
+.add-pro-img-btn {
+    width: 25px;
+    top: 10px;
+    right: 50px;
+    position: absolute;
+    display: none;
+    z-index: 10;
+}
+
+.temp-cen h2 {
+    margin: 10px 0px 4px 0px;
+    user-select: text;
+}
+
+.temp-cen div {
+    font-size: 15px;
+    display: flex;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 7px auto 0px auto;
+}
+
+.temp-cen div img {
+    width: 25px;
+    margin: auto 7px 0px 0px;
+}
+
+.temp-cen div small {
+    margin: auto 0px;
+}
+
+.temp-mes-flex {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}
+
+.temp-mes-flex a {
+    padding: 10px 0px;
+    width: 50%;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.temp-mes-flex a:first-child {
+    background-color: green;
+}
+
+.temp-mes-flex a:last-child {
+    background-color: crimson;
+}
+
+.temp-mes-flex a:active {
+    background-color: white;
+    color: blue;
+}
+
+.wallet-container {
+    background-color: darkblue;
+    color: white;
+    display: none;
+    padding: 20px 0px 15px 0px;
+}
+
+.wallet-con-title {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+}
+
+.wallet-body-con {
+    display: flex;
+    max-width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.wallet-body-con img {
+    width: 90px;
+    flex-shrink: 0;
+    margin: auto 50px;
+}
+
+.wallet-body-con div {
+    width: 100%;
+    margin: auto 15px;
+}
+
+.wallet-bottom-con {
+    display: flex;
+}
+
+.wallet-bottom-con div {
+    text-align: center;
+    padding: 15px 0px;
+    width: 50%;
+    max-width: 370px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.wallet-bottom-con div img {
+    width: 50px;
+}
+
+.wallet-bottom-con div span {
+    display: block;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.wallet-bottom-con div:active {
+    background-color: blue;
+}
+
+.virtual-card-packer {
+    padding: 50px 0px;
+}
+.v-card-toggler{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 7px 15px;
+    display: block;
+    margin: 20px 10px 20px auto;
+    cursor: pointer;
+}
+.virtual-card-con {
+    width: 85%;
+    display: inline-block;
+    margin-left: 7.5%;
+    padding: 30px 0px;
+    user-select: text;
+}
+
+.virtual-card-con small:last-child {
+    max-width: 420px;
+    display: block;
+    margin: 15px auto auto auto;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.virtual-card-con small:last-child yel {
+    color: yellow;
+}
+
+.v-card-cont {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    background-image: url('../img/greenFlex.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 55vw;
+    max-height: 250px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 4px grey;
+    box-shadow: 2px 2px 4px grey, -2px -2px 4px grey;
+}
+
+.v-card-cont>* {
+    position: absolute;
+}
+
+.v-card-shader {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.v-card-head-img {
+    height: 35px;
+    top: 20px;
+    left: 20px;
+}
+
+.v-card-amount {
+    right: 40px;
+    top: 25px;
+    font-size: 18px;
+}
+
+.v-card-number {
+    top: 45%;
+    font-size: 23px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 5px;
+    z-index: 3;
+}
+
+.v-card-number b {
+    display: inline-block;
+}
+
+.v-card-holder {
+    bottom: 25px;
+    margin-left: 20px;
+}
+
+.v-card-holder>* {
+    display: block;
+}
+
+.v-card-holder b {
+    margin-top: 7px;
+}
+
+.v-card-logo {
+    width: 90px;
+    bottom: 30px;
+    right: 30px;
+}
+
+.v-card-type {
+    bottom: 7px;
+    right: 15px;
+    font-size: 14px;
+}
+
+.info-con {
+    background-color: white;
+    box-shadow: 0px 3px 6px grey, 0px -3px 6px grey;
+    margin: 15px auto 0px auto;
+    padding-bottom: 10px;
+    max-width: 500px;
+}
+
+.info-head {
+    background-color: blue;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    padding: 10px 0px 10px 15px;
+    text-transform: capitalize;
+}
+
+.info-bord {
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 94%;
+    margin: 15px auto;
+    position: relative;
+}
+
+.info-bord b {
+    display: block;
+    padding: 5px;
+    margin: auto 7px;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #363636;
+}
+
+.info-bord div {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.info-bord div img {
+    width: 35px;
+    margin: auto 10px auto 15px;
+}
+
+.edit-pro-info-btn {
+    width: 25px;
+    right: 7px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+.info-bord span {
+    margin: auto 0px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.info-bord a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 7px 20px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: 2px 2px 4px grey;
+    margin: 15px auto;
+    outline: none;
+    cursor: pointer;
+}
+
+.info-bord a:active {
+    background-color: white;
+    color: gray;
+}
+
+#facebook-cont,
+#instagram-cont,
+#whatsapp-cont,
+#twitter-cont,
+#youtube-cont {
+    display: block;
+}
+
+.about-me {
+    margin: 10px auto;
+    width: 95%;
+}
+
+.about-me b {
+    font-size: 23px;
+    display: block;
+}
+
+.about-me stripe {
+    display: block;
+    width: 150px;
+    height: 4px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+.no-bis-found-temp {
+    text-align: center;
+    padding: 30px 0px;
+    display: none;
+}
+
+.no-bis-found-temp img {
+    width: 55%;
+    max-width: 300px;
+}
+
+.no-bis-found-temp b {
+    font-size: 23px;
+    display: block;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.user-bis-appender {
+    font-size: 0px;
+}
+
+.bis-cont {
+    width: 45%;
+    margin: 20px 10px;
+    box-shadow: 3px 3px 5px grey;
+    padding: 10px;
+    margin-left: 3.2%;
+    transition: ease box-shadow 700ms;
+    cursor: pointer;
+    display: block;
+    color: unset;
+    text-decoration: none;
+}
+
+.bis-cont:hover {
+    box-shadow: 7px 7px 20px grey, -7px -7px 20px grey;
+}
+
+.bis-img-shower {
+    padding-bottom: 100%;
+    background-image: url('../img/workForceIconGrey.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bis-name {
+    font-size: 16px;
+    margin-top: 7px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.bis-cont i {
+    font-size: 13px;
+    color: #363636;
+    margin-top: 3px;
+    display: block;
+}
+
+.bis-cont small {
+    font-size: 12px;
+    margin-top: 9px;
+    display: block;
+}
+
+.star-flex img {
+    width: 17px;
+    height: 17px;
+    margin-right: 7px;
+    margin-top: 3px;
+}
+
+.bis-des {
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 95%;
+    margin: 15px auto 100px auto;
+}
+
+.bis-des b {
+    display: block;
+    margin: 5px;
+}
+
+.bis-des div {
+    font-size: 13px;
+    margin: 10px;
+}
+
+.result-cont {
+    display: flex;
+    position: relative;
+    padding: 17px 0px;
+    text-decoration: none;
+    color: unset;
+    outline: none;
+    cursor: default;
+}
+
+.p-img {
+    width: 45%;
+    max-width: 250px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.prod-info {
+    width: 100%;
+    padding-left: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+.p-name {
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.p-price {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.dis-div {
+    display: flex;
+    margin-top: 5px;
+}
+
+.dis-div del {
+    font-size: 14px;
+    margin: auto 0px;
+}
+
+.dis-div div {
+    font-size: 14px;
+    display: inline-block;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    margin: auto 0px auto 10px;
+    padding: 6px 5px;
+}
+
+.add-cart-bone {
+    padding: 15px 0px;
+    visibility: hidden;
+}
+
+.prod-info small {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+}
+
+.stripe {
+    width: 93%;
+    height: 1px;
+    background-color: #dadada;
+    margin: 0px auto;
+}
+
+.pg-box {
+    padding: 20px 0px;
+    width: 90%;
+    margin: 27px auto;
+    line-height: 53px;
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .temp {
+        height: 400px;
+    }
+
+    .user-temp-profile-pic,
+    .temp-cen label {
+        width: 150px;
+        height: 150px;
+    }
+
+    .temp-mes-flex a {
+        padding: 15px 0px;
+        font-size: 16px;
+    }
+
+    .wallet-container {
+        padding: 30px 0px;
+    }
+
+    .wallet-bottom-con div {
+        border-radius: 7px;
+        border: 2px solid white;
+    }
+
+    .v-card-cont {
+        cursor: pointer;
+    }
+
+    .v-card-cont:hover {
+        box-shadow: 5px 5px 10px grey, -5px -5px 10px grey;
+    }
+    .v-card-toggler{
+        margin: 20px auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .virtual-card-con {
+        width: 45%;
+        margin-left: 3.2%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .pc-body-info-flexer {
+        display: flex;
+        width: 100%;
+    }
+
+    .pc-body-info-flexer>* {
+        flex-shrink: 0;
+    }
+
+    .profile-body-packer {
+        width: 62%;
+    }
+
+    .profile-body-packer>* {
+        display: inline-block;
+        width: 47%;
+        max-width: unset;
+        vertical-align: top;
+        margin-left: 2%;
+    }
+
+    .cart-body-pc-con {
+        width: 96%;
+    }
+
+    .bis-info-sticky-con {
+        width: 37%;
+        margin: 10px 0px 0px auto;
+        max-width: unset;
+        height: -moz-fit-content;
+        height: fit-content;
+        top: 70px;
+        position: sticky;
+    }
+
+}
+
+@media (min-width: 1220px) {
+    .virtual-card-con {
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}

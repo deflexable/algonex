@@ -1,0 +1,440 @@
+body {
+    background-color: white;
+}
+
+.header,
+.nav-temp,
+.send-mes-pc,
+.chat-search-pc-client-add,
+#pc-create-new-group-btn,
+.mes-top-pc,
+.mes-pc-group-info-temp,
+.group-info-user-cont reqc reqff,
+.product-cate-drop-wide-sec div h:hover,
+.product-cate-drop-wide div h:hover {
+    background-color: darkblue;
+}
+
+.chat-head,
+.reply-mes-pc-con span,
+.find-chat-pc,
+.my-chat {
+    background-color: blue;
+}
+
+.header {
+    padding: 6px 0px;
+}
+
+.pho-search-div {
+    display: none;
+}
+
+.forum-side-bar-con {
+    display: none;
+}
+
+.forum-side-bar-con a,
+.forum-phone-side-bar a {
+    display: flex;
+    padding: 12px 4px 12px 7px;
+    margin-top: 7px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+}
+
+.forum-side-bar-con a img,
+.forum-phone-side-bar a img {
+    width: 15px;
+    display: block;
+    margin: auto 0px auto auto;
+}
+
+.forum-side-bar-con ul,
+.forum-phone-side-bar ol {
+    list-style: none;
+    margin-top: 0px;
+    padding-left: 20px;
+    display: none;
+}
+
+.forum-side-bar-con ul li a,
+.forum-phone-side-bar ol li a {
+    font-size: 13px;
+    padding: 10px 7px;
+    font-weight: normal;
+    color: unset;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.forum-side-link-cont b {
+    display: block;
+    background-color: crimson;
+    text-transform: capitalize;
+    color: white;
+    padding: 7px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.forum-side-link-cont a {
+    display: block;
+    text-decoration: none;
+    padding: 7px 4px;
+    font-size: 14px;
+}
+
+.forum-side-link-cont ul {
+    list-style: none;
+}
+
+.main-page-temp {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-page-temp span {
+    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.main-page-temp h2 {
+    margin: 0px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 10vh;
+}
+
+.slide-dot-con {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 15px;
+    text-align: center;
+}
+
+.slide-dot-con div {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0px 5px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    filter: brightness(40%);
+}
+
+.top-story-con {
+    padding: 20px 0px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.top-story-item {
+    width: 150px;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 15px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
+}
+.top-story-item hk{
+    display: block;
+    height: 15px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 7px;
+}
+.top-story-item div {
+    padding-top: 90%;
+    position: relative;
+    background-image: url('../img/logoPlain.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-story-item div bone {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.281);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.top-story-item div b {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    color: white;
+    font-size: 15px;
+    z-index: 7;
+}
+
+.top-story-item span {
+    display: block;
+    padding: 6px 4px;
+    font-size: 14px;
+    color: rgb(73, 73, 73);
+    text-transform: capitalize;
+}
+
+.main-news-cont {
+    border-bottom: 1px solid #bebebe;
+    max-width: 700px;
+    margin: 15px auto;
+    text-decoration: none;
+    color: unset;
+    display: block;
+}
+
+.main-news-head {
+    display: flex;
+    padding: 7px 0px;
+    cursor: pointer;
+}
+
+.main-news-head img {
+    margin: auto 5px auto 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d3d3d3;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.main-news-head div {
+    margin: auto 0px;
+}
+
+.main-news-head small {
+    display: block;
+    color: #6c6c6c;
+}
+
+.main-news-content {
+    display: flex;
+}
+
+.main-news-content span {
+    display: block;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.main-news-content span h3 {
+    margin: 0px 0px 7px 0px;
+    padding: 0px;
+}
+
+.main-news-content img {
+    width: 107px;
+    height: 107px;
+    margin: auto 5px auto auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-news-butt {
+    display: flex;
+    font-size: 0px;
+    border-top: 1px solid #bebebe;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-news-butt i {
+    width: 1px;
+    height: 40px;
+    margin: auto 0px;
+    background-color: #bebebe;
+    display: block;
+}
+
+.main-news-butt div {
+    flex-shrink: 0;
+    width: 33%;
+}
+
+.main-news-butt div img {
+    width: 22px;
+    margin-top: 5px;
+}
+
+.main-news-butt div small {
+    font-size: 12px;
+    padding: 5px 0px 5px 0px;
+    display: block;
+}
+
+.forum-page-box-con {
+    line-height: 45px;
+    padding: 10px 10%;
+    display: none;
+}
+
+.forum-page-box-con a {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 6px 10px;
+    text-decoration: none;
+    margin: 120px 0px 0px 15px;
+}
+
+@media only screen and (min-width: 310px) {
+    #logo {
+        height: 29px;
+    }
+
+    .end-one {
+        margin-left: 8px;
+    }
+
+    .end-one img {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media only screen and (min-width: 370px) {
+    #logo {
+        height: 35px;
+    }
+
+    .end-one {
+        margin-left: 11px;
+    }
+
+    .end-one img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .main-news-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-story-con {
+        padding: 30px 0px;
+    }
+
+    .top-story-item {
+        width: 160px;
+        margin-left: 25px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .header {
+        padding: 9px 0px;
+    }
+
+    #forum-search-icon {
+        display: none;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    .body-cont-flexer {
+        display: flex;
+    }
+
+    .forum-side-bar-con {
+        width: 15%;
+        box-shadow: 3px 0px 6px grey;
+        min-height: 95vh;
+        height: -moz-fit-content;
+        height: fit-content;
+        position: sticky;
+        top: 50px;
+        flex-shrink: 0;
+        display: block;
+        word-break: break-all;
+    }
+
+    .main-page-container {
+        width: 85%;
+        flex-shrink: 0;
+    }
+
+    .main-news-content img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .main-news-butt div:last-child {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #logo {
+        height: 42px;
+    }
+
+    .end-one img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .main-page-flex-container {
+        display: flex;
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .forum-content-list-packer {
+        width: 74%;
+        flex-shrink: 0;
+    }
+
+    .forum-right-side-bar-con {
+        width: 25%;
+        min-height: 93vh;
+        height: -moz-fit-content;
+        height: fit-content;
+        flex-shrink: 0;
+        border-left: 1px solid rgb(207, 207, 207);
+        position: sticky;
+        top: 55px;
+    }
+
+    .main-news-content img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .main-news-content img {
+        width: 180px;
+        height: 180px;
+    }
+}

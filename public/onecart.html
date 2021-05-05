@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="green" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta property="og:title" content="Nigeria's Trusted Online Marketplace" />
-  <title>Algonex -- Nigeria Trusted Online Marketplace</title>
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+  <script>
+    function sendBack() {
+      alert("Your URL is badly formatted");
+      history.back();
+      location.href = "index.html";
+    }
+
+    function getUrlParam(name) {
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results == null) {
+        return null;
+      }
+      return decodeURIComponent(results[1]) || 0;
+    }
+    const productId = getUrlParam('productId');
+    if (productId == null) {
+      sendBack();
+    }
+  </script>
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/onecart.css">
 </head>
 
-<body class="d-body">
+<body>
 
+  <div class="buy-btn">
+    buy now
+  </div>
   <style id="proStyle">
     .circle-progress-value {
       stroke-width: 50px;
@@ -135,6 +154,9 @@
           <input type="search" placeholder="Search for products" onfocus="this.select()">
         </form>
         <img src="img/microphone.svg" alt="search-button" id="phone-prod-search-icon-img">
+      </div>
+
+      <div class="product-div-breadcrum-pc">
       </div>
 
     </div>
@@ -669,802 +691,422 @@
 
   <input type="text" id="mes-copy-bucket-pc">
 
-  <div class="padder">
+  <div class="star-review-zoom">
+    <img src="img/close.svg" class="star-review-zoom-close" alt="">
+    <span>Click star to rate</span>
+    <div>
+      <img src="img/star-border.svg" alt="">
+      <img src="img/star-border.svg" alt="">
+      <img src="img/star-border.svg" alt="">
+      <img src="img/star-border.svg" alt="">
+      <img src="img/star-border.svg" alt="">
+    </div>
+  </div>
 
-    <div class="top-flexer">
-      <div class="top-flex-temp"></div>
+  <div class="container-flexer">
 
-      <div class="banner-con">
+    <div class="main-container-aligner-pc">
+      <div class="padder">
+        <div class="flexer">
 
-        <div class="slide-dot-con">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="slider-con">
+
+            <div class="slider-flex">
+              <img src="img/spinner.gif" alt="product image spinner"
+                style="width: 20%; margin: 130px auto; display: block;max-width: 90px;">
+            </div>
+
+            <img src="img/left-arrow.svg" alt="slide-button-left" id="slider-left" class="slide-btn">
+            <img src="img/right-arrow.svg" alt="slide-button-right" id="slider-right" class="slide-btn">
+
+            <div class="slide-dot-con">
+
+            </div>
+
+          </div>
+
+          <div class="prod-info">
+            <div class="p-name">
+              <div style="background-color: rgb(240, 240, 240); height: 40px; width: 90%; border-radius: 7px;">
+
+              </div>
+            </div>
+            <div class="p-price">
+              <div style="background-color: rgb(255, 234, 234); height: 25px; width: 50%; border-radius: 7px;">
+
+              </div>
+            </div>
+            <del class="discount">
+              <div style="background-color: rgb(232, 232, 255); height: 18px; width: 30%; border-radius: 7px;">
+
+              </div>
+            </del>
+
+            <div class="star-div">
+
+            </div>
+
+            <div id="condition">
+              <div
+                style="background-color: rgb(255, 244, 219); height: 23px; width: 50%; border-radius: 7px; margin-left: -7px;">
+
+              </div>
+            </div>
+
+            <div id="p-remain">
+              <div
+                style="background-color: rgb(225, 255, 224); height: 23px; width: 50%; border-radius: 7px; margin-left: -7px;">
+
+              </div>
+            </div>
+
+            <div class="quan-div">
+              <span>Quantity</span>
+              <div id="minus-quan">
+                -
+              </div>
+              <input type="number" placeholder="1" value="1" id="quan-input">
+              <div id="plus-quan">
+                +
+              </div>
+            </div>
+
+            <div id="cost-txt">
+              <div
+                style="background-color: rgb(255, 230, 245); height: 25px; width: 70%; border-radius: 10px; margin-left: -7px;">
+
+              </div>
+            </div>
+            <table class="share-box">
+              <tr>
+                <td class="n" id="share-prod-td"><img src="img/share.png"> <span>Share</span></td>
+                <td class="n" id="similar-locator"><img src="img/similar.png"> <span>Similar</span></td>
+                <td id="wishList"><img src="img/wishlist.png"> <span>Wishlist</span></td>
+              </tr>
+            </table>
+            <small class="prod-update-txt">
+
+            </small>
+
+            <div class="buy-pc">
+              buy now
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="banner-cont">
-          <img src="bisstemp/mainTemp.png" />
-          <img src="bisstemp/girlSup.png" />
-          <img src="bisstemp/stamp/tv.png" />
-          <img src="bisstemp/stamp/sellPhone.png" />
-          <img src="bisstemp/stamp/furniture.png" />
-          <img src="bisstemp/stamp/otherStamp.png" />
-          <img src="bisstemp/stamp/devices.png" alt="">
+        <div class="p-des">
+          <b class="p-des-title" style="padding-bottom: 15px;">Description</b>
+          <div class="p-des-txt">
+            <div style="background-color: rgb(255, 223, 233); height: 200px; width: 80%; border-radius: 7px;">
+
+            </div>
+          </div>
+
+          <fault id="prod-fault-con">
+            <b class="p-des-title">Defects</b>
+            <line></line>
+            <div>
+
+            </div>
+
+          </fault>
+
+          <table class="p-manual">
+
+          </table>
+
+          <div class="des-more">
+            <div>
+              Check More About This Products
+            </div>
+            <img src="img/morearrow.svg">
+          </div>
+        </div>
+
+        <div class="add-info-con add-sell-info-show-phone">
+          <div class="add-info-title">
+            Additional Info
+          </div>
+          <div class="add-info-head">
+            <img src="img/deliv.svg" />
+            <b>Delivery and shipment</b>
+          </div>
+          <div class="add-info-txt delivery-info-txt">
+            <div style="background-color: rgb(255, 236, 250);height: 60px; width: 90%; border-radius: 10px;">
+
+            </div>
+          </div>
+          <div class="add-info-head">
+            <img src="img/return-box.svg" />
+            <b>Fulfillment & Return Policy</b>
+          </div>
+          <div class="add-info-txt">
+            This product is eligible for return within 7days. Return can only be processed if certain conditions are
+            fulfilled. If these conditions are not fulfilled, neither return nor refund will be issued <a
+              href="termsAndCondition.html#returnPolicy">Click to learn more about return</a>
+          </div>
+          <div class="add-info-head">
+            <img src="img/cardPin.svg" />
+            <b>Payment & Security</b>
+          </div>
+          <div class="add-info-txt">
+            Your payment information is processed securely. We do not store credit card details nor have access to your
+            credit card informations. Therefore, we guaranty you safe and secure
+            payment while making payment on our platform. Please <a
+              href="termsAndCondition.html#paymentAndSecurity">Click here to learn more about payment methods and
+              security</a>
+          </div>
+
+          <div class="add-info-head">
+            <img src="img/followerPink.svg" />
+            <b>Bulk order & discount</b>
+          </div>
+          <div class="add-info-txt">
+            Enjoy massive discount when you order in large quanity. Please note that customer whose order exceed or meet
+            up to 20 units are eligible for this offer. To place your bulk order, click <a
+              class="bulk-order-chat-trigger">Here to chat with us</a> or
+            <a href="tel:+2348023888590"> call us</a>
+          </div>
+          <div class="in-box">
+            <b>What In The Box</b>
+            <ol>
+
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="manual-img-temp">
+
+        </div>
+
+
+        <a class="sell-con add-sell-info-show-phone">
+
+          <b>Seller Info</b>
+          <div class="sell-div">
+            <img src="img/progressDots.gif" class="seller-img">
+            <div class="sell-info">
+              <div class="sell-name">
+                <div style="background-color: rgb(242, 242, 242);height: 35px; width: 90%; border-radius: 7px;">
+                </div>
+              </div>
+              <div class="sell-live">
+                <img src="img/google-maps.svg" />
+                <div>
+
+                </div>
+              </div>
+              <i>
+                <div style="background-color: rgb(255, 233, 255);height: 90px; width: 90%; border-radius: 7px;">
+
+                </div>
+              </i>
+              <button class="sell-chat-btn">Loading</button>
+            </div>
+          </div>
+
+        </a>
+
+        <div class="forum-comment-section">
+          <b class="post-comment-title">Comments</b>
+
+          <div class="post-comment-flexer">
+            <div class="post-comment-flexer-cont">
+
+              <div class="comment-reply-container">
+                <div class="user-comment-cont" id="comment-reply-display">
+
+                </div>
+                <img src="img/clear.png" alt="clear button" id="clear-comment-reply-btn">
+              </div>
+
+              <textarea id="comment-section-textarea" cols="30" rows="10"
+                placeholder="Write Your Comment Here..."></textarea>
+
+              <div class="comment-dont-mind-con">
+                <input type="checkbox" id="comment-recieve-noti-checkbox" checked>
+                <label for="comment-recieve-noti-checkbox">I don't mind receiving notifications
+                  from this discussion</label>
+              </div>
+            </div>
+            <button>Submit</button>
+          </div>
+
+          <div class="rating-div-flex">
+            <div class="rating-point">
+              <span>0</span>
+              <div>
+                <img src="img/star.svg" />
+                <img src="img/stargrey.svg" />
+                <img src="img/stargrey.svg" />
+                <img src="img/stargrey.svg" />
+                <img src="img/stargrey.svg" />
+              </div>
+              <small>0</small>
+            </div>
+            <div class="rating-progress">
+              <div>
+                <span>5</span> <progress min="0" max="100" value="25">
+                </progress>
+              </div>
+              <div>
+                <span>4</span> <progress min="0" max="100" value="13">
+                </progress>
+              </div>
+              <div>
+                <span>3</span> <progress min="0" max="100" value="7">
+                </progress>
+              </div>
+              <div>
+                <span>2</span> <progress min="0" max="100" value="0">
+                </progress>
+              </div>
+              <div>
+                <span>1</span> <progress min="0" max="100" value="5">
+                </progress>
+              </div>
+            </div>
+          </div>
+
+          <div class="no-review-found-con">
+            <img src="img/reviews.jpg" alt="">
+            <b>No Reviews Yet</b>
+          </div>
+
+          <div class="forum-comment-appender">
+            <img src="img/progressDots.gif" alt="" style="display: block;margin: 15vh auto;height: 10px;">
+           <!--<div class="user-comment-cont" id="">
+              <comment>
+                <img src="img/me.png" alt="" class="review-user-img">
+                <div>
+                  <b>Onabanjo Ademola</b>
+                  <small>26/27/3930</small>
+                  <revstar><img src="img/star.svg" />
+                    <img src="img/star.svg" />
+                    <img src="img/star.svg" />
+                    <img src="img/stargrey.svg" />
+                    <img src="img/stargrey.svg" /></revstar>
+                  <span>Lorem ipsum dolor sit,
+                    amet consectetur adipisicing elit. Suscipit esse voluptatem</span>
+                </div>
+              </comment>
+            </div>-->
+          </div>
+
+          <div class="loading-comment-notify">Please wait <img src="img/progressDots.gif" alt=""></div>
+
+        </div>
+
+        <div class="simi-con">
+          <div id="find-simi">
+          </div>
+          <b>similar products</b>
+
+          <div class="simi-not-found-temp">
+            <img src="" alt="product not found">
+            <b>No Similar Products Found</b>
+          </div>
+
+          <div class="simi-appender">
+
+            <img src="img/progressDots.gif" alt=""
+              style="width: 30%; display: block;margin: 90px auto;max-width: 100px;" class="simi-progress-notify">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="side-info-bar-con-pc">
+
+      <div class="add-info-con">
+        <div class="add-info-title">
+          Additional Info
+        </div>
+        <div class="add-info-head">
+          <img src="img/deliv.svg" />
+          <b>Delivery and shipment</b>
+        </div>
+        <div class="add-info-txt delivery-info-txt">
+          <div style="background-color: rgb(255, 236, 250);height: 60px; width: 90%; border-radius: 10px;">
+
+          </div>
+        </div>
+        <div class="add-info-head">
+          <img src="img/return-box.svg" />
+          <b>Fulfillment & Return Policy</b>
+        </div>
+        <div class="add-info-txt">
+          This product is eligible for return within 7days. Return can only be processed if certain conditions are
+          fulfilled. If these conditions are not fulfilled, neither return nor refund will be issued <a
+            href="termsAndCondition.html?section=returnPolicy">Click to learn more about return</a>
+        </div>
+        <div class="add-info-head">
+          <img src="img/cardPin.svg" />
+          <b>Payment & Security</b>
+        </div>
+        <div class="add-info-txt">
+          Your payment information is processed securely. We do not store credit card details nor have access to your
+          credit card informations. Therefore, we guaranty you safe and secure
+          payment while making payment on our platform. Please <a href="termsAndCondition.html#paymentAndSecurity">Click
+            here to learn more about payment methods and security</a>
+        </div>
+        <div class="add-info-head">
+          <img src="img/followerPink.svg" />
+          <b>Bulk order & discount</b>
+        </div>
+        <div class="add-info-txt">
+          Enjoy massive discount when you order in large quanity. Please note that customer whose order exceed or meet
+          up to 20 units are eligible for this offer. To place your bulk order, click <a
+            class="bulk-order-chat-trigger">Here to chat with us</a> or
+          <a href="tel:+2348023888590"> call us</a>
+        </div>
+        <div class="in-box">
+          <b>What In The Box</b>
+          <ol>
+
+          </ol>
         </div>
       </div>
 
-      <table class="bill-table">
-        <tr>
-          <td>
-            <a href="productCategory.html">
-              <img src="img/dairy-products.svg" alt="">
-              <div>Products</div>
-            </a>
-          </td>
-          <td>
-            <a href="businessindex.html">
-              <img src="img/suitcase.svg" alt="">
-              <div>Business</div>
-            </a>
-          </td>
-          <td>
-            <a href="forumSearch.html?category=Jobs|Vacancies">
-              <img src="img/love.svg" alt="">
-              <div>Wishlist</div>
-            </a>
-          </td>
-          <td>
-            <a href="businessUpload.html">
-              <img src="img/man.png" alt="">
-              <div>My Profile</div>
-            </a>
-          </td>
-        </tr>
+      <a class="sell-con">
+        <b>Seller Info</b>
+        <div class="sell-div">
+          <img src="img/spinner.gif" class="seller-img">
+          <div class="sell-info">
+            <div class="sell-name">
+              <div style="background-color: rgb(242, 242, 242);height: 35px; width: 90%; border-radius: 7px;">
 
-        <tr>
-          <td>
-            <a href="newPost.html?flag=job_upload">
-              <img src="img/cooperation.svg" alt="">
-              <div>Discount</div>
-            </a>
-          </td>
-          <td>
-            <a href="forum.html">
-              <img src="img/discussion.svg" alt="">
-              <div>Track order</div>
-            </a>
-          </td>
-          <td>
-            <a href="workforce.html">
-              <img src="img/workForceIcon.png" alt="">
-              <div>Work Force</div>
-            </a>
-          </td>
-          <td>
-            <a href="airtime.html">
-              <img src="img/airtime.svg" alt="">
-              <div>Airtime</div>
-            </a>
-          </td>
-        </tr>
+              </div>
+            </div>
+            <div class="sell-live">
+              <img src="img/google-maps.svg" />
+              <div>
 
-        <tr>
-          <td>
-            <a href="data.html">
-              <img src="img/data.svg" alt="">
-              <div>Data</div>
-            </a>
-          </td>
-          <td>
-            <a href="tv.html">
-              <img src="img/tv.svg" alt="">
-              <div>Tv</div>
-            </a>
-          </td>
-          <td>
-            <a href="electricity.html">
-              <img src="img/light.svg" alt="">
-              <div>Electricity</div>
-            </a>
-          </td>
-          <td>
-            <a href="profile.html#myBank">
-              <img src="img/customer-service.svg" alt="">
-              <div>Help Center</div>
-            </a>
-          </td>
-        </tr>
-      </table>
+              </div>
+            </div>
+            <i>
+              <div style="background-color: rgb(255, 233, 255);height: 90px; width: 90%; border-radius: 7px;">
 
-    </div>
-
-    <!--products category-->
-
-    <div class="prod-3-con product-cate-index-con" style="margin-top: 0px;">
-      <div class="prod-title cate-title">
-        <div>Products Category</div>
-        <sub>Easy access to all products categories</sub>
-      </div>
-
-      <div class="prod-cate">
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-      </div>
-
-    </div>
-
-    <!--first product-->
-    <div class="prod-3-con">
-      <div class="prod-title" style="background-color: green;">
-        <div>Electronics for geeks</div>
-        <sub>Get 60% off on electronics devices</sub>
-        <a href="productsearch.html?subCategory=Electronic%20Gadgets"><b>See More</b> <img src="img/morearrow.svg" alt=""></a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-elect-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-
-          <!--<span>Lorem, ipsum Lorem ipsum dolor sit</span>
-          <div>&#8358;675,656</div>
-          <small>
-            <img src="img/star.svg" alt="">
-            <img src="img/star.svg" alt="">
-            <img src="img/star.svg" alt="">
-            <img src="img/stargrey.svg" alt="">
-            <img src="img/stargrey.svg" alt="">
-          </small>-->
-
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-elect-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-elect-10">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-elect-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-elect-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-elect-11">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-4">
-        <a class="prod-elect-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-5">
-        <a class="prod-elect-10">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-11">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-elect-12">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-fashion-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-    </div>
-
-    <div class="top-sale-con">
-      <b>Top Selling</b>
-
-      <div class="top-sale-appender">
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-        <a>
-          <img src="img/logoPlain.gif">
-        </a>
-      </div>
-
-    </div>
-
-    <!--products category-->
-
-    <div class="prod-3-con">
-      <div class="prod-title" style="background-color: blue;">
-        <div>Fashion swag</div>
-        <sub>Make yourself more confidence and attractive</sub>
-        <a href="productsearch.html?subCategory=Shoe%2C%20Jewelry%20%26%20Watch%20Accessories"><b>See More</b> <img src="img/morearrow.svg" alt=""></a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-fashion-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-fashion-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-fashion-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-fashion-10">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-fashion-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-fashion-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-special-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-fashion-11">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-4">
-        <a class="prod-fashion-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-5">
-        <a class="prod-fashion-10">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-11">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-12">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-    </div>
-
-
-    <div class="p-show-case-container">
-
-      <div class="prod-des-show-case" style="background-color: rgb(0, 140, 255);">
-        <div class="pro-ddes-show-case-bone"></div>
-        <div>
-          <h>Laptop Express</h>
-          <span>Access affordable, HD resolution display and super fast laptops for your offices, school and homes</span>
-          <button>Shop Away</button>
+              </div>
+            </i>
+            <button class="sell-chat-btn">Loading</button>
+          </div>
         </div>
-
-        <img src="indexImg/showCase/laptop.png" alt="" style="right: 5%;">
-      </div>
-
-      <div class="prod-des-show-case" style="background-color: orange;">
-        <div class="pro-ddes-show-case-bone"></div>
-        <div>
-          <h>Smartphones</h>
-          <span>Get all smartphone integrated with massive storage space and maximum pixel camera capturing</span>
-          <button>Shop Away</button>
-        </div>
-
-        <img src="indexImg/showCase/phone.png" alt="" style="bottom: 0;right: 0;">
-      </div>
-
-      <div class="prod-des-show-case" style="background-color: crimson;">
-        <div class="pro-ddes-show-case-bone"></div>
-        <div>
-          <h>Footwear</h>
-          <span>Let make you look more elegant and attractive with our collection of different special footwear</span>
-          <button>Shop Away</button>
-        </div>
-
-        <img src="indexImg/showCase/shoe.png" alt="">
-      </div>
-
-      <div class="prod-des-show-case" style="background-color: green;">
-        <div class="pro-ddes-show-case-bone"></div>
-        <div>
-          <h>Earpods</h>
-          <span>Looking for earpods equipped with high battery capacity, worry no more, we've got special ones for you</span>
-          <button>Shop Away</button>
-        </div>
-
-        <img src="indexImg/showCase/earpod.png" alt="" style="bottom: 3%;">
-      </div>
+      </a>
 
     </div>
-
-    <img src="" alt="" class="p-advert" id="workTempBanner">
-
-    <div class="prod-3-con hide-p-4 show-p-6">
-      <div class="prod-title" style="background-color: crimson;">
-        <div>Office & Comfort</div>
-        <sub>Get quality and affordable furnitures just for you </sub>
-        <a href="productsearch.html?subCategory=Home%20%26%20Office%20Furniture"><b>See More</b> <img src="img/morearrow.svg" alt=""></a>
-      </div>
-      
-      <div class="prod-3-img">
-        <a class="prod-office-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-fashion-12">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-4 show-p-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-5 show-p-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-6 show-p-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-
-      </div>
-
-      <div class="prod-3-img hide-p-4">
-        <a class="prod-office-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-office-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-    </div>
-
-    <div class="prod-3-con">
-      <div class="prod-title" style="background-color: purple;">
-        <div>Latest Collections</div>
-        <sub>Items we have selected just for you</sub>
-        <a href="productsearch.html?queryType=products"><b>See More</b> <img src="img/morearrow.svg" alt=""></a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-latest-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-elect-12">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-latest-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-latest-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-latest-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-latest-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-4">
-        <a class="prod-latest-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-latest-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-    </div>
-
-    <img src="bisstemp/stretch/fashion.png" alt="sell on Algonex" class="p-advert">
-
-    <div class="prod-3-con">
-      <div class="prod-title" style="background-color: orange;">
-        <div>Special access</div>
-        <sub>Shop and be on top of everything</sub>
-        <a href="productsearch.html?subCategory=Large%20Appliances%20%26%20Home%20Improvement"><b>See More</b> <img src="img/morearrow.svg" alt=""></a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-special-1">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-office-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-special-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img">
-        <a class="prod-special-4">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-5">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-6">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-4 prod-office-2">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-5 prod-office-3">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="show-p-6 prod-special-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-      <div class="prod-3-img hide-p-4">
-        <a class="prod-special-7">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-8">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-        <a class="prod-special-9">
-          <img src="img/logoPlain.gif" class="prod-div-img">
-          <bne1></bne1>
-          <bne2></bne2>
-          <bne3></bne3>
-        </a>
-      </div>
-
-    </div>
-
-    <img src="" alt="Algonex Advert" class="p-advert" style="background-color: aqua;"
-      id="sellTempBanner">
 
   </div>
 
-  <footer>
+  <footer style="margin-top: 20px;margin-bottom: 38px;">
+
     <div class="contact-pc-con">
       <div class="contact-content"> <img src="img/helpService.svg" class="contact-img"> <span>Need Help? </span>
         <div class="call-btn-footer-phone"><a href="tel:+2349019445081">CALL US</a></div> <span>Or</span>
@@ -1518,7 +1160,10 @@
     </div>
   </footer>
 
-  <div class="footer-pc-con">
+
+
+
+  <div class="footer-pc-con" style="margin-top: 20px;">
     <div class="contact-pc-con">
       <div class="contact-content"> <img src="img/helpService.svg" class="contact-img"> <span>Need Help? </span>
         <div class="call-btn-footer-phone"><a href="tel:+2349019445081">CALL US</a></div> <span>Or</span>
@@ -1597,16 +1242,14 @@
 
   </div>
 
-
   <script src="js/jquery.js"></script>
   <script src="js/firebase.js"></script>
   <script src="js/algolia.js"></script>
-  <script src="js/imgCompressor.js"></script>
   <script src="js/pCate.js"></script>
+  <script src="js/imgCompressor.js"></script>
   <script src="js/header.js"></script>
   
-  <script src="js/index.js">
-  </script>
+  <script src="js/onecart.js"></script>
 
 </body>
 

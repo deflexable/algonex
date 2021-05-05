@@ -1,0 +1,257 @@
+footer {
+  background-color: rgba(32, 31, 31, 0.965);
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0px -2px 4px grey;
+  display: block;
+}
+
+.contact-pc-con {
+  display: flex;
+  background-color: black;
+  padding: 10px 0px;
+}
+
+.contact-content {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  font-size: 13px;
+}
+
+.contact-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+}
+
+.contact-content span {
+  margin: auto 7px;
+}
+
+.contact-content div {
+  font-weight: bold;
+  margin: auto;
+  padding: 3px 7px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.call-btn-footer-phone {
+  background-color: green;
+}
+
+.call-btn-footer-phone a {
+  color: white;
+  text-decoration: none;
+}
+
+.chat-btn-footer-phone {
+  background-color: blue;
+}
+
+.call-btn-footer-phone a:active {
+  color: green;
+}
+
+.call-btn-footer-phone:active {
+  background-color: white;
+}
+
+.chat-btn-footer-phone:active {
+  color: blue;
+  background-color: white;
+}
+
+.app-con-phone img {
+  margin: 15px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.footer-txt-con {
+  display: flex;
+}
+
+.footer-txt {
+  width: 50%;
+}
+
+.footer-txt b {
+  font-size: 14px;
+  text-transform: capitalize;
+  display: block;
+  cursor: unset;
+}
+
+.footer-txt a {
+  margin-top: 7px;
+  font-size: 13px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-txt a:active {
+  color: rgba(20, 19, 19, 0.962);
+  background-color: white;
+}
+
+.meet-txt-phone {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.social {
+  display: flex;
+  margin-top: 5px;
+}
+
+.social img {
+  margin-top: 4px;
+  cursor: pointer;
+  padding: 0px 15px;
+  width: calc(25% - 30px);
+  height: 30px;
+}
+
+.partner-div {
+  display: flex;
+  margin-top: 7px;
+  padding-bottom: 10px;
+
+}
+
+.partner-div img {
+  padding: 0px 15px;
+  width: calc(25% - 30px);
+  height: 35px;
+}
+
+.footer-pc-con {
+  display: none;
+}
+
+/*for pc*/
+@media only screen and (min-width: 800px) {
+  footer {
+    display: none;
+  }
+
+  .footer-pc-con {
+    display: block;
+    background-color: rgba(32, 31, 31, 0.965);
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .contact-img {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+  }
+
+  .contact-content div {
+    margin-left: 13px;
+  }
+
+  .contact-content span {
+    font-size: 15px;
+    margin-left: 13px;
+  }
+
+  .contact-content div {
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .meet-txt {
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 0px 10px 40px;
+  }
+
+  .meet-con {
+    display: flex;
+  }
+
+  .pc-meet-img img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: auto 0px auto 40px;
+  }
+
+  .app-con-pc {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .app-con-pc img {
+    height: 50px;
+    cursor: pointer;
+    margin: auto 20px auto auto;
+  }
+
+  .txt-nav-pc {
+    display: flex;
+    margin-top: 30px;
+    text-transform: capitalize;
+  }
+
+  .txt-nav-head {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .txt-nav-pc div {
+    width: 25%;
+    text-align: center;
+  }
+
+  .txt-nav-pc div a {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  .txt-nav-pc div a:active {
+    background-color: white;
+    color: black;
+  }
+
+  .foot-bottom {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  .partner-pc-con {
+    display: flex;
+  }
+
+  .foot-bottom img {
+    width: 100px;
+    height: 35px;
+    margin-left: 30px;
+  }
+
+  .copyright-pc-con {
+    margin-left: auto;
+    display: flex;
+  }
+
+  .copyright-pc-con div {
+    margin-right: 25px;
+  }
+
+  .copy-yr {
+    font-weight: bold;
+    margin: auto;
+  }
+
+}

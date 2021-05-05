@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+  }
+
+  .term-title {
+    color: darkblue;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px grey;
+  }
+
+  .term-note {
+    background-color: #b6f6ff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 15px auto 0px auto;
+    padding: 10px 0px;
+  }
+
+  .term-note img {
+    width: 27px;
+    height: 27px;
+    margin: 10px;
+    flex-shrink: 0;
+  }
+
+  .term-note b {
+    font-size: 15px;
+    color: darkblue;
+  }
+
+  .term-note div {
+    font-size: 13px;
+    color: #0000c1;
+    line-height: 1.4em;
+    margin-right: 10px;
+  }
+
+  .terms-ol {
+    list-style: none;
+  }
+
+  .terms-ol h2 {
+    margin-left: -27px;
+    text-transform: capitalize;
+  }
+
+  .terms-ol div {
+    line-height: 1.4em;
+  }
+
+  .terms-ol ul li {
+    list-style-type: lower-roman;
+    margin-top: 10px;
+  }
+
+  .pp {
+    margin: 20px 0px 30px 15px;
+  }
+
+  .pp div {
+    font-weight: bold;
+    font-size: 23px;
+  }
+
+  .pp s {
+    height: 4px;
+    width: 230px;
+    background-color: green;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .pp span {
+    display: block;
+    margin: 20px 10px 0px 30px;
+    line-height: 1.7em;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .padder {
+      width: 70%;
+      margin: 0px auto;
+    }
+  }
