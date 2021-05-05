@@ -459,13 +459,13 @@ $(document).ready(function () {
 
     var isSubmittingReview = false;
 
-    firebase.database().ref("vendors/" + sellerId).once('value', function (v) {
+    firebase.database().ref("vendors/0XWIVTfROBXR3BvxQAG06f5zxaO2").once('value', function (v) {
       const img = formateUserImg(v.child('img').val());
       $('.seller-img').attr('src', img);
       $('.sell-name').html(v.child('fName').val() + ' ' + v.child('lName').val());
       $('.sell-live div').html('Lived At: ' + v.child('localGovt').val() + ' ' + v.child('state').val());
-      $(".sell-con").attr('href', 'productsearch.html?sellerId=' + sellerId);
-      $(".sell-con").attr('target', '_blank');
+
+
       $('.sell-info i').html(v.child('storeDes').val());
     });
 
