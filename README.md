@@ -16,6 +16,9 @@ Kindly visit <a href="https://algonex-7.web.app/">https://algonex-7.web.app/</a>
 
 * Firebase: firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. It comprises of different products which includes realtime database, firestore, storage, functions, hosting, Ml kits, e.t.c.
 
+# <a href="https://github.com/algolia/datasets/blob/master/ecommerce/records.json">Datasets</a>
+Algonex has over 10,000 dataset gotten from <a href="https://github.com/algolia/datasets/blob/master/ecommerce/records.json">here</a> which comprises of list of the most commonly bought items on Bestbuy.
+
 # Features
 * <b>Unique users:</b> When user signed up on algonex for the first time, such user are assigned a unique identity for accessing data from firebase database.
 * <b>Cart:</b> With the help of unique identity, user can access and store products in their personal carts.
