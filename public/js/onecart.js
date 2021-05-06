@@ -291,13 +291,21 @@ $(document).ready(function () {
       }
     }
 
-    sliderHtml += '<img src="' + s.child('pImg').val() + '" alt="' + pName + '" >';
+    sliderHtml += '<img src="img/logoPlain.gif" alt="' + pName + '" id="mainPimg24g" >';
+    
     s.child('img').forEach(function (i) {
       sliderHtml += '<img src="' + i.val() + '" alt="' + pName + '" >';
       sliderDots += '<div></div>';
     });
     $(".slider-flex").html(sliderHtml);
     $('.slide-dot-con').html(sliderDots);
+
+      var imgm = s.child('pImg').val();
+    try {
+        prepareProductImg('https://obscure-taiga-70753.herokuapp.com/' + imgm, '#mainPimg24g');
+      } catch (e) {
+        $('#mainPimg24g').attr('src', imgm);
+      }
 
     $(".slider-flex img").css('minHeight', '' + ($(".slider-flex img").eq(0).css('width') * 0.7));
 
