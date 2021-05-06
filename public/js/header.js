@@ -669,6 +669,9 @@ $(function () { //when doc has loaded
   }
   slideDrop(1);
   slideDrop(2);
+  
+  
+  firebase.database().ref('statistics').push().set(location.href);
 
   var notiBtn = $(".noti-div"),
     mesPcCon = $(".mes-container-pc"),
