@@ -335,7 +335,7 @@ $(document).ready(function () {
             queryJson.facetFilters = facetFilterArr;
         }
 
-        accessAppendedQuery = function () {
+        accessAppendedQuery = function (flagger, flagValue) {
             console.log('scrapping');
             if (false) {
 
@@ -384,11 +384,17 @@ $(document).ready(function () {
                 snapQuery += vaj('shipping');
 
                 console.log('snap_Q =' + snapQuery);
-                goTo("another page", "example", location.origin + location.pathname + snapQuery);
+                if(flagger == 'pager'){
+                    var g = location.href.split('page=' + page).join('').split('page=' + page).join('') + '&page=' + flagValue;
+                    goTo('another page', 'Loading', g);
+                   }else{
+                goTo("another page", "Loading", location.origin + location.pathname + snapQuery);
+                      }
                 clearTimeout(snappedQueryTimeout);
                 snappedQueryTimeout = setTimeout(() => {
+                    location.href = '#cont-container-spinner';
                     reloadWindow();
-                }, 500);
+                }, 700);
             }
         }
 
@@ -396,11 +402,13 @@ $(document).ready(function () {
         queryJson.hitsPerPage = pageNum * 1;
         queryJson.facets = ['brand', 'price', 'rate', 'stock', 'type', 'price_range', 'discount'];
         queryJson.attributesToRetrieve = searchNode;
+        $('#cont-container-spinner').css('display', 'block');
+        $('.cont-container').empty();
 
         index.search(aggregatedSearch, queryJson).then((rShot) => {
             const r = JSON.parse(JSON.stringify(rShot)),
                 rPageNum = r.nbPages,
-                searchCount = pageNum * rPageNum,
+                searchCount = r.nbHits,
                 facetStats = r.facets_stats;
 
             try {
@@ -493,7 +501,7 @@ $(document).ready(function () {
             } else {
                 $('.search-alert').hide();
                 $('.cont-container').show();
-                $('.result-txt').text(searchCount + ' search result found');
+                $('.result-txt').text('About '+searchCount + ' search result found');
 
                 $('.cont-container').empty();
                 r.hits.forEach(e => {
@@ -706,17 +714,28 @@ $(document).ready(function () {
                 return;
             }
             $('.pg-box').css('display', 'flex');
-            var pgDIv = '';
+            var pgDIv = '',
+                pgArrTrig = [];
             for (var i = 1; i <= numPages; i++) {
                 const p = i;
                 var link = location.href.split('&page=' + page).join('').split('page=' + page).join('') + '&page=' + p;
                 if (p == page) {
-                    pgDIv += '<a href="' + link + '" style="background-color: orange;">' + p + '</a>'
+                    pgDIv += '<a style="background-color: orange;" id="pbCont'+p+'">' + p + '</a>'
                 } else {
-                    pgDIv += '<a href="' + link + '">' + p + '</a>'
+                    pgDIv += '<a href="' + link + '" id="pbCont'+p+'">' + p + '</a>';
+                    const pt = function(){
+                        $('#pbCont'+p).click(function(e){
+                        accessAppendedQuery('pager', p);
+                        e.preventDefault();
+                    });}
+                    pgArrTrig.push(pt);
                 }
+                $('#pbCont'+p).off('click');
             }
             $('.pg-box').html(pgDIv);
+            pgArrTrig.forEach(function(trig){
+                trig();
+            });
         }
 
         function getMoreCategories() {
