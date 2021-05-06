@@ -178,8 +178,26 @@ $(document).ready(function () {
     }
 
     reloadWindow('snapping');
+    var popTimeout = null;
 
     function reloadWindow(firstTimeLoad) {
+        
+        
+    window.onpopstate = function(e){
+        clearTimeout(popTimeout);
+        popTimeout = setTimeout(() => {
+      if(e.state){
+        reloadWindow();
+        }
+         }, 500);
+     };
+        function joinPager(){
+            if(location.href.includes('&page='))
+                return '';
+            else
+                return '&';
+           }
+        
         const searchWord = getUrlParam('search'),
             qCategory = getUrlParam('category'),
             qSubCategory = getUrlParam('subCategory'),
@@ -387,7 +405,7 @@ $(document).ready(function () {
                 if(flagger == 'pager'){
                     var g = location.href.replace(new RegExp(location.hash, "g"), '').replace(new RegExp('page='+page, "g"), 'page='+flagValue);
                     if(!g.includes('page='+flagValue)){
-                        g+= 'page='+flagValue;
+                        g+= joinPager()+'page='+flagValue;
                     }
                     goTo('another page', 'Loading', g);
                    }else{
@@ -721,7 +739,7 @@ $(document).ready(function () {
                 pgArrTrig = [];
             for (var i = 1; i <= numPages; i++) {
                 const p = i;
-                var link = location.href.split(location.hash).join('').split('page=' + page).join('') + 'page=' + p;
+                var link = location.href.split(location.hash).join('').split('page=' + page).join('') + joinPager() +'page=' + p;
                 if (p == page) {
                     pgDIv += '<a style="background-color: orange;" id="pbCont'+p+'">' + p + '</a>'
                 } else {
