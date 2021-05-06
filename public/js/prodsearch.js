@@ -385,7 +385,10 @@ $(document).ready(function () {
 
                 console.log('snap_Q =' + snapQuery);
                 if(flagger == 'pager'){
-                    var g = location.href.split('page=' + page).join('').split('page=' + page).join('') + '&page=' + flagValue;
+                    var g = location.href.replace(new RegExp(location.hash, "g"), '').replace(new RegExp('page='+page, "g"), 'page='+flagValue);
+                    if(!g.includes('page='+flagValue)){
+                        g+= 'page='+flagValue;
+                    }
                     goTo('another page', 'Loading', g);
                    }else{
                 goTo("another page", "Loading", location.origin + location.pathname + snapQuery);
@@ -718,7 +721,7 @@ $(document).ready(function () {
                 pgArrTrig = [];
             for (var i = 1; i <= numPages; i++) {
                 const p = i;
-                var link = location.href.split('&page=' + page).join('').split('page=' + page).join('') + '&page=' + p;
+                var link = location.href.split(location.hash).join('').split('page=' + page).join('') + 'page=' + p;
                 if (p == page) {
                     pgDIv += '<a style="background-color: orange;" id="pbCont'+p+'">' + p + '</a>'
                 } else {
