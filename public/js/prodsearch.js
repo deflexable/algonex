@@ -321,18 +321,20 @@ $(document).ready(function () {
         queryScrapper(qSubCategory, 'subCate');
 
         if (qFreeShipping == 'free') {
-            qJoin();
-            filterQuerier += 'free_shipping: true';
-            if (!filterBucket['shipping']) {
+            //qJoin();
+            //filterQuerier += 'free_shipping: true';
+            //if (!filterBucket['shipping']) {
                 filterBucket['shipping'] = ['free_shipping:true'];
-            }
+            //}
         } else if (qFreeShipping == 'fee') {
-            qJoin();
-            filterQuerier += 'free_shipping: false';
-            if (!filterBucket['shipping']) {
+            //qJoin();
+            //filterQuerier += 'free_shipping: false';
+            //if (!filterBucket['shipping']) {
                 filterBucket['shipping'] = ['free_shipping:false'];
-            }
-        }
+            //}
+        } else {
+           delete filterBucket['shipping'];
+          } 
 
         if (queryType != null) {
             aggregatedSearch = '*';
