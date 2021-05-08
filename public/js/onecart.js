@@ -105,7 +105,7 @@ $(document).ready(function () {
       if (userId != '') {
         firebase.database().ref('cart/' + userId + '/' + productId).set(q);
       }
-      costTxt.html(" <small> Total Cost (Excluding shipping) </small> : &#8358;" + numberWithCommas((parseFloat(priceTxt) - Math.ceil((disGlob * priceTxt) / 100)) * q));
+      costTxt.html(" <small> Total Cost (Excluding shipping) </small> : $" + numberWithCommas((parseFloat(priceTxt) - Math.ceil((disGlob * priceTxt) / 100)) * q));
     }
   }
 
@@ -245,7 +245,7 @@ $(document).ready(function () {
 
     var pRate = s.child('rate').val();
 
-    if(pRate == null){
+    if (pRate == null) {
       pRate = 0;
     }
     $('.star-div').html(getRating(pRate));
@@ -292,7 +292,7 @@ $(document).ready(function () {
     }
 
     sliderHtml += '<img src="img/logoPlain.gif" alt="' + pName + '" id="mainPimg24g" >';
-    
+
     s.child('img').forEach(function (i) {
       sliderHtml += '<img src="' + i.val() + '" alt="' + pName + '" >';
       sliderDots += '<div></div>';
@@ -300,12 +300,8 @@ $(document).ready(function () {
     $(".slider-flex").html(sliderHtml);
     $('.slide-dot-con').html(sliderDots);
 
-      var imgm = s.child('pImg').val();
-    try {
-        prepareProductImg('https://obscure-taiga-70753.herokuapp.com/' + imgm, '#mainPimg24g');
-      } catch (e) {
-        $('#mainPimg24g').attr('src', imgm);
-      }
+
+    prepareProductImg(s.child('pImg').val(), '#mainPimg24g');
 
     $(".slider-flex img").css('minHeight', '' + ($(".slider-flex img").eq(0).css('width') * 0.7));
 
@@ -316,11 +312,11 @@ $(document).ready(function () {
     $('.p-name').html(pName);
     if (pDis != null && pDis != 0) {
       disGlob = pDis;
-      $('.p-price').html('&#8358;' + numberWithCommas((parseFloat(pPrice) - Math.ceil((pDis * pPrice) / 100)).toFixed(2)));
-      $('.discount').html('&#8358;' + numberWithCommas(pPrice.toFixed(2)));
+      $('.p-price').html('$' + numberWithCommas((roundNumTo2(parseFloat(pPrice) - Math.ceil((pDis * pPrice) / 100)))));
+      $('.discount').html('$' + numberWithCommas(roundNumTo2(pPrice)));
     } else {
       disGlob = 0;
-      $('.p-price').html('&#8358;' + numberWithCommas(pPrice.toFixed(2)));
+      $('.p-price').html('$' + numberWithCommas(roundNumTo2(pPrice)));
       $('.discount').css('display', 'none');
     }
     $("#condition").html("condition:<div>" + condVal + "</div>");
@@ -331,7 +327,7 @@ $(document).ready(function () {
       cond.css("backgroundColor", "green");
     }
     $("#p-remain").html("Available in stock: <div>" + pRemain + "</div>");
-    costTxt.html("<small> Total Cost (Excluding shipping) </small> : &#8358;" + numberWithCommas((parseFloat(priceTxt) - Math.ceil((disGlob * priceTxt) / 100)).toFixed(2) * 1));
+    costTxt.html("<small> Total Cost (Excluding shipping) </small> : $" + numberWithCommas(roundNumTo2(parseFloat(priceTxt) - Math.ceil((disGlob * priceTxt) / 100)) * 1));
 
     if (fault != null) {
       $("#prod-fault-con").css('display', 'block');
@@ -546,22 +542,17 @@ $(document).ready(function () {
       }
       var rate = d.child('rate').val();
 
-      if(rate == null){
+      if (rate == null) {
         rate = 0;
       }
-      var simiHtml = '<a href="onecart.html?productId=' + key + '" class="simi-cont"><img src="img/logoPlain.gif" alt="' + name + '" class="simi-cont-img" id="simpimg92'+key+'" />';
+      var simiHtml = '<a href="onecart.html?productId=' + key + '" class="simi-cont"><img src="img/logoPlain.gif" alt="' + name + '" class="simi-cont-img" id="simpimg92' + key + '" />';
       if (dis != null && dis != 0) {
         simiHtml += '<div class="simi-dis-per-temp">-' + dis + '%</div>'
       }
-      simiHtml += '<div class="simi-p-name">' + name + '</div><div class="simi-price">&#8358;' + numberWithCommas((parseFloat(price) - Math.ceil((dect * price) / 100)).toFixed(2)) + '</div><div class="simi-star">' +
+      simiHtml += '<div class="simi-p-name">' + name + '</div><div class="simi-price">$' + numberWithCommas(roundNumTo2(parseFloat(price) - Math.ceil((dect * price) / 100))) + '</div><div class="simi-star">' +
         getRating(rate) + '</div></a>';
       $('.simi-appender').append(simiHtml);
-
-      try {
-        prepareProductImg('https://obscure-taiga-70753.herokuapp.com/' + image, '#simpimg92' + key);
-      } catch (e) {
-        $('#simpimg92' + key).attr('src', image);
-      }
+      prepareProductImg(image, '#simpimg92' + key);
     }
   });
 
@@ -721,13 +712,30 @@ $(document).ready(function () {
   });
 
   function prepareProductImg(src, imgRef) {
-    var imgAccessor = new Image();
-    imgAccessor.setAttribute('crossOrigin', 'anonymous');
-    imgAccessor.onload = function (r) {
-      const resizedImg = getEqualizedImage(src, imgAccessor);
-      $(imgRef).attr('src', resizedImg);
+    try {
+
+      var imgAccessor = new Image(),
+        proxiedURL = 'https://obscure-taiga-70753.herokuapp.com/' + src;
+
+      imgAccessor.setAttribute('crossOrigin', 'anonymous');
+      imgAccessor.onload = function (r) {
+        try {
+          const resizedImg = getEqualizedImage(src, imgAccessor);
+          console.log('setting img', resizedImg);
+          if (resizedImg == proxiedURL) {
+            $(imgRef).attr('src', src);
+          } else {
+            $(imgRef).attr('src', resizedImg);
+          }
+        } catch (e) {
+          $(imgRef).attr('src', src);
+        }
+      }
+      imgAccessor.src = proxiedURL;
+
+    } catch (e) {
+      $(imgRef).attr('src', src);
     }
-    imgAccessor.src = src;
   }
 
   function getEqualizedImage(imgUrl, loadedImg) {

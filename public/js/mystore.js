@@ -160,7 +160,7 @@ $(document).ready(function () {
                     const rowRef = sectionPrefix + 'StoreTableRowa6g2bv7s9qz' + key;
 
                     var tableHtml = '<tr id="' + rowRef + '"><td><div class="p-store-info"><img src="' + pImg + '" class="p-store-img" /><a href="onecart.html?productId=' + key + '" target="_blank" class="p-store-name">' + limitString(pName, 60) + '</a>' +
-                      '<div class="p-store-price">&#8358;' + numberWithCommas(pPrice) + '</div><div class="p-store-discount"><div>Discount: </div><span>' + discount +
+                      '<div class="p-store-price">$' + numberWithCommas(pPrice) + '</div><div class="p-store-discount"><div>Discount: </div><span>' + discount +
                       '</span><img src="img/edit.png" /></div><div class="condition-p-store"><div>Condition: </div>' + condition +
                       '</div><div class="stock-p-store"><div>Stock: </div><span>' + stock + '</span><img src="img/edit.png" /></div></div></td>' +
                       '<td><div class="p-store-created-on">' + new Date(date).toLocaleString("en-us") + '</div></td><td><div class="store-prod-ref" >' + key + '</div></td><td><div class="p-store-status" ' + status + '</div></td>' +

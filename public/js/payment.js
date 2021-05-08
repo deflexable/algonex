@@ -144,7 +144,7 @@ $(document).ready(function () {
         if (user) {
 
             function initializePayment() {
-                $('#payBtn').html('Pay &#8358;' + numberWithCommas(totalCost));
+                $('#payBtn').html('Pay $' + numberWithCommas(totalCost));
                 readyInput();
                 $('#payBtn').click(function () {
                     $('.form-div input').trigger('oninput');

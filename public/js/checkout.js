@@ -226,8 +226,8 @@ $(document).ready(function () {
 
                                 var cartHtml = '<div class="cart-item-cont" id="cartItemContRef' + contKey + '"><div class="cart-img-con"><div class="item-cart-count">' + stack99(cartNum) + '</div><img src="' +
                                     img + '" alt="failed to load image" class="cart-prod-img" /></div>' +
-                                    '<div class="cart-info" ><div class="item-name">' + name + '</div><b>&#8358;' + numberWithCommas(disPrice) + '</b><div class="delivery-cost">Delivery cost: &#8358;' + deliveryCost + '</div>' +
-                                    '<div class="item-cost">Cost: &#8358;' + numberWithCommas(((cartNum * disPrice) + parseFloat(deliveryCost)) + parseFloat(deliveryCost)) + '</div></div></div><div class="cart-stripe"></div>';
+                                    '<div class="cart-info" ><div class="item-name">' + name + '</div><b>$' + numberWithCommas(disPrice) + '</b><div class="delivery-cost">Delivery cost: $' + deliveryCost + '</div>' +
+                                    '<div class="item-cost">Cost: $' + numberWithCommas(((cartNum * disPrice) + parseFloat(deliveryCost)) + parseFloat(deliveryCost)) + '</div></div></div><div class="cart-stripe"></div>';
                                 $('.cart-content-appender').append(cartHtml);
 
                                 const id = '#cartItemContRef' + contKey,
@@ -238,7 +238,7 @@ $(document).ready(function () {
                                 cartRef.on('value', function (calShot) {
                                     const cp = calShot.val();
                                     if (cp != null) {
-                                        costTxt.html("Cost: &#8358;" + numberWithCommas((cp * disPrice) + parseFloat(deliveryCost)));
+                                        costTxt.html("Cost: $" + numberWithCommas((cp * disPrice) + parseFloat(deliveryCost)));
                                     } else {
                                         $(id).slideToggle(700);
                                         setTimeout(() => {
@@ -309,8 +309,8 @@ $(document).ready(function () {
                                 deliveryCost += (Math.ceil((deliveryRate * price) / 100) * cartNum);
                                 ++indexInnerCount;
                                 if (indexInnerCount == cartCountIte) {
-                                    const calcHtml = '<div class="total-cart-body"><span>Items cost</span><b>&#8358;' + numberWithCommas(realAmount) + '</b></div><div class="total-cart-body"><span>Discount</span><b>- &#8358;' + numberWithCommas(totalDiscount) + '</b></div>' +
-                                        '<div class="total-cart-body"><span>Delivery cost</span><b>+ &#8358;' + deliveryCost + '</b></div><div class="total-cart-body total-cart-body-sum"><span>Total amount</span><b>&#8358;' +
+                                    const calcHtml = '<div class="total-cart-body"><span>Items cost</span><b>$' + numberWithCommas(realAmount) + '</b></div><div class="total-cart-body"><span>Discount</span><b>- $' + numberWithCommas(totalDiscount) + '</b></div>' +
+                                        '<div class="total-cart-body"><span>Delivery cost</span><b>+ $' + deliveryCost + '</b></div><div class="total-cart-body total-cart-body-sum"><span>Total amount</span><b>$' +
                                         numberWithCommas((realAmount - totalDiscount) + deliveryCost) + '</b></div>';
                                     $('.calc-content').html(calcHtml);
                                     $('.checkout-splitter').html('Cart item (' + indexInnerCount + ')');

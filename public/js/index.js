@@ -185,7 +185,26 @@ $(document).ready(function () {
             var price = d.child('pPrice').val(),
                 dis = d.child('discount').val(),
                 name = d.child('pName').val(),
-                prodHtml = '<img src="' + d.child('pImg').val() + '" class="prod-div-img" alt="' + name + '"><span>' + limitString(name, 40) + '</span><div>&#8358;' + numberWithCommas((parseFloat(price) - Math.ceil((dis * price) / 100))) + '</div>';
+                prodHtml = '<img src="' + d.child('pImg').val() + '" class="prod-div-img" alt="' + name + '"><span>' + limitString(name, 40) + '</span><div>$' + numberWithCommas(roundNumTo2(parseFloat(price) - Math.ceil((dis * price) / 100))) + '</div>';
+                /*if(price >= 2000){
+                    firebase.database().ref('Products/'+path+'/pPrice').set((price/400));
+                }
+                if(d.child('cate').val().toLowerCase() == 'phone and tablets'){
+                    firebase.database().ref('Products/'+path+'/cate').set('Cell Phones');
+                    firebase.database().ref('Products/'+path+'/subCate').set('No-Contract Phones');
+                }
+                if(d.child('cate').val().toLowerCase() == 'home and office'){
+                    firebase.database().ref('Products/'+path+'/cate').set('Office Furniture & Storage');
+                    firebase.database().ref('Products/'+path+'/subCate').set('Office Chairs');
+                }
+                if(d.child('cate').val().toLowerCase() == 'fashion'){
+                    firebase.database().ref('Products/'+path+'/cate').set('Health, Fitness & Beauty');
+                    firebase.database().ref('Products/'+path+'/subCate').set('Personal Care & Beauty');
+                }
+                if(d.child('cate').val().toLowerCase() == 'electronics'){
+                    firebase.database().ref('Products/'+path+'/cate').set('Computers & Tablets');
+                    firebase.database().ref('Products/'+path+'/subCate').set('Laptops');
+                }*/
             if (dis != null && dis != 0) {
                 prodHtml += '<badge style="background-color: ';
                 if (dis > 0 && dis < 20) {

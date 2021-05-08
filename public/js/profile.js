@@ -51,7 +51,7 @@ $(document).ready(function () {
                     if (balance == null) {
                         balance = '0';
                     }
-                    $('.wallet-body-con div h2').html('&#8358;' + balance);
+                    $('.wallet-body-con div h2').html('$' + balance);
                 });
                 $('#withdraw-wallet-btn').click(function () {
                     alert('Sorry, this service is currently unavailable');
@@ -235,9 +235,9 @@ $(document).ready(function () {
                         }
 
                         searchTable += '<a href="onecart.html?productId=' + id + '" class="result-cont"><img src="' + img + '" alt="' + pName + '" class="p-img"><div class="prod-info"><div class="p-name">' +
-                            pName + '</div><div class="p-price">&#8358;' + numberWithCommas((parseFloat(price) - Math.ceil((dis * price) / 100))) + '</div>';
+                            pName + '</div><div class="p-price">$' + numberWithCommas((parseFloat(price) - Math.ceil((dis * price) / 100))) + '</div>';
                         if (dis != null && dis != 0) {
-                            searchTable += '<div class="dis-div"><del>&#8358;' + price + '</del><div style="background-color: ';
+                            searchTable += '<div class="dis-div"><del>$' + price + '</del><div style="background-color: ';
                             if (dis > 0 && dis < 20) {
                                 searchTable += 'green';
                             } else if (dis >= 20 && dis < 40) {

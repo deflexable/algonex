@@ -4,6 +4,14 @@ var toastTimeout, accessMessageDialog = null,
   pathForRecordedSearchData_ = 'productsearch.html?search=',
   micId_ = '#phone-prod-search-icon-img, #pc-prod-search-icon-img';
 
+function roundNumTo2(num) {
+  try {
+    return Math.ceil(num * 100) / 100;
+  } catch (e) {
+    return num;
+  }
+}
+
 
 function hoverBesideView(currentHover) {
   $(currentHover).on({
@@ -495,7 +503,7 @@ $(function () { //when doc has loaded
   function fetchSearch(inputObject, searchAppender) {
     console.log('fetching search...');
     var searchWords = inputObject.val().trim(),
-    searchTemp = $(searchAppender);
+      searchTemp = $(searchAppender);
 
     if (lastSearchIndex != searchWords) {
       if (searchWords != '') {
@@ -542,8 +550,8 @@ $(function () { //when doc has loaded
             searchTemp.html(html);
             $('.pc-search-hint div img:first-child').off('hover');
             hoverBesideView('.pc-search-hint div img:first-child');
-            $(searchAppender+' div').off('click');
-            $(searchAppender+' div').click(function (e) {
+            $(searchAppender + ' div').off('click');
+            $(searchAppender + ' div').click(function (e) {
               var reh = $(this).attr('id'),
                 jie = $(this).children('span').html();
               if (reh) {
@@ -669,8 +677,8 @@ $(function () { //when doc has loaded
   }
   slideDrop(1);
   slideDrop(2);
-  
-  
+
+
   firebase.database().ref('statistics').push().set(location.href);
 
   var notiBtn = $(".noti-div"),

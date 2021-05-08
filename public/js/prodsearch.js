@@ -1,7 +1,9 @@
 var queryAppender = {},
-    flagST = '',emt = null,
+    flagST = '',
+    emt = null,
     accessAppendedQuery = null,
-    snappedQueryTimeout = null;
+    snappedQueryTimeout = null,
+    reloadSnapFlagger = null;
 
 $(document).ready(function () {
 
@@ -30,6 +32,8 @@ $(document).ready(function () {
         if (v == 'none') {
             delete queryAppender.subCategory;
         } else {
+            reloadSnapFlagger = 'yes';
+            queryAppender = {};
             queryAppender.subCategory = $(this).val();
         }
         accessAppendedQuery();
@@ -47,6 +51,7 @@ $(document).ready(function () {
         $('input[name="ship-filter-name"], .filter-con-padder input[type="checkbox"]').prop('checked', false);
         $('.filter-con-padder select').val('none');
         queryAppender = {};
+        reloadSnapFlagger = 'yes';
         accessAppendedQuery();
     });
 
@@ -79,7 +84,9 @@ $(document).ready(function () {
             $('.filter-search-cate').hide();
             delete queryAppender.category;
         } else {
+            queryAppender = {};
             queryAppender.category = $(this).val();
+            reloadSnapFlagger = 'yes';
             $('.filter-search-cate').show();
             const v = e.target.selectedIndex - 1;
             var sub = '<option value="none">Select Product Sub-Category</option>';
@@ -181,23 +188,24 @@ $(document).ready(function () {
     var popTimeout = null;
 
     function reloadWindow(firstTimeLoad) {
-        
-        
-    window.onpopstate = function(e){
-        clearTimeout(popTimeout);
-        popTimeout = setTimeout(() => {
-      if(e.state){
-        reloadWindow();
-        }
-         }, 500);
-     };
-        function joinPager(){
-            if(location.href.includes('&page='))
+
+
+        window.onpopstate = function (e) {
+            clearTimeout(popTimeout);
+            popTimeout = setTimeout(() => {
+                if (e.state) {
+                    reloadWindow();
+                }
+            }, 500);
+        };
+
+        function joinPager() {
+            if (location.href.includes('&page='))
                 return '';
             else
                 return '&';
-           }
-        
+        }
+
         const searchWord = getUrlParam('search'),
             qCategory = getUrlParam('category'),
             qSubCategory = getUrlParam('subCategory'),
@@ -258,8 +266,8 @@ $(document).ready(function () {
                 return null;
         }
 
-        if(firstTimeLoad){
-            if(qCategory != null){
+        if (firstTimeLoad) {
+            if (qCategory != null) {
                 $('#filter-cate').val(qCategory);
             }
         }
@@ -324,17 +332,17 @@ $(document).ready(function () {
             //qJoin();
             //filterQuerier += 'free_shipping: true';
             //if (!filterBucket['shipping']) {
-                filterBucket['shipping'] = ['free_shipping:true'];
+            filterBucket['shipping'] = ['free_shipping:true'];
             //}
         } else if (qFreeShipping == 'fee') {
             //qJoin();
             //filterQuerier += 'free_shipping: false';
             //if (!filterBucket['shipping']) {
-                filterBucket['shipping'] = ['free_shipping:false'];
+            filterBucket['shipping'] = ['free_shipping:false'];
             //}
         } else {
-           delete filterBucket['shipping'];
-          } 
+            delete filterBucket['shipping'];
+        }
 
         if (queryType != null) {
             aggregatedSearch = '*';
@@ -345,7 +353,7 @@ $(document).ready(function () {
             console.log('filterQueries =' + filterQuerier);
             queryJson.filters = filterQuerier;
         }
-        
+
         if (!$.isEmptyObject(filterBucket)) {
             $.each(filterBucket, function (key, v) {
                 console.log('ffkey =', key + ' & v=', v);
@@ -404,19 +412,28 @@ $(document).ready(function () {
                 snapQuery += vaj('shipping');
 
                 console.log('snap_Q =' + snapQuery);
-                if(flagger == 'pager'){
-                    var g = location.href.replace(new RegExp(location.hash, "g"), '').replace(new RegExp('page='+page, "g"), 'page='+flagValue);
-                    if(!g.includes('page='+flagValue)){
-                        g+= joinPager()+'page='+flagValue;
+                if (flagger == 'pager') {
+                    var g = location.href.replace(new RegExp(location.hash, "g"), '').replace(new RegExp('page=' + page, "g"), 'page=' + flagValue);
+                    if (!g.includes('page=' + flagValue)) {
+                        g += joinPager() + 'page=' + flagValue;
                     }
                     goTo('another page', 'Loading', g);
-                   }else{
-                goTo("another page", "Loading", location.origin + location.pathname + snapQuery);
-                      }
+                } else {
+                    goTo("another page", "Loading", location.origin + location.pathname + snapQuery);
+                }
+                var rFlag = null;
+                if(reloadSnapFlagger == 'yes'){
+                    reloadSnapFlagger = null;
+                    rFlag = 'yes';
+                }
                 clearTimeout(snappedQueryTimeout);
                 snappedQueryTimeout = setTimeout(() => {
                     location.href = '#cont-container-spinner';
-                    reloadWindow();
+                    if(rFlag == 'yes'){
+                        reloadWindow('snapper');
+                    }else{
+                        reloadWindow();
+                    }
                 }, 700);
             }
         }
@@ -524,7 +541,7 @@ $(document).ready(function () {
             } else {
                 $('.search-alert').hide();
                 $('.cont-container').show();
-                $('.result-txt').text('About '+searchCount + ' search result found');
+                $('.result-txt').text('About ' + searchCount + ' search result found');
 
                 $('.cont-container').empty();
                 r.hits.forEach(e => {
@@ -560,9 +577,9 @@ $(document).ready(function () {
             }
 
             var searchTable = '<a href="onecart.html?productId=' + id + '" class="result-cont"><img src="img/logoPlain.gif" alt="' + pName + '" class="p-img" id="pwaited82r' + id + '"><div class="prod-info"><div class="p-name">' +
-                highlightedName + '</div><div class="p-price">&#8358;' + numberWithCommas((price - Math.ceil((dis * price) / 100)).toFixed(2)) + '</div>';
+                highlightedName + '</div><div class="p-price">$' + numberWithCommas(roundNumTo2(price - Math.ceil((dis * price) / 100))) + '</div>';
             if (dis != null && dis != 0) {
-                searchTable += '<div class="dis-div"><del>&#8358;' + price + '</del><div style="background-color: ';
+                searchTable += '<div class="dis-div"><del>$' + price + '</del><div style="background-color: ';
                 if (dis > 0 && dis < 20) {
                     searchTable += 'green';
                 } else if (dis >= 20 && dis < 40) {
@@ -741,22 +758,23 @@ $(document).ready(function () {
                 pgArrTrig = [];
             for (var i = 1; i <= numPages; i++) {
                 const p = i;
-                var link = location.href.split(location.hash).join('').split('page=' + page).join('') + joinPager() +'page=' + p;
+                var link = location.href.split(location.hash).join('').split('page=' + page).join('') + joinPager() + 'page=' + p;
                 if (p == page) {
-                    pgDIv += '<a style="background-color: orange;" id="pbCont'+p+'">' + p + '</a>'
+                    pgDIv += '<a style="background-color: orange;" id="pbCont' + p + '">' + p + '</a>'
                 } else {
-                    pgDIv += '<a href="' + link + '" id="pbCont'+p+'">' + p + '</a>';
-                    const pt = function(){
-                        $('#pbCont'+p).click(function(e){
-                        accessAppendedQuery('pager', p);
-                        e.preventDefault();
-                    });}
+                    pgDIv += '<a href="' + link + '" id="pbCont' + p + '">' + p + '</a>';
+                    const pt = function () {
+                        $('#pbCont' + p).click(function (e) {
+                            accessAppendedQuery('pager', p);
+                            e.preventDefault();
+                        });
+                    }
                     pgArrTrig.push(pt);
                 }
-                $('#pbCont'+p).off('click');
+                $('#pbCont' + p).off('click');
             }
             $('.pg-box').html(pgDIv);
-            pgArrTrig.forEach(function(trig){
+            pgArrTrig.forEach(function (trig) {
                 trig();
             });
         }
@@ -807,11 +825,13 @@ $(document).ready(function () {
                                 page: 0,
                                 hitsPerPage: 7,
                             },
-                            qqf = [['cate:' + $('#filter-cate').val()]],
+                            qqf = [
+                                ['cate:' + $('#filter-cate').val()]
+                            ],
                             qqsub = $('#filter-sub-cate').val();
 
                         if (qqsub != 'none') {
-                            qqf.push(['subCate:'+qqsub]);
+                            qqf.push(['subCate:' + qqsub]);
                         }
                         console.log(qqf);
                         qq.filters = qqf;
