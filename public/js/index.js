@@ -53,7 +53,7 @@ $(document).ready(function () {
 
             if (img != null) {
                 if (img.startsWith('https://firebasestorage.googleapis.com')) {
-                    $('.prod-cate').append('<a href="productsearch.html?category=' + cate[a] + '"><img src="' + img + '" alt="' + cate[a] + '"><span>' + cate[a] + '</span></a>');
+                    $('.prod-cate').append('<a href="productsearch.html?category=' +encodeURIComponent(cate[a].replace(/&/g, '<AND>')) + '"><img src="' + img + '" alt="' + cate[a] + '"><span>' + cate[a] + '</span></a>');
                 }
             }
         }

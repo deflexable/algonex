@@ -270,7 +270,7 @@ $(document).ready(function () {
       }
     });
 
-    $('.product-div-breadcrum-pc').html('<a href="productsearch.html?queryType=product">Products</a> <c> > </c><a href="productsearch.html?category=' + encodeURIComponent(pCate) + '" target="_blank" >' + pCate + '</a> <c> > </c><a href="productsearch.html?subCategory=' + encodeURIComponent(subCate) + '" target="_blank">' + subCate + '</a> <c> > </c><b>' + limitString(pName, 33) + '</b> ');
+    $('.product-div-breadcrum-pc').html('<a href="productsearch.html?queryType=product">Products</a> <c> > </c><a href="productsearch.html?category=' + encodeURIComponent(pCate.replace(/&/g, '<AND>')) + '" target="_blank" >' + pCate + '</a> <c> > </c><a href="productsearch.html?subCategory=' + encodeURIComponent(subCate.replace(/&/g, '<AND>')) + '" target="_blank">' + subCate + '</a> <c> > </c><b>' + limitString(pName, 33) + '</b> ');
 
     if (pVid != null) {
       sliderDots += '<div></div>';

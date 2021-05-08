@@ -224,7 +224,6 @@ $(document).ready(function () {
             index = client.initIndex('Products');
 
         var page = getUrlParam('page'),
-            moreCategoryPath = null,
             aggregatedSearch = searchWord,
             queryJson = {},
             filterQuerier = '',
@@ -268,7 +267,7 @@ $(document).ready(function () {
 
         if (firstTimeLoad) {
             if (qCategory != null) {
-                $('#filter-cate').val(qCategory);
+                $('#filter-cate').val(qCategory.replace(/<AND>/g, '&'));
             }
         }
 
@@ -311,14 +310,14 @@ $(document).ready(function () {
 
         function queryScrapper(value, node) {
             if (value != null) {
-                value.split(',').forEach(function (e) {
+                value.split('<OR>').forEach(function (e) {
                     if (e != '') {
                         /*qJoin();
                         filterQuerier += node + ':' + e ;*/
                         if (!filterBucket[node]) {
                             filterBucket[node] = [];
                         }
-                        filterBucket[node].push(node + ':' + e);
+                        filterBucket[node].push(node + ':' + e.replace(/<AND>/g, '&'));
                     }
                 });
             }
@@ -387,14 +386,14 @@ $(document).ready(function () {
                     }
                 }
 
-                function ds(node) {
+                function ds(node, joiner) {
                     var queue = '';
                     $.each(queryAppender[node], function (key, v) {
                         console.log('key =' + key + ' v=' + v);
                         if (queue == '') {
-                            queue += node + '=' + encodeURIComponent(key);
+                            queue += node + '=' + encodeURIComponent(key.replace(/&/g, '<AND>'));
                         } else {
-                            queue += ',' + encodeURIComponent(key);
+                            queue += encodeURIComponent(joiner + key);
                         }
                     });
                     return sjoin(queue) + queue;
@@ -403,9 +402,9 @@ $(document).ready(function () {
                 snapQuery += '?search=' + aggregatedSearch;
                 snapQuery += vaj('category');
                 snapQuery += vaj('subCategory');
-                snapQuery += ds('brand');
-                snapQuery += ds('type');
-                snapQuery += ds('rate');
+                snapQuery += ds('brand', '<OR>');
+                snapQuery += ds('type', '<OR>');
+                snapQuery += ds('rate', ',');
                 snapQuery += vaj('price');
                 snapQuery += vaj('discount');
                 snapQuery += vaj('stock');
@@ -422,16 +421,16 @@ $(document).ready(function () {
                     goTo("another page", "Loading", location.origin + location.pathname + snapQuery);
                 }
                 var rFlag = null;
-                if(reloadSnapFlagger == 'yes'){
+                if (reloadSnapFlagger == 'yes') {
                     reloadSnapFlagger = null;
                     rFlag = 'yes';
                 }
                 clearTimeout(snappedQueryTimeout);
                 snappedQueryTimeout = setTimeout(() => {
                     location.href = '#cont-container-spinner';
-                    if(rFlag == 'yes'){
+                    if (rFlag == 'yes') {
                         reloadWindow('snapper');
-                    }else{
+                    } else {
                         reloadWindow();
                     }
                 }, 700);
@@ -440,7 +439,7 @@ $(document).ready(function () {
 
         queryJson.page = page - 1;
         queryJson.hitsPerPage = pageNum * 1;
-        queryJson.facets = ['brand', 'price', 'rate', 'stock', 'type', 'price_range', 'discount'];
+        queryJson.facets = ['brand', 'price', 'rate', 'stock', 'type', 'price_range', 'discount', 'subCate'];
         queryJson.attributesToRetrieve = searchNode;
         $('#cont-container-spinner').css('display', 'block');
         $('.cont-container').empty();
@@ -527,6 +526,27 @@ $(document).ready(function () {
                 console.error(e);
             }
 
+            $('.more-cate').empty();
+            try {
+                const subCount = Object.keys(r.facets.subCate).length;
+                console.log('sub count ='+subCount);
+                if (subCount != 0) {
+                    var moreCartIte = 0;
+                    $.each(r.facets.subCate, function (k, v) {
+                        console.log('subbing ='+k);
+                        ++moreCartIte;
+                        if (moreCartIte <= 7) {
+                            getMoreCategories(k, 1);
+                        }
+                    });
+                } else {
+                    throw 'subcate facets is empty';
+                }
+            } catch (e) {
+                console.error('no subCate');
+                getMoreCategories('Computers & Tablets', 10);
+            }
+
 
             console.log('response =', JSON.stringify(rShot));
             if (firstTimeLoad) {
@@ -541,7 +561,11 @@ $(document).ready(function () {
             } else {
                 $('.search-alert').hide();
                 $('.cont-container').show();
-                $('.result-txt').text('About ' + searchCount + ' search result found');
+                var rs = searchCount + ' search result found (' + page + ' of ' + rPageNum + ')';
+                if (searchCount > pageNum) {
+                    rs = 'About ' + rs;
+                }
+                $('.result-txt').text(rs);
 
                 $('.cont-container').empty();
                 r.hits.forEach(e => {
@@ -594,12 +618,7 @@ $(document).ready(function () {
             searchTable += '<div class="star-grid">' + getRating(rating) + '</div><div class="add-cart-bone">.</div><div class="add-cart" id="addToCartBtn' + id + '" >Add to cart</div></div></a><div class="stripe"></div>';
 
             $('.cont-container').append(searchTable);
-
-            try {
-                prepareProductImg('https://obscure-taiga-70753.herokuapp.com/' + img, '#pwaited82r' + id);
-            } catch (e) {
-                $('#pwaited82r' + id).attr('src', img);
-            }
+            prepareProductImg(img, '#pwaited82r' + id);
 
             const addCartBtn = $('#addToCartBtn' + id);
 
@@ -662,9 +681,9 @@ $(document).ready(function () {
 
                         $.each(r.facets[facetNode], function (k, v) {
 
-                            const key = k.replace(/\//g, 'SL').replace(/&/g, 'AN').replace(/ /g, '');
+                            const key = k.replace(/\//g, 'SL').replace(/&/g, 'AN').replace(/ /g, '').replace(/,/g, '');
                             if (brandIndexer >= brandIndex - 10 && brandIndexer < brandIndex) {
-                                var bh = '<label for="otestibrand' + key + facetNode + '"><input type="checkbox" name="filter-scrapper' + facetNode + '" id="otestibrand' + key + facetNode + '" value="' + k + '"><div>' + k + '</div></label>';
+                                var bh = '<label for="otestibrand' + key + facetNode + '"><input type="checkbox" name="filter-scrapper' + facetNode + '" id="otestibrand' + key + facetNode + '" value="' + k + '"><div>' + k + '</div><cf>' + v + '</cf></label>';
                                 ++appendedBrand;
 
                                 $(containerCont + ' .filter-appender').append(bh);
@@ -701,13 +720,30 @@ $(document).ready(function () {
         }
 
         function prepareProductImg(src, imgRef) {
-            var imgAccessor = new Image();
-            imgAccessor.setAttribute('crossOrigin', 'anonymous');
-            imgAccessor.onload = function (r) {
-                const resizedImg = getEqualizedImage(src, imgAccessor);
-                $(imgRef).attr('src', resizedImg);
+            try {
+
+                var imgAccessor = new Image(),
+                    proxiedURL = 'https://obscure-taiga-70753.herokuapp.com/' + src;
+
+                imgAccessor.setAttribute('crossOrigin', 'anonymous');
+                imgAccessor.onload = function (r) {
+                    try {
+                        const resizedImg = getEqualizedImage(src, imgAccessor);
+                        //console.log('setting img', resizedImg);
+                        if (resizedImg == proxiedURL) {
+                            $(imgRef).attr('src', src);
+                        } else {
+                            $(imgRef).attr('src', resizedImg);
+                        }
+                    } catch (e) {
+                        $(imgRef).attr('src', src);
+                    }
+                }
+                imgAccessor.src = proxiedURL;
+
+            } catch (e) {
+                $(imgRef).attr('src', src);
             }
-            imgAccessor.src = src;
         }
 
         function getEqualizedImage(imgUrl, loadedImg) {
@@ -779,14 +815,15 @@ $(document).ready(function () {
             });
         }
 
-        function getMoreCategories() {
-            firebase.database().ref('productCateImg/' + moreCategoryPath).once('value', function (moreCateShot) {
-                $('.more-cate').empty();
+        function getMoreCategories(moreCategoryPath, num) {
+            firebase.database().ref('Products').orderByChild('subCate').equalTo(moreCategoryPath).limitToLast(num).once('value', function (moreCateShot) {
                 moreCateShot.forEach(function (m) {
-                    if (m.val().startsWith('https://firebasestorage.googleapis.com')) {
-                        const key = m.key;
-                        $('.more-cate').append('<a href="productsearch.html?subCategory=' + encodeURIComponent(key) + '"><img src="' + m.val() + '"><span>' + key + '</span></a>');
-                    }
+                    const key = m.key,
+                        img = m.child('pImg').val(),
+                        mSubCate = m.child('subCate').val();
+
+                    $('.more-cate').append('<a href="productsearch.html?subCategory=' + encodeURIComponent(mSubCate.replace(/&/g, '<AND>')) + '"><img src="img/logoPlain.gif" id="mSubcater3r' + key + '"><span>' + mSubCate + '</span></a>');
+                    prepareProductImg(img, '#mSubcater3r' + key);
                 });
             });
         }
