@@ -458,7 +458,7 @@ $(function () { //when doc has loaded
 
   //product search
   var client = algoliasearch('6PIT380A2Z', 'cf0572b6c16cd88b35f5a0ebd7b9411e'),
-    index = client.initIndex('ProductHint'),
+    index = client.initIndex('Products'),
     algoliaSearchTimeout = null;
 
   var arrowKeyPosition = 0,
@@ -545,7 +545,7 @@ $(function () { //when doc has loaded
                   html += '<scpk></scpk>'
                 }
               }
-              html += '<span>' + respondJson.hits[i]._highlightResult.name.value + '</span></div>';
+              html += '<span>' + getImportantWord(respondJson.hits[i]._highlightResult.name.value) + '</span></div>';
             }
             searchTemp.html(html);
             $('.pc-search-hint div img:first-child').off('hover');
@@ -554,7 +554,7 @@ $(function () { //when doc has loaded
             $(searchAppender + ' div').click(function (e) {
               var reh = $(this).attr('id'),
                 jie = $(this).children('span').html();
-              if (reh) {
+              if (reh && false) {
                 location.href = 'onecart.html?productId=' + reh.replace(/searchHi24u9/g, '');
               } else {
                 accessSearch(getImportantWord(jie));
