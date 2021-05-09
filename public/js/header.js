@@ -485,6 +485,7 @@ $(function () { //when doc has loaded
     }
     for (var i = 0; i < aiArr.length; i++) {
       const a = i;
+      if(!aiArr[a].includes('-') && !aiArr[a].includes('&') && !aiArr[a].includes('/')){
       if (aiArr[a].includes('<em>') && aiArr[a].includes('</em>')) {
         ++addedFocus;
         focusedSearch += stripHtml(aiArr[a]) + ' ';
@@ -492,6 +493,7 @@ $(function () { //when doc has loaded
         ++addedWords;
         focusedSearch += aiArr[a] + ' ';
       }
+     }
       if ((addedFocus + addedWords) == 5) {
         break;
       }
@@ -557,7 +559,7 @@ $(function () { //when doc has loaded
               if (reh && false) {
                 location.href = 'onecart.html?productId=' + reh.replace(/searchHi24u9/g, '');
               } else {
-                accessSearch(getImportantWord(jie));
+                accessSearch(jie);
               }
               searchTemp.empty();
             });
@@ -577,7 +579,7 @@ $(function () { //when doc has loaded
   function highlightHint(h, inputObject) {
     $(h).children().css('backgroundColor', 'white');
     $(h).children().eq(arrowKeyPosition).css('backgroundColor', 'rgb(216, 216, 216)');
-    inputObject.val(getImportantWord(document.querySelector(h).childNodes[arrowKeyPosition].lastElementChild.innerHTML));
+    inputObject.val(document.querySelector(h).childNodes[arrowKeyPosition].lastElementChild.innerHTML);
   }
 
   function pageAlgolia(inputRef, searchTemp) {
