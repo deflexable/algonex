@@ -535,8 +535,8 @@ $(document).ready(function () {
                     $.each(r.facets.subCate, function (k, v) {
                         console.log('subbing ='+k);
                         ++moreCartIte;
-                        if (moreCartIte <= 7) {
-                            getMoreCategories(k, 1);
+                        if (moreCartIte <= 14) {
+                            getMoreCategories(k, 1, 'subCate');
                         }
                     });
                 } else {
@@ -544,7 +544,7 @@ $(document).ready(function () {
                 }
             } catch (e) {
                 console.error('no subCate');
-                getMoreCategories('Computers & Tablets', 10);
+                getMoreCategories('Computers & Tablets', 10, 'cate');
             }
 
 
@@ -815,8 +815,8 @@ $(document).ready(function () {
             });
         }
 
-        function getMoreCategories(moreCategoryPath, num) {
-            firebase.database().ref('Products').orderByChild('subCate').equalTo(moreCategoryPath).limitToLast(num).once('value', function (moreCateShot) {
+        function getMoreCategories(moreCategoryPath, num, cartNode) {
+            firebase.database().ref('Products').orderByChild(cartNode).equalTo(moreCategoryPath).limitToLast(num).once('value', function (moreCateShot) {
                 moreCateShot.forEach(function (m) {
                     const key = m.key,
                         img = m.child('pImg').val(),
